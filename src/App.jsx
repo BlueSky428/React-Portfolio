@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Hero from './components/Hero/Hero';
 import GlobalStyles from './styles/Global/GlobalStyles';
 
 const StyledImg = styled.img`
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <StyledImg src="public/mount-fuji-hokusai-near-ejiri.svg" />
+      <Hero />
+      {/* <StyledImg src="public/mount-fuji-hokusai-near-ejiri.svg" /> */}
     </>
   );
 }
