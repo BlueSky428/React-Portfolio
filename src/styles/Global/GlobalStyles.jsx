@@ -26,7 +26,8 @@ const GlobalStyles = createGlobalStyle`
     body {
         min-height: 100vh;
         line-height: 1.6;
-        font-weight: 300;        
+        font-weight: 300; 
+        overflow: hidden;
     }
 
     img, picture, svg, video {

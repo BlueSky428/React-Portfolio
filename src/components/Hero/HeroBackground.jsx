@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
-const horizontalDriftLg = keyframes`
+const horizontalDrift = keyframes`
     from {
         background-position: 0 0;
     }
@@ -10,28 +10,55 @@ const horizontalDriftLg = keyframes`
     }
 `;
 
-const StyledHeroBackground = styled.div`
-  /* height: 80%; */
+const StyledHeroBgClouds = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background: url(../../bg_kumo_lg.png);
-  animation: ${horizontalDriftLg} 35s linear infinite;
-  -webkit-animation: ${horizontalDriftLg} 35s linear infinite;
-  animation-duration: 35s;
+  animation: ${horizontalDrift} 45s linear infinite;
+  -webkit-animation: ${horizontalDrift} 45s linear infinite;
+  animation-duration: 45s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: ${horizontalDriftLg};
+  /* Set to running for animation */
+  animation-play-state: paused;
+  animation-name: ${horizontalDrift};
+  z-index: 10;
+
+  ${props =>
+    props.small &&
+    css`
+      background: url(../../bg_kumo_sm.png);
+      animation-duration: 35s;
+    `}
+`;
+
+const StyledImg = styled.img`
+  position: absolute;
+  /* top: 0rem; */
+  bottom: -39rem;
+  /* left: 28.5rem; */
+  right: 0;
+  /* position: relative; */
+  height: 100rem;
+  width: 100rem;
+  z-index: 1000;
+  /* transform: scaleX(-1); */
 `;
 
 const HeroBackground = () => {
-  return <StyledHeroBackground></StyledHeroBackground>;
+  return (
+    <>
+      <StyledHeroBgClouds />
+      <StyledHeroBgClouds small />
+      <StyledImg src="public\mount-fuji-hokusai-near-ejiri-noBg-sakura.svg" />
+    </>
+  );
 };
 
 export default HeroBackground;
