@@ -38,7 +38,7 @@ const StyledHeroBgClouds = styled.div`
     `}
 `;
 
-const StyledImg = styled.img`
+const StyledFuji = styled.img`
   position: absolute;
   /* top: 0rem; */
   bottom: -39rem;
@@ -51,12 +51,25 @@ const StyledImg = styled.img`
   /* transform: scaleX(-1); */
 `;
 
+const StyledSun = styled.img`
+  position: absolute;
+  /* Consider this position - looks nice */
+  bottom: 0;
+  right: 0;
+  /*  */
+
+  bottom: 18rem;
+  right: 34.3rem;
+  z-index: 1;
+`;
+
 const HeroBackground = () => {
   return (
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledImg src="public\mount-fuji-hokusai-near-ejiri-noBg-sakura.svg" />
+      <StyledFuji src="public/mount-fuji-hokusai-near-ejiri-noBg-sakura01.svg" />
+      <StyledSun src="public/sun.svg" />
     </>
   );
 };
