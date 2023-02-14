@@ -21,13 +21,6 @@ const StyledHeroSection = styled.section`
   overflow: hidden;
 `;
 
-// .css {
-//   background:
-//    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%),
-//    url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a') no-repeat;
-//   height: 200px;
-// }
-
 const StyledHeroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,21 +36,55 @@ const StyledHeroContainer = styled.div`
   }
 `;
 
+const StyledHeroText = styled.div`
+  /* Framer motion div for fadeIn */
+`;
+
+const StyledTextBox = styled.div`
+  & h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    display: block;
+    color: #192d48;
+
+    & span {
+      font-family: 'Potta One', cursive;
+      font-size: 3.6rem;
+      color: navy;
+    }
+  }
+  & h4 {
+    margin-top: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+`;
+
 const Hero = () => {
   return (
     <>
       <StyledHeroSection>
         <HeroBackground />
         <StyledHeroContainer>
-          <div>
-            <div>
-              <h1>Hi, my name is Nick Mullenmeister.</h1>
+          <StyledHeroText>
+            <StyledTextBox>
+              <h1>
+                Hi, my name is <span>Nick</span>.
+              </h1>
               <h1>
                 I create interesting and beautiful things for the web. I also
                 love Japan.
               </h1>
-            </div>
-          </div>
+              <h4>
+                I am a web developer who is finds meaning in developing websites
+                that help people.{' '}
+              </h4>
+            </StyledTextBox>
+          </StyledHeroText>
         </StyledHeroContainer>
       </StyledHeroSection>
     </>
