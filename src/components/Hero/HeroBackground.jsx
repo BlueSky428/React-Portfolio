@@ -61,6 +61,8 @@ const StyledSun = styled.img`
   bottom: 18rem;
   right: 34.3rem;
   z-index: 1;
+  /* filter: drop-shadow(0px 1px 1.7px #fb0950); */
+  filter: drop-shadow(0px 1px 1.7px #ce373c);
 `;
 
 const HeroBackground = () => {
@@ -69,7 +71,7 @@ const HeroBackground = () => {
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledFuji src="public/mount-fuji-hokusai-near-ejiri-noBg-sakura01.svg" />
-      <StyledSun src="public/sun.svg" />
+      <StyledSun src="public/red-sun.svg" />
     </>
   );
 };
