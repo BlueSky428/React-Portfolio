@@ -40,15 +40,15 @@ const StyledHeroBgClouds = styled.div`
 
 const StyledFuji = styled.img`
   position: absolute;
-  /* top: 0rem; */
   bottom: -39rem;
-  /* left: 28.5rem; */
+
   right: 0;
-  /* position: relative; */
   height: 100rem;
+  /* Settings to consider for keeping height in check */
+  /* height: 38rem;
+  bottom: -7rem; */
   width: 100rem;
   z-index: 1000;
-  /* transform: scaleX(-1); */
 `;
 
 const StyledSun = styled.img`

@@ -38,15 +38,20 @@ const StyledHeroContainer = styled.div`
 
 const StyledHeroText = styled.div`
   /* Framer motion div for fadeIn */
+  /* background: url(../../washi.png); */
+  /* padding: 2rem;
+  box-shadow: 0px 12px 31px -14px rgba(0, 0, 0, 0.75); */
 `;
 
 const StyledTextBox = styled.div`
+  text-shadow: 1px 1px 2px #eee;
   & h1 {
     font-family: 'Lato', sans-serif;
     font-size: 3.2rem;
     font-weight: 400;
     display: block;
     color: #192d48;
+    opacity: 1;
 
     & span {
       font-family: 'Potta One', cursive;
@@ -75,13 +80,10 @@ const Hero = () => {
               <h1>
                 Hi, my name is <span>Nick</span>.
               </h1>
-              <h1>
-                I create interesting and beautiful things for the web. I also
-                love Japan.
-              </h1>
+              <h1>I create interesting and beautiful things for the web.</h1>
               <h4>
-                I am a web developer who is finds meaning in developing websites
-                that help people.{' '}
+                I am a web developer who finds meaning in developing websites
+                that help people. I also love Japan.{' '}
               </h4>
             </StyledTextBox>
           </StyledHeroText>
