@@ -1,3 +1,4 @@
+import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import GlobalStyles from './styles/Global/GlobalStyles';
 
@@ -6,8 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <Hero />
-
-      {/* <StyledImg src="public/mount-fuji-hokusai-near-ejiri.svg" /> */}
+      {/* <About /> */}
     </>
   );
 }

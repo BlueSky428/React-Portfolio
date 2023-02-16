@@ -40,13 +40,16 @@ const StyledHeroBgClouds = styled.div`
 
 const StyledFuji = styled.img`
   position: absolute;
-  bottom: -39rem;
+  bottom: -10.7rem;
 
   right: 0;
-  height: 100rem;
+  /* Use height: 100rem for initial layout idea (not ideal) */
+  /* height: 100rem; */
+  height: min-content;
   /* Settings to consider for keeping height in check */
   /* height: 38rem;
   bottom: -7rem; */
+
   width: 100rem;
   z-index: 1000;
 `;
@@ -70,8 +73,8 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledFuji src="public/mount-fuji-hokusai-near-ejiri-noBg-sakura01.svg" />
-      <StyledSun src="public/red-sun.svg" />
+      <StyledFuji src="/mount-fuji-hokusai-near-ejiri-noBg-sakura01.svg" />
+      <StyledSun src="/red-sun.svg" />
     </>
   );
 };
