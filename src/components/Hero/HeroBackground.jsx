@@ -73,7 +73,7 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledFuji src="/mount-fuji-hokusai-near-ejiri-noBg-sakura01.svg" />
+      <StyledFuji src="/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg" />
       <StyledSun src="/red-sun.svg" />
     </>
   );

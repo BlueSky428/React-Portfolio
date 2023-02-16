@@ -25,7 +25,7 @@ const StyledHeroSection = styled.section`
 
 const StyledHeroContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.3fr;
   place-items: center;
   height: 100%;
   margin: 0 auto;
@@ -48,26 +48,30 @@ const StyledHeroText = styled.div`
 const StyledTextBox = styled.div`
   text-shadow: 1px 1px 2px #eee;
   & h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: sans-serif;
     font-size: 3.2rem;
-    font-weight: 400;
+    font-weight: 500;
     display: block;
     color: #192d48;
+    /* color: #23446d; */
+    line-height: 1.4;
     opacity: 1;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
 
     & span {
       font-family: 'Potta One', cursive;
       font-size: 3.6rem;
-      color: navy;
+      color: #23446d;
     }
   }
   & h4 {
     margin-top: 2rem;
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
     font-size: 1.5rem;
     line-height: 1.5;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
   }
 `;
 
@@ -84,8 +88,9 @@ const Hero = () => {
               </h1>
               <h1>Welcome to my corner of the web.</h1>
               <h4>
-                I am a web developer who finds meaning in developing interesting
-                and beautiful websites that help people. I also love Japan.{' '}
+                I'm a web developer based in Minnesota who finds meaning in
+                building interesting and beautiful websites that help people. I
+                also love Japan.{' '}
               </h4>
             </StyledTextBox>
           </StyledHeroText>
