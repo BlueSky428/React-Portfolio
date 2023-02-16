@@ -7,7 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <Hero />
-      {/* <About /> */}
+      <About />
     </>
   );
 }
