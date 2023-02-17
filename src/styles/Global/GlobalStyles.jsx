@@ -27,7 +27,6 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         line-height: 1.6;
         font-weight: 300; 
-        /* overflow: hidden; */
         background-color: #fbf3e2;
     }
 

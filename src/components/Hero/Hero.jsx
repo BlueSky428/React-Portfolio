@@ -15,6 +15,8 @@ const StyledHeroSection = styled.section`
     url(../../public/water-color.jpg) no-repeat; */
   /* background-image: url(../../public/water-color.jpg); */
   height: 100vh;
+  /* For mobile */
+  height: 100svh;
   /* height: 70rem; */
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 85%, 0 100%);
   clip-path: polygon(0px 0px, 100% 0px, 100% 83%, 0px 100%);
@@ -25,7 +27,7 @@ const StyledHeroSection = styled.section`
 
 const StyledHeroContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
   height: 100%;
   margin: 0 auto;
@@ -46,32 +48,62 @@ const StyledHeroText = styled.div`
 `;
 
 const StyledTextBox = styled.div`
-  text-shadow: 1px 1px 2px #eee;
   & h1 {
-    font-family: sans-serif;
-    font-size: 3.2rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 600;
     display: block;
-    color: #192d48;
-    /* color: #23446d; */
+    color: #1e3e67;
     line-height: 1.4;
-    opacity: 1;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
 
     & span {
       font-family: 'Potta One', cursive;
-      font-size: 3.6rem;
-      color: #23446d;
+      font-size: 4rem;
+
+      color: #1e3e67;
+
+      font-weight: 600;
     }
   }
-  & h4 {
+
+  & h2 {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin-top: 0.5rem;
+    line-height: 0.9;
+    font-size: 3.8rem;
+    color: #30425a;
+    color: #355176;
+  }
+  & p {
     margin-top: 2rem;
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.25rem;
-    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1.6rem;
     line-height: 1.5;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    /* max-width: 5.4rem; */
+    margin-top: 2rem;
+    color: #355176;
+    color: #1e3e67;
+  }
+
+  & a {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.25rem 1.75rem;
+    letter-spacing: 0.1rem;
+    border: 0.12rem solid #1e3e67;
+    color: #1e3e67;
+    margin-top: 4rem;
+    line-height: 1;
+    font-size: 1.6rem;
+    text-transform: capitalize;
   }
 `;
 
@@ -86,12 +118,15 @@ const Hero = () => {
               <h1>
                 Hi there, I'm <span>Nick</span>.
               </h1>
-              <h1>Welcome to my corner of the web.</h1>
-              <h4>
-                I'm a web developer based in Minnesota who finds meaning in
-                building interesting and beautiful websites that help people. I
-                also love Japan.{' '}
-              </h4>
+              <h2>Welcome to my corner of the web.</h2>
+              <p>
+                I'm a web developer based in Minnesota who strives to build
+                interesting and beautiful websites that help people. My current
+                focus is on accessible React applications. I also love Japan.{' '}
+              </p>
+              <a href="#" target="_blank" rel="noreferrer">
+                resume
+              </a>
             </StyledTextBox>
           </StyledHeroText>
         </StyledHeroContainer>
