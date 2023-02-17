@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
+
     *, *::after, *::before {
         margin: 0;
         padding: 0;
@@ -10,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     html {
         box-sizing: border-box;
         font-size: 62.5%;
+        scroll-behavior: smooth;
         /* color-scheme: dark light; */
 
         @media only screen and (max-width: 75em) {
@@ -20,6 +23,30 @@ const GlobalStyles = createGlobalStyle`
         font-size: 50%;
         }
 }
+
+    ::selection {
+    background-color: #ce373c;
+    color: #eee;
+}
+
+/* Default focus styles & keyboard focus */
+    :focus {
+        outline: 0.2rem dashed #ce373c;
+        outline-offset: 0.3rem;
+     }
+
+     :focus:not(:focus-visible) {
+    outline: none;
+    outline-offset: 0rem;
+  }
+
+    :focus-visible {
+    outline: .2rem dashed #ce373c;
+    outline-offset: .3rem;
+  }
+
+  /* Scrollbar styles */
+  /* TODO */
 
 
 
@@ -37,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
 
     button {
         outline: transparent;
+        border: none;
         text-decoration: none;
         cursor: pointer;
         

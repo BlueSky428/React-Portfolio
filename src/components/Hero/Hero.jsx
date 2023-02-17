@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
 
 const StyledHeroSection = styled.section`
-  /* width: 100vw; */
   width: 100%;
-  background-color: skyblue;
+  height: 100vh;
+  min-height: 100vh;
+  /* For mobile */
+  height: 100svh;
   background: linear-gradient(to top, #0181f1, skyblue);
   background: linear-gradient(to top, #fedccd, #f5cce9);
   /* background: linear-gradient(
@@ -14,14 +16,7 @@ const StyledHeroSection = styled.section`
     ),
     url(../../public/water-color.jpg) no-repeat; */
   /* background-image: url(../../public/water-color.jpg); */
-  height: 100vh;
-  /* For mobile */
-  height: 100svh;
-  /* height: 70rem; */
-  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 85%, 0 100%);
-  clip-path: polygon(0px 0px, 100% 0px, 100% 83%, 0px 100%);
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
-  /* position: relative; */
   overflow: hidden;
 `;
 
@@ -120,9 +115,9 @@ const Hero = () => {
               </h1>
               <h2>Welcome to my corner of the web.</h2>
               <p>
-                I'm a web developer based in Minnesota who strives to build
-                interesting and beautiful websites that help people. My current
-                focus is on accessible React applications. I also love Japan.{' '}
+                I'm a web developer based in Minnesota who builds interesting
+                and beautiful websites that help people. My current focus is on
+                accessible React applications. I also love Japan.{' '}
               </p>
               <a href="#" target="_blank" rel="noreferrer">
                 resume
