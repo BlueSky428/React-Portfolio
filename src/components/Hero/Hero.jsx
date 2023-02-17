@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
+import { motion } from 'framer-motion';
 
 const StyledHeroSection = styled.section`
   width: 100%;
@@ -110,18 +111,58 @@ const Hero = () => {
         <StyledHeroContainer>
           <StyledHeroText>
             <StyledTextBox>
-              <h1>
-                Hi there, I'm <span>Nick</span>.
-              </h1>
-              <h2>Welcome to my corner of the web.</h2>
-              <p>
-                I'm a web developer based in Minnesota who builds interesting
-                and beautiful websites that help people. My current focus is on
-                accessible React applications. I also love Japan.{' '}
-              </p>
-              <a href="#" target="_blank" rel="noreferrer">
-                resume
-              </a>
+              <motion.div
+                initial={{ opacity: 0.01, y: '2rem' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.645, 0.045, 0.355, 1],
+                  delay: 0.11,
+                }}
+              >
+                <h1>
+                  Hi there, I'm <span>Nick</span>.
+                </h1>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0.01, y: '2rem' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.645, 0.045, 0.355, 1],
+                  delay: 0.21,
+                }}
+              >
+                <h2>Welcome to my corner of the web.</h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0.01, y: '2rem' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.645, 0.045, 0.355, 1],
+                  delay: 0.31,
+                }}
+              >
+                <p>
+                  I'm a web developer based in Minnesota who builds interesting
+                  and beautiful websites that help people. My current focus is
+                  on accessible React applications. I also love Japan.{' '}
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0.01, y: '2rem' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.645, 0.045, 0.355, 1],
+                  delay: 0.41,
+                }}
+              >
+                <a href="#" target="_blank" rel="noreferrer">
+                  resume
+                </a>
+              </motion.div>
             </StyledTextBox>
           </StyledHeroText>
         </StyledHeroContainer>
