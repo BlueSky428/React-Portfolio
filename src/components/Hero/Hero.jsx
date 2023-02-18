@@ -2,7 +2,18 @@ import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
 import { motion } from 'framer-motion';
 
-const childVariants = {
+const parentHeroTextVariants = {
+  hidden: { opacity: 0.01 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const childHeroTextVariants = {
   hidden: { opacity: 0.01, y: '2rem' },
   visible: {
     opacity: 1,
@@ -10,10 +21,6 @@ const childVariants = {
     transition: {
       duration: 0.5,
       ease: [0.645, 0.045, 0.355, 1],
-      // delay: 0.11,
-      // 0.21...0.31...etc.
-      delayChildren: 0.3,
-      staggerChildren: 0.05,
     },
   },
 };
@@ -127,42 +134,27 @@ const Hero = () => {
         <StyledHeroContainer>
           <StyledHeroText>
             <StyledTextBox
-              variants={heroVariant}
               initial="hidden"
               animate="visible"
+              variants={parentHeroTextVariants}
             >
-              <motion.div
-              // variants={heroVariant}
-              // initial="hidden"
-              // animate="visible"
-              >
+              <motion.div variants={childHeroTextVariants}>
                 <h1>
                   Hi there, I'm <span>Nick</span>.
                 </h1>
               </motion.div>
-              <motion.div
-              // variants={heroVariant}
-              // initial="hidden"
-              // animate="visible"
-              >
+
+              <motion.div variants={childHeroTextVariants}>
                 <h2>Welcome to my corner of the web.</h2>
               </motion.div>
-              <motion.div
-              // variants={heroVariant}
-              // initial="hidden"
-              // animate="visible"
-              >
+              <motion.div variants={childHeroTextVariants}>
                 <p>
                   I'm a web developer based in Minnesota who builds interesting
                   and beautiful websites that help people. My current focus is
                   on accessible React applications. I also love Japan.{' '}
                 </p>
               </motion.div>
-              <motion.div
-              // variants={heroVariant}
-              // initial="hidden"
-              // animate="visible"
-              >
+              <motion.div variants={childHeroTextVariants}>
                 <motion.a
                   whileTap={{ scale: 0.97 }}
                   href="#"
