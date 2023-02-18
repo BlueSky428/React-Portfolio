@@ -1,4 +1,18 @@
 import styled, { css, keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
+
+const sunVariants = {
+  hidden: { opacity: 0.01, y: '20rem' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.7,
+      duration: 1.5,
+      ease: [0.645, 0.045, 0.355, 1],
+    },
+  },
+};
 
 const horizontalDrift = keyframes`
     from {
@@ -54,7 +68,7 @@ const StyledFuji = styled.img`
   z-index: 1000;
 `;
 
-const StyledSun = styled.img`
+const StyledSun = styled(motion.img)`
   position: absolute;
   /* Consider this position - looks nice */
   bottom: 0;
@@ -74,7 +88,12 @@ const HeroBackground = () => {
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledFuji src="/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg" />
-      <StyledSun src="/red-sun.svg" />
+      <StyledSun
+        initial="hidden"
+        animate="visible"
+        variants={sunVariants}
+        src="/red-sun.svg"
+      />
     </>
   );
 };

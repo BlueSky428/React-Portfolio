@@ -59,13 +59,6 @@ const StyledHeroContainer = styled.div`
   }
 `;
 
-const StyledHeroText = styled.div`
-  /* Framer motion div for fadeIn */
-  /* background: url(../../washi.png); */
-  /* padding: 2rem;
-  box-shadow: 0px 12px 31px -14px rgba(0, 0, 0, 0.75); */
-`;
-
 const StyledTextBox = styled(motion.div)`
   & h1 {
     font-size: 4rem;
@@ -132,40 +125,38 @@ const Hero = () => {
       <StyledHeroSection>
         <HeroBackground />
         <StyledHeroContainer>
-          <StyledHeroText>
-            <StyledTextBox
-              initial="hidden"
-              animate="visible"
-              variants={parentHeroTextVariants}
-            >
-              <motion.div variants={childHeroTextVariants}>
-                <h1>
-                  Hi there, I'm <span>Nick</span>.
-                </h1>
-              </motion.div>
+          <StyledTextBox
+            initial="hidden"
+            animate="visible"
+            variants={parentHeroTextVariants}
+          >
+            <motion.div variants={childHeroTextVariants}>
+              <h1>
+                Hi there, I'm <span>Nick</span>.
+              </h1>
+            </motion.div>
 
-              <motion.div variants={childHeroTextVariants}>
-                <h2>Welcome to my corner of the web.</h2>
-              </motion.div>
-              <motion.div variants={childHeroTextVariants}>
-                <p>
-                  I'm a web developer based in Minnesota who builds interesting
-                  and beautiful websites that help people. My current focus is
-                  on accessible React applications. I also love Japan.{' '}
-                </p>
-              </motion.div>
-              <motion.div variants={childHeroTextVariants}>
-                <motion.a
-                  whileTap={{ scale: 0.97 }}
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  resume
-                </motion.a>
-              </motion.div>
-            </StyledTextBox>
-          </StyledHeroText>
+            <motion.div variants={childHeroTextVariants}>
+              <h2>Welcome to my corner of the web.</h2>
+            </motion.div>
+            <motion.div variants={childHeroTextVariants}>
+              <p>
+                I'm a web developer based in Minnesota who builds interesting
+                and beautiful websites that help people. My current focus is on
+                accessible React applications. I also love Japan.{' '}
+              </p>
+            </motion.div>
+            <motion.div variants={childHeroTextVariants}>
+              <motion.a
+                whileTap={{ scale: 0.97 }}
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                resume
+              </motion.a>
+            </motion.div>
+          </StyledTextBox>
         </StyledHeroContainer>
       </StyledHeroSection>
     </>
