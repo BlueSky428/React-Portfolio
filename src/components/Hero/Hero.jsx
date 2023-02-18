@@ -2,6 +2,22 @@ import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
 import { motion } from 'framer-motion';
 
+const childVariants = {
+  hidden: { opacity: 0.01, y: '2rem' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.645, 0.045, 0.355, 1],
+      // delay: 0.11,
+      // 0.21...0.31...etc.
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
 const StyledHeroSection = styled.section`
   width: 100%;
   height: 100vh;
@@ -43,7 +59,7 @@ const StyledHeroText = styled.div`
   box-shadow: 0px 12px 31px -14px rgba(0, 0, 0, 0.75); */
 `;
 
-const StyledTextBox = styled.div`
+const StyledTextBox = styled(motion.div)`
   & h1 {
     font-size: 4rem;
     font-weight: 600;
@@ -110,39 +126,31 @@ const Hero = () => {
         <HeroBackground />
         <StyledHeroContainer>
           <StyledHeroText>
-            <StyledTextBox>
+            <StyledTextBox
+              variants={heroVariant}
+              initial="hidden"
+              animate="visible"
+            >
               <motion.div
-                initial={{ opacity: 0.01, y: '2rem' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.645, 0.045, 0.355, 1],
-                  delay: 0.11,
-                }}
+              // variants={heroVariant}
+              // initial="hidden"
+              // animate="visible"
               >
                 <h1>
                   Hi there, I'm <span>Nick</span>.
                 </h1>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0.01, y: '2rem' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.645, 0.045, 0.355, 1],
-                  delay: 0.21,
-                }}
+              // variants={heroVariant}
+              // initial="hidden"
+              // animate="visible"
               >
                 <h2>Welcome to my corner of the web.</h2>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0.01, y: '2rem' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.645, 0.045, 0.355, 1],
-                  delay: 0.31,
-                }}
+              // variants={heroVariant}
+              // initial="hidden"
+              // animate="visible"
               >
                 <p>
                   I'm a web developer based in Minnesota who builds interesting
@@ -151,17 +159,18 @@ const Hero = () => {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0.01, y: '2rem' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.645, 0.045, 0.355, 1],
-                  delay: 0.41,
-                }}
+              // variants={heroVariant}
+              // initial="hidden"
+              // animate="visible"
               >
-                <a href="#" target="_blank" rel="noreferrer">
+                <motion.a
+                  whileTap={{ scale: 0.97 }}
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   resume
-                </a>
+                </motion.a>
               </motion.div>
             </StyledTextBox>
           </StyledHeroText>
