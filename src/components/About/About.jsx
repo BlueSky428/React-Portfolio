@@ -12,6 +12,7 @@ const StyledContainer = styled.div`
       rgba(245, 204, 233, 0.8)
     ),
     url(../../public/Hokusai-Fugaku-36-views-28.svg) no-repeat center/100%; */
+
   /* 
   background: radial-gradient(
       circle at 50% 50%,
@@ -62,8 +63,8 @@ const About = () => {
         <HeadingContainer>
           <div></div>
           <img
-            alt="Japanese enso (circle made with single brush stroke)"
-            src="/enso.png"
+            alt='Japanese enso (circle made with single brush stroke)'
+            src='/enso.png'
           />
           {/* <h2>
             About <br></br> Me

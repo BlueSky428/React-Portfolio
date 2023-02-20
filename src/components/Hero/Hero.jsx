@@ -19,6 +19,7 @@ const StyledHeroSection = styled.section`
       rgba(254, 220, 205, 0.8),
       rgba(245, 204, 233, 0.8)
     ),
+  
     url(../../public/water-color.jpg) no-repeat; */
   /* background-image: url(../../public/water-color.jpg); */
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
@@ -45,27 +46,23 @@ const StyledTextBox = styled(motion.div)`
     font-size: 4rem;
     font-weight: 600;
     display: block;
-    color: #1e3e67;
     line-height: 1.4;
+    color: ${props => props.theme.primary.h1};
     font-family: ${props => props.theme.fonts.primary};
 
     & span {
       font-family: ${props => props.theme.fonts.secondary};
       font-size: 4rem;
-
-      color: #1e3e67;
-
       font-weight: 600;
     }
   }
 
   & h2 {
     font-family: ${props => props.theme.fonts.primary};
+    color: ${props => props.theme.primary.h2};
     margin-top: 0.5rem;
     line-height: 0.9;
     font-size: 3.8rem;
-    color: #30425a;
-    color: #355176;
   }
   & p {
     margin-top: 2rem;
@@ -76,8 +73,7 @@ const StyledTextBox = styled(motion.div)`
     font-family: ${props => props.theme.fonts.primary};
     /* max-width: 5.4rem; */
     margin-top: 2rem;
-    color: #355176;
-    color: #1e3e67;
+    color: ${props => props.theme.primary.p};
   }
 
   & a {
@@ -88,10 +84,10 @@ const StyledTextBox = styled(motion.div)`
     position: relative;
     cursor: pointer;
     border-radius: 0.4rem;
-    padding: 1.25rem 1.75rem;
+    padding: 1.45rem 2.45rem;
     letter-spacing: 0.1rem;
-    border: 0.12rem solid #1e3e67;
-    color: #1e3e67;
+    border: 0.12rem solid ${props => props.theme.primary.link};
+    color: ${props => props.theme.primary.link};
     margin-top: 4rem;
     line-height: 1;
     font-size: 1.6rem;
@@ -106,8 +102,8 @@ const Hero = () => {
         <HeroBackground />
         <StyledHeroContainer>
           <StyledTextBox
-            initial="hidden"
-            animate="visible"
+            initial='hidden'
+            animate='visible'
             variants={parentHeroTextVariants}
           >
             <motion.div variants={childHeroTextVariants}>
@@ -129,9 +125,9 @@ const Hero = () => {
             <motion.div variants={childHeroTextVariants}>
               <motion.a
                 whileTap={{ scale: 0.97 }}
-                href="#"
-                target="_blank"
-                rel="noreferrer"
+                href='#'
+                target='_blank'
+                rel='noreferrer'
               >
                 resume
               </motion.a>

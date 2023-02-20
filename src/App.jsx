@@ -1,11 +1,11 @@
 import { ThemeProvider } from 'styled-components';
-import { base } from './themes/themes';
+import { base, lightTheme } from './themes/themes';
 import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import GlobalStyles from './styles/Global/GlobalStyles';
 
 function App() {
-  const theme = { ...base };
+  const theme = { ...base, ...lightTheme };
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

@@ -77,17 +77,17 @@ const HeroBackground = () => {
       <StyledHeroBgClouds small />
       <StyledFuji
         alt="Hokusai's Mount Fuji near Ejiri piece"
-        initial="hidden"
-        animate="visible"
+        initial='hidden'
+        animate='visible'
         variants={fujiVariants}
-        src="/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg"
+        src='/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg'
       />
       <StyledSun
-        alt="Reddish sun"
-        initial="hidden"
-        animate="visible"
+        alt='Reddish sun'
+        initial='hidden'
+        animate='visible'
         variants={sunVariants}
-        src="/red-sun.svg"
+        src='/red-sun.svg'
       />
     </>
   );
