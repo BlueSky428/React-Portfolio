@@ -61,7 +61,10 @@ const About = () => {
       <StyledContainer>
         <HeadingContainer>
           <div></div>
-          <img src="/enso.png" />
+          <img
+            alt="Japanese enso (circle made with single brush stroke)"
+            src="/enso.png"
+          />
           {/* <h2>
             About <br></br> Me
           </h2> */}

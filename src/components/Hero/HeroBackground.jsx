@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 const sunVariants = {
   hidden: { opacity: 0.01, y: '20rem' },
@@ -7,8 +7,22 @@ const sunVariants = {
     opacity: 1,
     y: 0,
     transition: {
+      delay: 0.8,
+      duration: 1.6,
+      ease: [0.645, 0.045, 0.355, 1],
+    },
+  },
+};
+
+const fujiVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
       delay: 0.7,
-      duration: 1.5,
+      duration: 0.7,
       ease: [0.645, 0.045, 0.355, 1],
     },
   },
@@ -52,7 +66,7 @@ const StyledHeroBgClouds = styled.div`
     `}
 `;
 
-const StyledFuji = styled.img`
+const StyledFuji = styled(motion.img)`
   position: absolute;
   bottom: -10.7rem;
 
@@ -87,8 +101,15 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledFuji src="/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg" />
+      <StyledFuji
+        alt="Hokusai's Mount Fuji near Ejiri piece"
+        initial="hidden"
+        animate="visible"
+        variants={fujiVariants}
+        src="/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg"
+      />
       <StyledSun
+        alt="Reddish sun"
         initial="hidden"
         animate="visible"
         variants={sunVariants}
