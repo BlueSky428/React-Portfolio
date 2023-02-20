@@ -47,10 +47,10 @@ const StyledTextBox = styled(motion.div)`
     display: block;
     color: #1e3e67;
     line-height: 1.4;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: ${props => props.theme.fonts.primary};
 
     & span {
-      font-family: 'Potta One', cursive;
+      font-family: ${props => props.theme.fonts.secondary};
       font-size: 4rem;
 
       color: #1e3e67;
@@ -60,7 +60,7 @@ const StyledTextBox = styled(motion.div)`
   }
 
   & h2 {
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: ${props => props.theme.fonts.primary};
     margin-top: 0.5rem;
     line-height: 0.9;
     font-size: 3.8rem;
@@ -69,12 +69,11 @@ const StyledTextBox = styled(motion.div)`
   }
   & p {
     margin-top: 2rem;
-    font-family: 'Lato', sans-serif;
     font-weight: 600;
     letter-spacing: 0.1rem;
     font-size: 1.6rem;
     line-height: 1.5;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: ${props => props.theme.fonts.primary};
     /* max-width: 5.4rem; */
     margin-top: 2rem;
     color: #355176;
@@ -82,7 +81,7 @@ const StyledTextBox = styled(motion.div)`
   }
 
   & a {
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: ${props => props.theme.fonts.primary};
     font-weight: 600;
     display: inline-block;
     text-decoration: none;
