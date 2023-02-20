@@ -1,29 +1,10 @@
 import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
 import { motion } from 'framer-motion';
-
-const parentHeroTextVariants = {
-  hidden: { opacity: 0.01 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const childHeroTextVariants = {
-  hidden: { opacity: 0.01, y: '2rem' },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.645, 0.045, 0.355, 1],
-    },
-  },
-};
+import {
+  childHeroTextVariants,
+  parentHeroTextVariants,
+} from '../../utils/animations';
 
 const StyledHeroSection = styled.section`
   width: 100%;

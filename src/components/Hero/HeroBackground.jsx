@@ -1,32 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
-import { easeInOut, motion } from 'framer-motion';
-
-const sunVariants = {
-  hidden: { opacity: 0.01, y: '20rem' },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.8,
-      duration: 1.6,
-      ease: [0.645, 0.045, 0.355, 1],
-    },
-  },
-};
-
-const fujiVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.7,
-      duration: 0.7,
-      ease: [0.645, 0.045, 0.355, 1],
-    },
-  },
-};
+import { motion } from 'framer-motion';
+import { fujiVariants, sunVariants } from '../../utils/animations';
 
 const horizontalDrift = keyframes`
     from {
