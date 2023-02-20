@@ -12,12 +12,16 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   /* For mobile */
   height: 100svh;
-  background: linear-gradient(to top, #0181f1, skyblue);
-  background: linear-gradient(to top, #fedccd, #f5cce9);
+  /* background: linear-gradient(to top, #0181f1, skyblue); */
+  background: linear-gradient(
+    to top,
+    ${props => props.theme.gradients.heroBgBottom},
+    ${props => props.theme.gradients.heroBgTop}
+  );
   /* background: linear-gradient(
       to top,
-      rgba(254, 220, 205, 0.8),
-      rgba(245, 204, 233, 0.8)
+      #fedccdcc,
+      #f5cce9cc
     ),
   
     url(../../public/water-color.jpg) no-repeat; */
@@ -34,7 +38,7 @@ const StyledHeroContainer = styled.div`
   margin: 0 auto;
   max-width: 114rem;
   position: relative;
-  z-index: 500;
+  z-index: 1500;
 
   & h1 {
     font-size: 3.2rem;
@@ -127,7 +131,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.97 }}
                 href='#'
                 target='_blank'
-                rel='noreferrer'
+                rel='noopener noreferrer'
               >
                 resume
               </motion.a>

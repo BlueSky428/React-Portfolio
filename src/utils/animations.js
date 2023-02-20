@@ -1,5 +1,6 @@
 // Hero animations //
 
+const cubicBezierEase = [0.645, 0.045, 0.355, 1];
 // Hero StyledTextBox
 export const parentHeroTextVariants = {
   hidden: { opacity: 0.01 },
@@ -20,7 +21,7 @@ export const childHeroTextVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.645, 0.045, 0.355, 1],
+      ease: cubicBezierEase,
     },
   },
 };
@@ -35,7 +36,7 @@ export const fujiVariants = {
     transition: {
       delay: 0.7,
       duration: 0.7,
-      ease: [0.645, 0.045, 0.355, 1],
+      ease: cubicBezierEase,
     },
   },
 };
@@ -49,7 +50,7 @@ export const sunVariants = {
     transition: {
       delay: 0.8,
       duration: 1.6,
-      ease: [0.645, 0.045, 0.355, 1],
+      ease: cubicBezierEase,
     },
   },
 };

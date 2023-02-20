@@ -25,13 +25,13 @@ const GlobalStyles = createGlobalStyle`
 }
 
     ::selection {
-    background-color: #ce373c;
-    color: #eee;
+    background-color: ${props => props.theme.tertiary.textSelection};
+    color: ${props => props.theme.neutrals.textSelectionColor};
 }
 
 /* Default focus styles & keyboard focus */
     :focus {
-        outline: 0.2rem dashed #ce373c;
+        outline: 0.2rem dashed ${props => props.theme.tertiary.focusOutline};
         outline-offset: 0.3rem;
      }
 
@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
     :focus-visible {
-    outline: .2rem dashed #ce373c;
+    outline: .2rem dashed ${props => props.theme.tertiary.focusOutline};
     outline-offset: .3rem;
   }
 
@@ -54,8 +54,8 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         line-height: 1.6;
         font-weight: 300; 
-        background-color: #fbf3e2;
-    }
+        background-color: ${props => props.theme.neutrals.body};
+        }
 
     img, picture, svg, video {
         display: block;
