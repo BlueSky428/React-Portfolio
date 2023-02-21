@@ -77,8 +77,9 @@ const StyledBranch = styled(motion.img)`
   /* height: 75rem; */
   width: 75rem;
   width: 50rem;
-  /* height: auto;
-  width: auto; */
+  @media ${props => props.theme.bp.desktopL} {
+    width: 46rem;
+  }
 `;
 
 const HeroBackground = () => {

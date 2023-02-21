@@ -1,8 +1,30 @@
 // Base
+const bpSize = {
+  mobileS: '20.65em', //330px
+  mobileM: '25em', //400px
+  mobileL: '30em', //480px
+  tabletS: '37.5em', //600px
+  tabletL: '48em', //768px
+  desktopXS: '56.25em', //900px
+  desktopS: '67.5em', //1080px
+  desktopM: '75em', //1200px
+  desktopL: '87.5em', //1400px
+};
 export const base = {
   fonts: {
     primary: 'Zen Kaku Gothic Antique, system-ui, sans-serif',
     secondary: 'Potta One, system-ui, cursive',
+  },
+  bp: {
+    mobileS: `only screen and (max-width: ${bpSize.mobileS})`,
+    mobileM: `only screen and (max-width: ${bpSize.mobileM})`,
+    mobileL: `only screen and (max-width: ${bpSize.mobileL})`,
+    tabletS: `only screen and (max-width: ${bpSize.tabletS})`,
+    tabletL: `only screen and (max-width: ${bpSize.tabletL})`,
+    desktopXS: `only screen and (max-width: ${bpSize.desktopXS})`,
+    desktopS: `only screen and (max-width: ${bpSize.desktopS})`,
+    desktopM: `only screen and (max-width: ${bpSize.desktopM})`,
+    desktopL: `only screen and (max-width: ${bpSize.desktopL})`,
   },
 };
 

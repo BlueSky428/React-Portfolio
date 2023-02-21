@@ -15,11 +15,15 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
         /* color-scheme: dark light; */
 
-        @media only screen and (max-width: 75em) {
+        @media ${props => props.theme.bp.desktopL} {
+        font-size: 58%
+        }
+
+        @media ${props => props.theme.bp.desktopM} {
         font-size: 56.25%;
         }
 
-        @media only screen and (max-width: 56.25em) {
+        @media ${props => props.theme.bp.desktopXS} {
         font-size: 50%;
         }
 }
