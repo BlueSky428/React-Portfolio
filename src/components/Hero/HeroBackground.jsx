@@ -66,8 +66,19 @@ const StyledSun = styled(motion.img)`
   bottom: 18rem;
   right: 34.3rem;
   z-index: 1;
-  /* filter: drop-shadow(0px 1px 1.7px #fb0950); */
-  filter: drop-shadow(0px 1px 1.7px #ce373c);
+  filter: drop-shadow(0px 1px 1.7px ${props => props.theme.tertiary.sunShadow});
+`;
+
+const StyledBranch = styled(motion.img)`
+  position: absolute;
+  top: 0;
+  left: -0.1rem;
+  z-index: 100;
+  /* height: 75rem; */
+  width: 75rem;
+  width: 50rem;
+  /* height: auto;
+  width: auto; */
 `;
 
 const HeroBackground = () => {
@@ -75,6 +86,7 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
+      <StyledBranch src='/blossom-branch-v2.svg' />
       <StyledFuji
         alt="Hokusai's Mount Fuji near Ejiri piece"
         initial='hidden'

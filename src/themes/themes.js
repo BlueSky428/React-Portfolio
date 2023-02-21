@@ -37,6 +37,7 @@ export const lightTheme = {
   tertiary: {
     textSelection: lightPalette.tertiary[600],
     focusOutline: lightPalette.tertiary[600],
+    sunShadow: lightPalette.tertiary[600],
   },
   neutrals: {
     body: lightPalette.neutrals[200],

@@ -35,7 +35,7 @@ const StyledHeroContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   place-items: center;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 10rem;
   max-width: 114rem;
   position: relative;
   z-index: 1500;
@@ -46,6 +46,8 @@ const StyledHeroContainer = styled.div`
 `;
 
 const StyledTextBox = styled(motion.div)`
+  /* TEMP */
+  margin-top: 24rem;
   & h1 {
     font-size: 4rem;
     font-weight: 600;
