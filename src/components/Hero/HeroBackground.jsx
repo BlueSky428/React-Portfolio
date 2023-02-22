@@ -1,6 +1,9 @@
 import styled, { css, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { fujiVariants, sunVariants } from '../../utils/animations';
+import TreeBranchSVG from '../../../public/blossom-branch-v2.svg';
+import SunSVG from '../../../public/red-sun.svg';
+import FujiSVG from '../../../public/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
 
 const horizontalDrift = keyframes`
     from {
@@ -40,23 +43,24 @@ const StyledHeroBgClouds = styled.div`
     `}
 `;
 
-const StyledFuji = styled(motion.img)`
+const StyledFujiContainer = styled(motion.div)`
   position: absolute;
   bottom: -10.7rem;
-
   right: 0;
-  /* Use height: 100rem for initial layout idea (not ideal) */
-  /* height: 100rem; */
-  height: min-content;
-  /* Settings to consider for keeping height in check */
-  /* height: 38rem;
-  bottom: -7rem; */
-
-  width: 100rem;
   z-index: 1000;
+
+  & svg {
+    height: min-content;
+    width: 100rem;
+    /* Use height: 100rem for initial layout idea (not ideal) */
+    /* height: 100rem; */
+    /* Settings to consider for keeping height in check */
+    /* height: 38rem;
+  bottom: -7rem; */
+  }
 `;
 
-const StyledSun = styled(motion.img)`
+const StyledSunContainer = styled(motion.div)`
   position: absolute;
   /* Consider this position - looks nice */
   bottom: 0;
@@ -67,18 +71,28 @@ const StyledSun = styled(motion.img)`
   right: 34.3rem;
   z-index: 1;
   filter: drop-shadow(0px 1px 1.7px ${props => props.theme.tertiary.sunShadow});
+  & svg {
+    height: 100%;
+  }
 `;
 
-const StyledBranch = styled(motion.img)`
+const StyledTreeBranchContainer = styled(motion.div)`
   position: absolute;
   top: 0;
   left: -0.1rem;
   z-index: 100;
-  /* height: 75rem; */
-  width: 75rem;
-  width: 50rem;
-  @media ${props => props.theme.bp.desktopL} {
-    width: 46rem;
+  /* height: 75rem;
+  width: 50rem; */
+
+  & svg {
+    /* Original SVG params */
+    /* width="203.44472mm"
+   height="143.04601mm"  */
+    /* height: 75rem; */
+    width: 50rem;
+    @media ${props => props.theme.bp.desktopL} {
+      width: 46rem;
+    }
   }
 `;
 
@@ -87,21 +101,23 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledBranch src='/blossom-branch-v2.svg' />
-      <StyledFuji
-        alt="Hokusai's Mount Fuji near Ejiri piece"
+      <StyledTreeBranchContainer>
+        <TreeBranchSVG title='Japanese tree branch with pretty flowers' />
+      </StyledTreeBranchContainer>
+      <StyledFujiContainer
         initial='hidden'
         animate='visible'
         variants={fujiVariants}
-        src='/mount-fuji-hokusai-near-ejiri-noBg-sakura02.svg'
-      />
-      <StyledSun
-        alt='Reddish sun'
+      >
+        <FujiSVG title="Hokusai's Mount Fuji near Ejiri piece" />
+      </StyledFujiContainer>
+      <StyledSunContainer
         initial='hidden'
         animate='visible'
         variants={sunVariants}
-        src='/red-sun.svg'
-      />
+      >
+        <SunSVG title='Rising red sun' />
+      </StyledSunContainer>
     </>
   );
 };
