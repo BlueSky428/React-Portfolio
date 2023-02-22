@@ -1,6 +1,10 @@
 import styled, { css, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
-import { fujiVariants, sunVariants } from '../../utils/animations';
+import {
+  fujiVariants,
+  sunVariants,
+  branchVariants,
+} from '../../utils/animations';
 import TreeBranchSVG from '../../../public/blossom-branch-v2.svg';
 import SunSVG from '../../../public/red-sun.svg';
 import FujiSVG from '../../../public/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
@@ -101,7 +105,11 @@ const HeroBackground = () => {
     <>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
-      <StyledTreeBranchContainer>
+      <StyledTreeBranchContainer
+        initial='hidden'
+        animate='visible'
+        variants={branchVariants}
+      >
         <TreeBranchSVG title='Japanese tree branch with pretty flowers' />
       </StyledTreeBranchContainer>
       <StyledFujiContainer

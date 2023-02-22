@@ -54,3 +54,17 @@ export const sunVariants = {
     },
   },
 };
+
+export const branchVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1.7,
+      duration: 0.7,
+      ease: cubicBezierEase,
+    },
+  },
+};
