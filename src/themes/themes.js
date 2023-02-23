@@ -54,7 +54,10 @@ export const lightTheme = {
     h1: lightPalette.primary[600],
     p: lightPalette.primary[600],
     link: lightPalette.primary[600],
+    scrollbarThumb: lightPalette.primary[600],
+    scrollbarThumbHover: lightPalette.primary[300],
     h2: lightPalette.primary[400],
+    scrollbarTrack: lightPalette.primary[300],
   },
   tertiary: {
     textSelection: lightPalette.tertiary[600],

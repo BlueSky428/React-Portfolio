@@ -51,6 +51,34 @@ const GlobalStyles = createGlobalStyle`
 
   /* Scrollbar styles */
   /* TODO */
+  html {
+    scrollbar-width: thin;
+    /* scrollbar-color: var(--dark-slate) var(--navy); */
+    scrollbar-color: ${props => props.theme.primary.scrollbarTrack} ${props =>
+  props.theme.primary.scrollbarThumb};
+  }
+  ::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${props => props.theme.primary.scrollbarTrack};
+    background: transparent;
+}
+  ::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme.primary.scrollbarThumb};
+    background: linear-gradient(
+    to top,
+    ${props => props.theme.primary.scrollbarThumb},
+    ${props => props.theme.tertiary.scrollThumbHover}
+  );
+    border: .4rem solid transparent;
+    border-radius: 0.8rem;
+    /* background-clip: padding-box; */
+
+    &:hover {
+      background-color: ${({ theme }) => theme.scrollThumbHover};
+    }
+  }
 
 
 
