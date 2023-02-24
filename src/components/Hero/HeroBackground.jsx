@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
   fujiVariants,
   sunVariants,
@@ -101,6 +101,7 @@ const StyledTreeBranchContainer = styled(motion.div)`
 `;
 
 const HeroBackground = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <>
       <StyledHeroBgClouds />
@@ -120,7 +121,7 @@ const HeroBackground = () => {
         <FujiSVG title="Hokusai's Mount Fuji near Ejiri piece" />
       </StyledFujiContainer>
       <StyledSunContainer
-        initial='hidden'
+        initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
         animate='visible'
         variants={sunVariants}
       >

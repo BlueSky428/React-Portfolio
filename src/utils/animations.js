@@ -1,8 +1,14 @@
 // Hero animations //
 
 const cubicBezierEase = [0.645, 0.045, 0.355, 1];
+const noMotion = {
+  opacity: 0.01,
+  y: 0,
+  x: 0,
+};
 // Hero StyledTextBox
 export const parentHeroTextVariants = {
+  noMotion: noMotion,
   hidden: { opacity: 0.01 },
   visible: {
     opacity: 1,
@@ -43,6 +49,7 @@ export const fujiVariants = {
 
 // Sun
 export const sunVariants = {
+  noMotion: noMotion,
   hidden: { opacity: 0.01, y: '20rem' },
   visible: {
     opacity: 1,

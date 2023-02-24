@@ -53,7 +53,6 @@ const GlobalStyles = createGlobalStyle`
   /* TODO */
   html {
     scrollbar-width: thin;
-    /* scrollbar-color: var(--dark-slate) var(--navy); */
     scrollbar-color: ${props => props.theme.primary.scrollbarTrack} ${props =>
   props.theme.primary.scrollbarThumb};
   }

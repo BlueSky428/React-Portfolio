@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import HeroBackground from './HeroBackground';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
   childHeroTextVariants,
   parentHeroTextVariants,
@@ -124,13 +124,15 @@ const StyledTextBox = styled(motion.div)`
 `;
 
 const Hero = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <>
       <StyledHeroSection>
         <HeroBackground />
         <StyledHeroContainer>
           <StyledTextBox
-            initial='hidden'
+            initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
             animate='visible'
             variants={parentHeroTextVariants}
           >
@@ -152,7 +154,7 @@ const Hero = () => {
             </motion.div>
             <motion.div variants={childHeroTextVariants}>
               <motion.a
-                whileTap={{ scale: 0.97 }}
+                whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
                 href='#'
                 target='_blank'
                 rel='noopener noreferrer'
