@@ -29,11 +29,15 @@ export const StyledHeroBgClouds = styled.div`
   animation-play-state: paused;
   animation-name: ${horizontalDrift};
   z-index: 10;
+  opacity: 0.4;
 
-  ${props =>
+  /* ${props =>
     props.small &&
     css`
       background: url(../../bg_kumo_sm.png);
       animation-duration: 35s;
-    `}
+    `} */
+
+  /* #530101 */
+  /* #4d0059 */
 `;

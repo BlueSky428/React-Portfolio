@@ -12,6 +12,7 @@ export const StyledHeroSection = styled.section`
     ${props => props.theme.gradients.heroBgBottom},
     ${props => props.theme.gradients.heroBgTop}
   );
+
   /* background: linear-gradient(
       to top,
       #fedccdcc,

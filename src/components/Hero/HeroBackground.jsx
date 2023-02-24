@@ -12,10 +12,36 @@ import {
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 
+import CloudSVG from '../../../public/kumo-gray.svg';
+import styled, { css } from 'styled-components';
+
+// Temp
+const Test = styled.div`
+  position: absolute;
+  bottom: 307px;
+  right: 187px;
+  transform: rotate(9deg);
+  z-index: 100000;
+
+  ${props =>
+    props.mirror &&
+    css`
+      bottom: 213px;
+      right: 526px;
+      transform: scaleX(-1) rotate(15deg);
+    `}
+`;
+
 const HeroBackground = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
+      <Test>
+        <CloudSVG />
+      </Test>
+      <Test mirror>
+        <CloudSVG />
+      </Test>
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledTreeBranchContainer
