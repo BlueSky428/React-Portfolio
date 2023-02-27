@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 const StyledTextBox = styled(motion.div)`
   /* TEMP */
   margin-top: 24rem;
+  /* New Grid Style */
+  /* margin-left: 10rem; */
+  /* padding-left: 10rem; */
   @media ${props => props.theme.bp.desktopL} {
     margin-top: 26rem;
   }

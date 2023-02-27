@@ -23,6 +23,7 @@ export const StyledHeroSection = styled.section`
   /* background-image: url(../../public/water-color.jpg); */
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
   overflow: hidden;
+  position: relative;
 `;
 
 export const StyledHeroContainer = styled.div`

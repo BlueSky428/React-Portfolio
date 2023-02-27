@@ -15,7 +15,7 @@ import { useReducedMotion } from 'framer-motion';
 import CloudSVG from '../../../public/kumo-gray.svg';
 import styled, { css } from 'styled-components';
 
-// Temp
+// Temp for small clouds
 const Test = styled.div`
   position: absolute;
   bottom: 307px;
@@ -32,16 +32,25 @@ const Test = styled.div`
     `}
 `;
 
+const SunFujiContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 100000000;
+`;
+
 const HeroBackground = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
-      <Test>
+      {/* <Test>
         <CloudSVG />
       </Test>
       <Test mirror>
         <CloudSVG />
-      </Test>
+      </Test> */}
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledTreeBranchContainer
