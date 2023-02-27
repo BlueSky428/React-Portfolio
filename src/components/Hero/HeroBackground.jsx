@@ -5,6 +5,7 @@ import { StyledHeroBgClouds } from '../../styles/Hero/HeroBackground/StyledHeroB
 import { StyledFujiContainer } from '../../styles/Hero/HeroBackground/StyledFujiContainer';
 import { StyledSunContainer } from '../../styles/Hero/HeroBackground/StyledSunContainer';
 import { StyledTreeBranchContainer } from '../../styles/Hero/HeroBackground/StyledTreeBranchContainer';
+import { StyledCloudContainer } from '../../styles/Hero/HeroBackground/StyledCloudContainer';
 import {
   fujiVariants,
   sunVariants,
@@ -15,31 +16,6 @@ import {
 import { useReducedMotion } from 'framer-motion';
 
 import CloudSVG from '../../../public/kumo-grayV2.svg';
-import styled, { css } from 'styled-components';
-
-import { motion } from 'framer-motion';
-
-const StyledCloudContainer = styled(motion.div)`
-  width: 19rem;
-  position: absolute;
-  bottom: 16.3rem;
-  right: -12.7rem;
-  z-index: 100000;
-
-  & svg {
-    filter: none;
-  }
-
-  ${props =>
-    props.mirror &&
-    css`
-      bottom: 5rem;
-      right: 21.2rem;
-      @media ${props => props.theme.bp.desktopL} {
-        right: 21.8rem;
-      }
-    `};
-`;
 
 const HeroBackground = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -70,6 +46,7 @@ const HeroBackground = () => {
         <StyledCloudContainer
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
           animate='visible'
+          // animate='animate'
           variants={rightCloudVariants}
         >
           <CloudSVG title='Japanese-style curly clouds' />

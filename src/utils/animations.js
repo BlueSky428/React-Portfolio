@@ -84,11 +84,15 @@ export const rightCloudVariants = {
   visible: {
     opacity: 1,
     x: 0,
-
+    // x: [0, -40],
     transition: {
       delay: 1.8,
       duration: 1.8,
       ease: cubicBezierEase,
+
+      // repeat: Infinity,
+      // repeatType: 'reverse',
+      // type: 'tween',
     },
   },
 };
