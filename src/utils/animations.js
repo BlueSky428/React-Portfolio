@@ -62,6 +62,37 @@ export const sunVariants = {
   },
 };
 
+// Clouds around sun
+export const leftCloudVariants = {
+  noMotion: noMotion,
+  hidden: { opacity: 0.01, x: '-10rem', scaleX: '-1' },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scaleX: '-1',
+    transition: {
+      delay: 1.8,
+      duration: 1.8,
+      ease: cubicBezierEase,
+    },
+  },
+};
+
+export const rightCloudVariants = {
+  noMotion: noMotion,
+  hidden: { opacity: 0.01, x: '10rem' },
+  visible: {
+    opacity: 1,
+    x: 0,
+
+    transition: {
+      delay: 1.8,
+      duration: 1.8,
+      ease: cubicBezierEase,
+    },
+  },
+};
+
 export const branchVariants = {
   hidden: {
     opacity: 0,

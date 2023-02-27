@@ -9,18 +9,21 @@ import {
   fujiVariants,
   sunVariants,
   branchVariants,
+  leftCloudVariants,
+  rightCloudVariants,
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 
-import CloudSVG from '../../../public/kumo-gray.svg';
+import CloudSVG from '../../../public/kumo-grayV2.svg';
 import styled, { css } from 'styled-components';
 
-const StyledCloudContainer = styled.div`
+import { motion } from 'framer-motion';
+
+const StyledCloudContainer = styled(motion.div)`
   width: 19rem;
   position: absolute;
   bottom: 16.3rem;
   right: -12.7rem;
-  transform: rotate(9deg);
   z-index: 100000;
 
   & svg {
@@ -32,8 +35,6 @@ const StyledCloudContainer = styled.div`
     css`
       bottom: 5rem;
       right: 21.2rem;
-      transform: scaleX(-1) rotate(14deg);
-
       @media ${props => props.theme.bp.desktopL} {
         right: 21.8rem;
       }
@@ -66,10 +67,19 @@ const HeroBackground = () => {
         variants={sunVariants}
       >
         <SunSVG title='Rising red sun' />
-        <StyledCloudContainer>
+        <StyledCloudContainer
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          animate='visible'
+          variants={rightCloudVariants}
+        >
           <CloudSVG title='Japanese-style curly clouds' />
         </StyledCloudContainer>
-        <StyledCloudContainer mirror>
+        <StyledCloudContainer
+          mirror
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          animate='visible'
+          variants={leftCloudVariants}
+        >
           <CloudSVG title='Japanese-style curly clouds' />
         </StyledCloudContainer>
       </StyledSunContainer>
