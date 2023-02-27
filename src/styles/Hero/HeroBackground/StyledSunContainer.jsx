@@ -18,7 +18,6 @@ export const StyledSunContainer = styled(motion.div)`
   right: 22.5%; */
 
   z-index: 1;
-  filter: drop-shadow(0px 1px 1.7px ${props => props.theme.tertiary.sunShadow});
 
   /* width: 100%;
   height: 100%;
@@ -41,5 +40,8 @@ export const StyledSunContainer = styled(motion.div)`
   & svg {
     width: 100%;
     height: 100%;
+    filter: drop-shadow(
+      0px 1px 1.7px ${props => props.theme.tertiary.sunShadow}
+    );
   }
 `;

@@ -15,42 +15,35 @@ import { useReducedMotion } from 'framer-motion';
 import CloudSVG from '../../../public/kumo-gray.svg';
 import styled, { css } from 'styled-components';
 
-// Temp for small clouds
-const Test = styled.div`
+const StyledCloudContainer = styled.div`
+  width: 19rem;
   position: absolute;
-  bottom: 307px;
-  right: 187px;
+  bottom: 16.3rem;
+  right: -12.7rem;
   transform: rotate(9deg);
   z-index: 100000;
+
+  & svg {
+    filter: none;
+  }
 
   ${props =>
     props.mirror &&
     css`
-      bottom: 213px;
-      right: 526px;
-      transform: scaleX(-1) rotate(15deg);
-    `}
-`;
+      bottom: 5rem;
+      right: 21.2rem;
+      transform: scaleX(-1) rotate(14deg);
 
-const SunFujiContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 100000000;
+      @media ${props => props.theme.bp.desktopL} {
+        right: 21.8rem;
+      }
+    `};
 `;
 
 const HeroBackground = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
-      {/* <Test>
-        <CloudSVG />
-      </Test>
-      <Test mirror>
-        <CloudSVG />
-      </Test> */}
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledTreeBranchContainer
@@ -73,6 +66,12 @@ const HeroBackground = () => {
         variants={sunVariants}
       >
         <SunSVG title='Rising red sun' />
+        <StyledCloudContainer>
+          <CloudSVG title='Japanese-style curly clouds' />
+        </StyledCloudContainer>
+        <StyledCloudContainer mirror>
+          <CloudSVG title='Japanese-style curly clouds' />
+        </StyledCloudContainer>
       </StyledSunContainer>
     </>
   );
