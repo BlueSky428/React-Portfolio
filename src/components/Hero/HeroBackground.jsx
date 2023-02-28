@@ -15,6 +15,7 @@ import {
   branchVariants,
   leftCloudVariants,
   rightCloudVariants,
+  lanternVariants,
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 
@@ -30,7 +31,7 @@ const HeroBackground = () => {
         variants={branchVariants}
       >
         <TreeBranchSVG title='Japanese tree branch with pretty flowers' />
-        <StyledLanternContainer>
+        <StyledLanternContainer animate='visible' variants={lanternVariants}>
           <LanternSVG title='Japanese paper lantern' />
         </StyledLanternContainer>
       </StyledTreeBranchContainer>

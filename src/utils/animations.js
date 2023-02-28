@@ -97,6 +97,7 @@ export const rightCloudVariants = {
   },
 };
 
+// Tree Branch
 export const branchVariants = {
   hidden: {
     opacity: 0,
@@ -107,6 +108,18 @@ export const branchVariants = {
       delay: 1.7,
       duration: 0.7,
       ease: cubicBezierEase,
+    },
+  },
+};
+
+// Japanese lantern
+export const lanternVariants = {
+  visible: {
+    // rotateZ: [4.5, -4.5],
+    transition: {
+      repeat: Infinity,
+      repeatType: 'reverse',
+      duration: 3,
     },
   },
 };
