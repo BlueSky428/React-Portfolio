@@ -13,7 +13,7 @@ export const StyledCloudContainer = styled(motion.div)`
   }
 
   ${props =>
-    props.mirror &&
+    props.left &&
     css`
       bottom: 5rem;
       right: 21.2rem;
