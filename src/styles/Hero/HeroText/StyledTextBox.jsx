@@ -18,9 +18,11 @@ const StyledTextBox = styled(motion.div)`
     & span {
       font-family: ${props => props.theme.fonts.secondary};
       font-size: 4rem;
+      /* font-weight: 100; */
       font-weight: 600;
       @media ${props => props.theme.bp.desktopL} {
         font-size: 3.6rem;
+        font-size: 4.6rem;
       }
     }
 

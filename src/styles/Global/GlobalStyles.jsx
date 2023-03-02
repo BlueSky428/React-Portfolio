@@ -1,13 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
-
+import GazeNozarashi from '../../fonts/GazeNozarashi/GazeNozarashi.ttf';
 const GlobalStyles = createGlobalStyle`
 
+/* Secondary Font */
+@font-face {
+  font-family: 'GazeNozarashi';
+  src: local('GazeNozarashi'), url(${GazeNozarashi}) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
     *, *::after, *::before {
         margin: 0;
         padding: 0;
         box-sizing: inherit;
     }
+
 
     html {
         box-sizing: border-box;
@@ -100,6 +108,16 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         
     }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+  * {
+    /* Very short durations means JavaScript that relies on events still works */
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 `;
 
 export default GlobalStyles;

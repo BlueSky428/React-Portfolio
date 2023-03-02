@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+import HokusaiPiece from '/src/assets/images/illustrations/Hokusai-Fugaku-36-views-10V2.svg';
+
 const StyledContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
 
@@ -56,12 +59,26 @@ const HeadingContainer = styled.div`
   }
 `;
 
+const Test = styled.div`
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  /* height: auto;
+  width: auto; */
+  z-index: 5000000;
+
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
+`;
+
 const About = () => {
   return (
     <>
       <StyledContainer>
         <HeadingContainer>
-          <div></div>
           <img
             alt='Japanese enso (circle made with single brush stroke)'
             src='/enso.png'
@@ -70,6 +87,9 @@ const About = () => {
             About <br></br> Me
           </h2> */}
         </HeadingContainer>
+        <Test>
+          <HokusaiPiece />
+        </Test>
       </StyledContainer>
     </>
   );

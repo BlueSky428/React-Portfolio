@@ -116,6 +116,7 @@ export const branchVariants = {
 export const lanternVariants = {
   visible: {
     // rotateZ: [4.5, -4.5],
+    // rotateZ: [1, -1],
     transition: {
       repeat: Infinity,
       repeatType: 'reverse',

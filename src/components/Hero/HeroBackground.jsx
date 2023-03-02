@@ -1,8 +1,8 @@
-import TreeBranchSVG from '../../../public/blossom-branch-v2.svg';
-import SunSVG from '../../../public/red-sun.svg';
-import FujiSVG from '../../../public/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
-import CloudSVG from '../../../public/kumo-grayV2.svg';
-import LanternSVG from '../../../public/chouchinV2.svg';
+import TreeBranchSVG from '/src/assets/images/illustrations/blossom-branch-v2.svg';
+import SunSVG from '/src/assets/images/illustrations/red-sun.svg';
+import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
+import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
+import LanternSVG from '/src/assets/images/illustrations/chouchinV2.svg';
 import { StyledHeroBgClouds } from '../../styles/Hero/HeroBackground/StyledHeroBgClouds';
 import { StyledFujiContainer } from '../../styles/Hero/HeroBackground/StyledFujiContainer';
 import { StyledSunContainer } from '../../styles/Hero/HeroBackground/StyledSunContainer';
