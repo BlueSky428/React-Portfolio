@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import NickPortraitSVG from '/src/assets/images/nick01V2.svg';
+import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
 
 const StyledAboutSection = styled.section`
@@ -66,25 +68,34 @@ const StyledPictureContainer = styled.div`
 
 const StyledPictureCollage = styled.div`
   position: relative;
-  & img {
-    outline: 0.8rem solid ${props => props.theme.neutrals.imageBorder};
+  & svg {
+    height: fit-content;
+    width: fit-content;
     box-shadow: 0.4rem 0.8rem 2.2rem -0.9rem rgba(0, 0, 0, 0.75);
+    outline: 0.8rem solid ${props => props.theme.neutrals.imageBorder};
   }
 `;
 
-const StyledLandscape = styled.img`
+const StyledLandscapeContainer = styled.div`
   width: 45rem;
   height: auto;
+  & svg {
+    /* Consider for something a bit more unique */
+    /* border-radius: 50%; */
+  }
 `;
 
-const StyledPortrait = styled.img`
-  position: absolute;
-  top: 50%;
-  transform: translate(50%, -50%);
-  right: 0;
-  border-radius: 50%;
+const StyledPortraitContainer = styled.div`
   width: 17rem;
   height: auto;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  & svg {
+    border-radius: 50%;
+  }
 `;
 
 const About = () => {
@@ -93,11 +104,13 @@ const About = () => {
       <StyledAboutSection>
         <StyledPictureContainer>
           <StyledPictureCollage>
-            <StyledLandscape src='/src/assets/images/nick02V2.svg' />
-            <StyledPortrait
-              src='/src/assets/images/nick01V2.svg'
-              alt='Nick smiling with greenery'
-            />
+            <StyledLandscapeContainer>
+              <NickLandscapeSVG title='Nick looking out at a vast mountain landscape' />
+            </StyledLandscapeContainer>
+
+            <StyledPortraitContainer>
+              <NickPortraitSVG title='Portrait of Nick with greenery' />
+            </StyledPortraitContainer>
           </StyledPictureCollage>
         </StyledPictureContainer>
         <StyledAboutHeading>
