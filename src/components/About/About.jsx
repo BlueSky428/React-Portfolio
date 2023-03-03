@@ -1,96 +1,76 @@
 import styled from 'styled-components';
+import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
 
-import HokusaiPiece from '/src/assets/images/illustrations/Hokusai-Fugaku-36-views-10V2.svg';
-
-const StyledContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  height: 100vh;
-  width: 100%;
-  /* background: radial-gradient(red, blue); */
-  /* background: radial-gradient(
-      rgba(254, 220, 205, 0.8),
-      rgba(245, 204, 233, 0.8)
+const StyledAboutSection = styled.section`
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      to bottom,
+      ${props => props.theme.neutrals.body} 0%,
+      rgba(194, 178, 128, 0.3) 70%
     ),
-    url(../../public/Hokusai-Fugaku-36-views-28.svg) no-repeat center/100%; */
+    url(src/assets/images/illustrations/water-color.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: min-content 1fr; */
+  height: 60rem;
+`;
 
-  /* 
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(251, 243, 226, 1) 0%,
-      rgba(227, 226, 226, 0.5) 50%,
-      rgba(251, 243, 226, 1) 100%
-    ),
-    url(../../public/Hokusai-Fugaku-36-views-28.svg) no-repeat center/100%; */
+const StyledAboutHeading = styled.div`
+  grid-column: 2 / -1;
+  /* justify-self: center; */
   & h2 {
-    position: absolute;
-    margin-top: 8rem;
-    margin-left: 2rem;
-    text-align: center;
-    font-family: 'Potta One', cursive;
-    font-size: 2.5rem;
+    font-family: ${props => props.theme.fonts.secondary};
+    font-size: 5rem;
   }
 `;
 
-const HeadingContainer = styled.div`
+const StyledAboutTextContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  grid-column: 2 / -1;
   position: relative;
-  height: 22rem;
-  width: 22rem;
 
   & div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(251, 243, 226, 0.6);
-    z-index: 50;
+    width: auto;
+    height: auto;
+    z-index: 500;
+    /* & svg {
+      position: absolute;
+      top: 0;
+      right: -27rem;
+      height: auto;
+      width: auto;
+    } */
   }
 
-  & img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* filter: opacity(0.9); */
-  }
+  /* background-image: url(src/assets/images/illustrations/red-temple-winter.svg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  /* background-size: 100rem; */
+  /* background-position: right; */
+  /* background-position-x: 8.5rem;
+  background-position-y: -18.5rem; */
 `;
-
-const Test = styled.div`
-  position: absolute;
-  right: 0;
-  left: 0;
-
-  /* height: auto;
-  width: auto; */
-  z-index: 5000000;
-
-  & svg {
-    height: 100%;
-    width: 100%;
-  }
-`;
+const StyledPictureContainer = styled.div``;
 
 const About = () => {
   return (
     <>
-      <StyledContainer>
-        <HeadingContainer>
-          <img
-            alt='Japanese enso (circle made with single brush stroke)'
-            src='/enso.png'
-          />
-          {/* <h2>
-            About <br></br> Me
-          </h2> */}
-        </HeadingContainer>
-        <Test>
-          <HokusaiPiece />
-        </Test>
-      </StyledContainer>
+      <StyledAboutSection>
+        <StyledPictureContainer></StyledPictureContainer>
+        <StyledAboutHeading>
+          <h2>About Me</h2>
+        </StyledAboutHeading>
+
+        <StyledAboutTextContainer>
+          {/* <div>
+            <RedTempleSVG title='Red temple amidst falling snow' />
+          </div> */}
+        </StyledAboutTextContainer>
+      </StyledAboutSection>
     </>
   );
 };
