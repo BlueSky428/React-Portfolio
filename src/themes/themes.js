@@ -67,6 +67,7 @@ export const lightTheme = {
   },
   neutrals: {
     body: lightPalette.neutrals[200],
+    imageBorder: lightPalette.neutrals[200],
     textSelectionColor: lightPalette.neutrals[100],
   },
   gradients: {
