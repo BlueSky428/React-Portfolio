@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<!--    width="210mm"
-   height="297mm" -->
-   <!-- viewBox="0 0 210 297" -->
-   <!--    preserveAspectRatio='none'
- -->
-<svg
 
-   viewBox="0 0 210 297"
+<svg
+   width="82.285416mm"
+   height="128.32292mm"
+   viewBox="0 0 82.285416 128.32292"
    version="1.1"
-   id="svg5"
+   id="svg982"
    xml:space="preserve"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="red-temple-winter.svg"
+   sodipodi:docname="test.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-     id="namedview7"
+     id="namedview984"
      pagecolor="#505050"
      bordercolor="#eeeeee"
      borderopacity="1"
@@ -28,51 +25,20 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4734708"
-     inkscape:cx="368.51765"
-     inkscape:cy="380.39437"
+     inkscape:zoom="0.73673541"
+     inkscape:cx="-27.825458"
+     inkscape:cy="202.92224"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" /><defs
-     id="defs2"><linearGradient
-       inkscape:collect="always"
-       id="linearGradient5539"><stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="0"
-         id="stop5537" /><stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="1"
-         id="stop5535" /></linearGradient><clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath458"><path
-         style="opacity:0.411043;fill:#1e3e67;fill-rule:evenodd;stroke:#c2b280;stroke-width:0.192;stroke-opacity:0.649123"
-         d="m 66.786961,39.361136 c -6.98386,-0.05291 -7.11314,1.995149 -8.92856,3.282252 -3.320175,2.353945 -4.280382,5.109948 -6.56195,8.653063 -4.424299,6.870618 -4.804783,15.736231 -5.586743,23.870624 -1.48336,15.430706 1.216498,30.979855 1.7776,46.471535 0.358685,9.90306 -1.42544,20.10715 1.01577,29.71131 1.445477,5.68678 -3.292171,9.21953 7.872227,15.74445 3.801367,2.22167 7.72904,0.20102 11.951827,0.26991 6.541768,0.10673 13.568839,-0.3307 20.197424,-0.15748 6.43704,0.16821 11.869514,0.11249 17.245624,0.25066 2.37875,0.0611 5.50178,-0.0977 7.78847,-1.44576 10.69714,-6.30607 9.07024,-16.13434 11.49388,-28.31307 0.76324,-3.83527 1.08804,-9.23372 0.90439,-13.26812 -0.2943,-6.46514 -0.85125,-12.45535 -0.50275,-18.22713 0.1939,-3.21126 0.0502,-5.59603 0.34982,-9.597695 1.13234,-15.125864 1.13487,-31.268889 -1.62595,-42.261922 C 121.90067,45.275728 109.29239,42.200777 100.30741,39.615081 89.569409,36.524898 66.786961,39.361136 66.786961,39.361136 Z"
-         id="path460"
-         sodipodi:nodetypes="ssssssssssssssssss" /></clipPath><mask
-       maskUnits="userSpaceOnUse"
-       id="mask11268"><rect
-         style="opacity:1;fill:url(#radialGradient11272);fill-opacity:1;fill-rule:evenodd;stroke:#c2b280;stroke-width:0.192;stroke-opacity:0.649123"
-         id="rect11270"
-         width="86.729744"
-         height="134.31439"
-         x="42.018139"
-         y="35.374245" /></mask><radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5539"
-       id="radialGradient11272"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.1652836,0.00814175,-0.01277441,1.8283298,-12.90739,-85.625075)"
-       cx="94.100571"
-       cy="102.49266"
-       fx="94.100571"
-       fy="102.49266"
-       r="43.460872" /></defs><g
+     id="defs979" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><image
+     id="layer1"
+     transform="translate(-55.463097,-95.651115)"><image
        width="82.285416"
        height="128.32292"
        preserveAspectRatio="none"
@@ -1121,8 +1087,6 @@ KWbLD0GfQUUVk9xVoqbXMclJvtfs12z+bcynZvYcDPtXvfhv4f6b4U0jS9RRftWr3QZ1vJV/1PT7
 q8jPPX2oopE8kTz342eILnV9ctYZpJJZIvvXFw++R8Y4zgYFcPp80jK9sWAR5NzbRgle69f1ooqk
 ypRTWp0mp+JpfDPhxhDHuUMNu19rBcgAZwfWiiioerNacIqNkf/Z
 "
-       id="image190"
-       x="43.252697"
-       y="38.549541"
-       clip-path="url(#clipPath458)"
-       mask="url(#mask11268)" /></g></svg>
+       id="image1111"
+       x="55.463097"
+       y="95.651115" /></g></svg>

@@ -109,6 +109,16 @@ const GlobalStyles = createGlobalStyle`
         
     }
 
+    p {
+      font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: ${props => props.theme.fonts.primary};
+    color: ${props => props.theme.primary.p};
+
+    }
+
     @media screen and (prefers-reduced-motion: reduce) {
   * {
     /* Very short durations means JavaScript that relies on events still works */

@@ -44,14 +44,6 @@ const StyledTextBox = styled(motion.div)`
   }
   & p {
     margin-top: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    font-family: ${props => props.theme.fonts.primary};
-    /* max-width: 5.4rem; */
-    margin-top: 2rem;
-    color: ${props => props.theme.primary.p};
 
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.5rem;
