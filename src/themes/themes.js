@@ -12,6 +12,7 @@ const bpSize = {
 };
 export const base = {
   fonts: {
+    primary: 'system-ui',
     primary: 'Zen Kaku Gothic Antique, system-ui, sans-serif',
     secondary: 'Potta One, system-ui, cursive',
     secondary: 'GazeNozarashi, system-ui, cursive',

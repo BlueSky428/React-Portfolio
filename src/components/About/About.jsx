@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import NickPortraitSVG from '/src/assets/images/nick01V2.svg';
 import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
@@ -22,6 +22,9 @@ const StyledAboutSection = styled.section`
   grid-template-rows: min-content 1fr;
   row-gap: 6rem;
   /* height: 60rem; */
+  @media ${props => props.theme.bp.desktopL} {
+    grid-template-columns: 48% 52%;
+  }
 `;
 
 const StyledAboutHeading = styled.div`
@@ -42,29 +45,10 @@ const StyledAboutTextContainer = styled.div`
   position: relative;
   max-width: 50rem;
   /* margin-right: 75rem; */
-
-  & div {
-    width: auto;
-    height: auto;
-    z-index: 500;
-    /* & svg {
-      position: absolute;
-      top: 0;
-      right: -27rem;
-      height: auto;
-      width: auto;
-    } */
-  }
-
-  /* background-image: url(src/assets/images/illustrations/red-temple-winter.svg);
-  background-repeat: no-repeat;
-  background-size: cover; */
-
-  /* background-size: 100rem; */
-  /* background-position: right; */
-  /* background-position-x: 8.5rem;
-  background-position-y: -18.5rem; */
+  padding-right: 5rem;
+  z-index: 100000;
 `;
+
 const StyledPictureContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -77,11 +61,15 @@ const StyledPictureContainer = styled.div`
 
 const StyledPictureCollage = styled.div`
   position: relative;
+  margin-left: 5rem;
   & svg {
     height: fit-content;
     width: fit-content;
     box-shadow: 0.4rem 0.8rem 2.2rem -0.9rem rgba(0, 0, 0, 0.75);
     outline: 0.8rem solid ${props => props.theme.neutrals.imageBorder};
+    @media ${props => props.theme.bp.desktopL} {
+      outline: 0.6rem solid ${props => props.theme.neutrals.imageBorder};
+    }
   }
 `;
 
@@ -91,6 +79,9 @@ const StyledLandscapeContainer = styled.div`
   & svg {
     /* Consider for something a bit more unique */
     /* border-radius: 50%; */
+  }
+  @media ${props => props.theme.bp.desktopL} {
+    width: 40rem;
   }
 `;
 
@@ -102,30 +93,18 @@ const StyledPortraitContainer = styled.div`
   right: 0;
   transform: translate(50%, -50%);
   border-radius: 50%;
+  @media ${props => props.theme.bp.desktopL} {
+    width: 13.5rem;
+  }
   & svg {
     border-radius: 50%;
   }
 `;
 
 const StyledBackground = styled.div`
-  position: relative;
-  /* height: 100%;
-  width: 100%; */
-  /* height: fit-content;
-  width: fit-content; */
-
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 50000;
-
-  /* 
-  & div {
-    width: fit-content;
-    height: fit-content;
-    height: auto;
-    width: auto;
-  } */
 
   & div {
     height: fit-content;
@@ -133,21 +112,8 @@ const StyledBackground = styled.div`
   }
 
   & svg {
-    /* width: auto;
-    height: auto; */
-    /* width: 100%; */
-    width: 50rem;
     width: auto;
     height: 50rem;
-    /* -webkit-mask-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(0, 0, 0, 0.5)),
-      to(rgba(0, 0, 0, 0))
-    ); */
-    /* -webkit-mask-image: radial-gradient(circle, black, transparent);
-    mask-image: radial-gradient (circle, black, transparent); */
     -webkit-mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
       black 2%,
@@ -159,12 +125,6 @@ const StyledBackground = styled.div`
       transparent 68%
     );
     opacity: 0.85;
-
-    /* mask-image: radial-gradient(
-      ellipse 90% 80% at 48% 78%,
-      black 40%,
-      transparent 50%
-    ); */
   }
 `;
 
@@ -176,7 +136,6 @@ const About = () => {
           <h2>About Me</h2>
         </StyledAboutHeading>
 
-        {/* <div> */}
         <StyledPictureContainer>
           <StyledPictureCollage>
             <StyledLandscapeContainer>
@@ -204,13 +163,12 @@ const About = () => {
             enjoy pencil drawing, and practice the piano during my free time.
           </p>
         </StyledAboutTextContainer>
-        {/* </div> */}
         <StyledBackground>
           <div>
             <RedTempleSVG title='Red temple amidst falling snow' />
           </div>
         </StyledBackground>
-        <StyledBackground mirror>
+        <StyledBackground>
           <div>
             <RedTempleSVG />
           </div>
