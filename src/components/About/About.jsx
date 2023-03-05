@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import NickPortraitSVG from '/src/assets/images/nick01V2.svg';
 import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
@@ -9,14 +9,16 @@ const StyledAboutSection = styled.section`
   background-image: linear-gradient(
       to bottom,
       ${props => props.theme.neutrals.body} 0%,
-      rgba(194, 178, 128, 0.3) 70%
+      rgba(194, 178, 128, 0.3) 40%
     ),
     url(src/assets/images/illustrations/water-color.jpg);
 
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-position-x: 70rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 45% 55%; */
   grid-template-rows: min-content 1fr;
   row-gap: 6rem;
   /* height: 60rem; */
@@ -36,9 +38,10 @@ const StyledAboutHeading = styled.div`
 const StyledAboutTextContainer = styled.div`
   width: 100%;
   height: 100%;
-  grid-column: 2 / -1;
+  /* grid-column: 2 / -1; */
   position: relative;
   max-width: 50rem;
+  /* margin-right: 75rem; */
 
   & div {
     width: auto;
@@ -67,6 +70,7 @@ const StyledPictureContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  /* justify-content: flex-end; */
   align-items: center;
   position: relative;
 `;
@@ -114,6 +118,7 @@ const StyledBackground = styled.div`
   bottom: 0;
   right: 0;
   z-index: 50000;
+
   /* 
   & div {
     width: fit-content;
@@ -145,9 +150,16 @@ const StyledBackground = styled.div`
     mask-image: radial-gradient (circle, black, transparent); */
     -webkit-mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
-      black 18%,
-      transparent 70%
+      black 2%,
+      transparent 68%
     );
+    mask-image: radial-gradient(
+      ellipse 95% 80% at 68% 55%,
+      black 2%,
+      transparent 68%
+    );
+    opacity: 0.85;
+
     /* mask-image: radial-gradient(
       ellipse 90% 80% at 48% 78%,
       black 40%,
@@ -163,6 +175,8 @@ const About = () => {
         <StyledAboutHeading>
           <h2>About Me</h2>
         </StyledAboutHeading>
+
+        {/* <div> */}
         <StyledPictureContainer>
           <StyledPictureCollage>
             <StyledLandscapeContainer>
@@ -175,14 +189,30 @@ const About = () => {
         </StyledPictureContainer>
 
         <StyledAboutTextContainer>
-          {/* <div>
-            <RedTempleSVG title='Red temple amidst falling snow' />
-          </div> */}
+          <p>
+            Hi! My name is Nick and I like building things for the web. I was
+            introduced to web development during high school, but I became much
+            more engaged in the field after graduating from a coding boot camp
+            in 2022. Since then I have continued to hone my programming skills
+            through consistent practice and dedication.{' '}
+          </p>
+          <br></br>
+          <p>
+            Outside of the coding world, I enjoy traveling and studying
+            Japanese. I spent a few years living in Japan, where I taught
+            English and studied Japanese culture. I also play video games, DJ,
+            enjoy pencil drawing, and practice the piano during my free time.
+          </p>
         </StyledAboutTextContainer>
+        {/* </div> */}
         <StyledBackground>
           <div>
+            <RedTempleSVG title='Red temple amidst falling snow' />
+          </div>
+        </StyledBackground>
+        <StyledBackground mirror>
+          <div>
             <RedTempleSVG />
-            {/* <img src='/src/assets/images/illustrations/red-temple-winterV6.png' /> */}
           </div>
         </StyledBackground>
       </StyledAboutSection>
