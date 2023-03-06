@@ -3,10 +3,24 @@ import styled from 'styled-components';
 export const StyledAboutSection = styled.section`
   position: relative;
   padding: 12rem 0;
+  /* Previous style no white fade */
   background-image: linear-gradient(
       to bottom,
       ${props => props.theme.neutrals.body} 0%,
       rgba(194, 178, 128, 0.3) 40%
+    ),
+    url(src/assets/images/illustrations/water-color.jpg);
+
+  background-image: linear-gradient(
+      to bottom,
+      ${props => props.theme.neutrals.body} 0%,
+      rgba(194, 178, 128, 0.3) 40%,
+      rgba(194, 178, 128, 0.25) 50%,
+      rgba(194, 178, 128, 0.2) 60%,
+      rgba(194, 178, 128, 0.1) 90%,
+      rgba(194, 178, 128, 0.05) 92%,
+      rgba(255, 255, 255, 0.85) 99%,
+      rgba(255, 255, 255, 0.9) 99.3%
     ),
     url(src/assets/images/illustrations/water-color.jpg);
 

@@ -12,7 +12,7 @@ export const StyledRedTempleContainer = styled(motion.div)`
   & svg {
     width: auto;
     height: 50rem;
-    -webkit-mask-image: radial-gradient(
+    /* -webkit-mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
       black 12%,
       transparent 68%
@@ -20,6 +20,16 @@ export const StyledRedTempleContainer = styled(motion.div)`
     mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
       black 12%,
+      transparent 69%
+    ); */
+    -webkit-mask-image: radial-gradient(
+      ellipse 99% 69% at 68% 48%,
+      black 10%,
+      transparent 69%
+    );
+    mask-image: radial-gradient(
+      ellipse 99% 69% at 68% 48%,
+      black 10%,
       transparent 69%
     );
   }
