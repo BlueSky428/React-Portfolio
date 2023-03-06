@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import NickPortraitSVG from '/src/assets/images/nick01V2.svg';
 import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
+import {
+  picturesTextVariants,
+  redTempleVariants,
+} from '../../utils/animations';
+import { useReducedMotion } from 'framer-motion';
 
 const StyledAboutSection = styled.section`
   position: relative;
@@ -38,7 +44,7 @@ const StyledAboutHeading = styled.div`
   }
 `;
 
-const StyledAboutTextContainer = styled.div`
+const StyledAboutTextContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
   /* grid-column: 2 / -1; */
@@ -49,7 +55,7 @@ const StyledAboutTextContainer = styled.div`
   z-index: 100000;
 `;
 
-const StyledPictureContainer = styled.div`
+const StyledPictureContainer = styled(motion.div)`
   height: 100%;
   width: 100%;
   display: flex;
@@ -101,7 +107,7 @@ const StyledPortraitContainer = styled.div`
   }
 `;
 
-const StyledBackground = styled.div`
+const StyledBackground = styled(motion.div)`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -116,19 +122,19 @@ const StyledBackground = styled.div`
     height: 50rem;
     -webkit-mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
-      black 2%,
+      black 12%,
       transparent 68%
     );
     mask-image: radial-gradient(
       ellipse 95% 80% at 68% 55%,
-      black 2%,
-      transparent 68%
+      black 12%,
+      transparent 69%
     );
-    opacity: 0.85;
   }
 `;
 
 const About = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <>
       <StyledAboutSection>
@@ -136,7 +142,12 @@ const About = () => {
           <h2>About Me</h2>
         </StyledAboutHeading>
 
-        <StyledPictureContainer>
+        <StyledPictureContainer
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={picturesTextVariants}
+        >
           <StyledPictureCollage>
             <StyledLandscapeContainer>
               <NickLandscapeSVG title='Nick looking out at a vast mountain landscape' />
@@ -147,7 +158,12 @@ const About = () => {
           </StyledPictureCollage>
         </StyledPictureContainer>
 
-        <StyledAboutTextContainer>
+        <StyledAboutTextContainer
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={picturesTextVariants}
+        >
           <p>
             Hi! My name is Nick and I like building things for the web. I was
             introduced to web development during high school, but I became much
@@ -163,14 +179,14 @@ const About = () => {
             enjoy pencil drawing, and practice the piano during my free time.
           </p>
         </StyledAboutTextContainer>
-        <StyledBackground>
+        <StyledBackground
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={redTempleVariants}
+        >
           <div>
             <RedTempleSVG title='Red temple amidst falling snow' />
-          </div>
-        </StyledBackground>
-        <StyledBackground>
-          <div>
-            <RedTempleSVG />
           </div>
         </StyledBackground>
       </StyledAboutSection>

@@ -124,3 +124,33 @@ export const lanternVariants = {
     },
   },
 };
+
+// About Animations //
+export const picturesTextVariants = {
+  noMotion: noMotion,
+  hidden: {
+    opacity: 0.01,
+    y: '8rem',
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: cubicBezierEase,
+    },
+  },
+};
+
+export const redTempleVariants = {
+  hidden: {
+    opacity: 0.01,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: cubicBezierEase,
+    },
+  },
+};
