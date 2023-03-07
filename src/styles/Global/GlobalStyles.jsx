@@ -90,6 +90,8 @@ const GlobalStyles = createGlobalStyle`
 
 
     body {
+      /* Use with 62.5% font size on html */
+        font-size: 1.6rem;
         min-height: 100vh;
         line-height: 1.6;
         font-weight: 300; 

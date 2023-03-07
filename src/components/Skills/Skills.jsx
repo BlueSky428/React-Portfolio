@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { skillData } from '../../data/skillData';
+import Skill from './Skill';
 
 const StyledSkillsSection = styled.section`
   display: grid;
@@ -28,13 +30,31 @@ const StyledSkillsHeading = styled.div`
   justify-self: center;
 `;
 
+const StyledSkillsContainer = styled.div`
+  max-width: 115rem;
+  margin: 0 auto;
+  & ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2.4rem;
+    list-style: none;
+  }
+`;
+
 const Skills = () => {
   return (
     <StyledSkillsSection>
       <StyledSkillsHeading>
         <h2>Technology</h2>
       </StyledSkillsHeading>
-      <div>asdfsdfs</div>
+      <StyledSkillsContainer>
+        <ul>
+          {skillData.map(skill => {
+            return <Skill key={skill.id} skill={skill} />;
+          })}
+        </ul>
+      </StyledSkillsContainer>
     </StyledSkillsSection>
   );
 };
