@@ -5,7 +5,8 @@ import Skill from './Skill';
 const StyledSkillsSection = styled.section`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr fr;
+  grid-template-rows: min-content 1fr;
+  row-gap: 6rem;
   padding: 12rem 0;
   height: 60rem;
   /* background-image: linear-gradient(to bottom, #d3d9d3, #fff); */
@@ -26,19 +27,26 @@ const StyledSkillsSection = styled.section`
   background-position: center;
 `;
 const StyledSkillsHeading = styled.div`
+  text-transform: capitalize;
   grid-column: 1 / -1;
   justify-self: center;
 `;
 
 const StyledSkillsContainer = styled.div`
-  max-width: 115rem;
+  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
   & ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 2.4rem;
-    list-style: none;
+    /* display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr); */
+    gap: 1.6rem;
+    width: 95%;
+    width: 100%;
   }
 `;
 
@@ -46,7 +54,7 @@ const Skills = () => {
   return (
     <StyledSkillsSection>
       <StyledSkillsHeading>
-        <h2>Technology</h2>
+        <h2>technology</h2>
       </StyledSkillsHeading>
       <StyledSkillsContainer>
         <ul>

@@ -5,11 +5,7 @@ export const skillData = [
   },
   {
     id: crypto.randomUUID(),
-    technology: 'CSS',
-  },
-  {
-    id: crypto.randomUUID(),
-    technology: 'SCSS',
+    technology: 'CSS/SCSS',
   },
   {
     id: crypto.randomUUID(),
@@ -21,11 +17,11 @@ export const skillData = [
   },
   {
     id: crypto.randomUUID(),
-    technology: 'Styled-Components',
+    technology: 'NodeJS',
   },
   {
     id: crypto.randomUUID(),
-    technology: 'NodeJS',
+    technology: 'Styled-Components',
   },
   {
     id: crypto.randomUUID(),
@@ -33,14 +29,30 @@ export const skillData = [
   },
   {
     id: crypto.randomUUID(),
-    technology: 'MongoDB',
+    technology: 'MongoDb',
   },
   {
     id: crypto.randomUUID(),
-    technology: 'Git',
+    technology: 'NPM',
+  },
+  {
+    id: crypto.randomUUID(),
+    technology: 'Framer-Motion',
   },
   {
     id: crypto.randomUUID(),
     technology: 'Inkscape',
+  },
+  {
+    id: crypto.randomUUID(),
+    technology: 'Git/Github',
+  },
+  {
+    id: crypto.randomUUID(),
+    technology: 'Vite',
+  },
+  {
+    id: crypto.randomUUID(),
+    technology: 'MySql',
   },
 ];

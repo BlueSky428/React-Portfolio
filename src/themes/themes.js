@@ -14,6 +14,8 @@ export const base = {
   fonts: {
     primary: 'system-ui',
     primary: 'Zen Kaku Gothic Antique, system-ui, sans-serif',
+    primary: 'Poppins, system-ui, sans-serif',
+    primary: 'Montserrat, system-ui, sans-serif',
     secondary: 'Potta One, system-ui, cursive',
     secondary: 'GazeNozarashi, system-ui, cursive',
   },
@@ -33,6 +35,7 @@ export const base = {
 // Light Theme
 const lightPalette = {
   primary: {
+    200: '#ecf6fa',
     300: '#407ac3',
     400: '#2b548a',
     500: '#244977',
@@ -57,9 +60,11 @@ export const lightTheme = {
     p: lightPalette.primary[600],
     link: lightPalette.primary[600],
     scrollbarThumb: lightPalette.primary[600],
-    scrollbarThumbHover: lightPalette.primary[300],
     h2: lightPalette.primary[400],
+    skillLiText: lightPalette.primary[300],
+    scrollbarThumbHover: lightPalette.primary[300],
     scrollbarTrack: lightPalette.primary[300],
+    skillLiBg: lightPalette.primary[200],
   },
   tertiary: {
     textSelection: lightPalette.tertiary[600],

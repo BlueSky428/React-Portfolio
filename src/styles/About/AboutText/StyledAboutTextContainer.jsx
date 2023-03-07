@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export const StyledAboutHeading = styled.div`
   grid-column: 1 / -1;
   justify-self: center;
+  text-transform: capitalize;
 `;
 
 // About text

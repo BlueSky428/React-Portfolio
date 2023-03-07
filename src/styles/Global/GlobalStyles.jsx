@@ -126,6 +126,10 @@ const GlobalStyles = createGlobalStyle`
 
     }
 
+    li {
+      list-style-type: none;
+    }
+
     @media screen and (prefers-reduced-motion: reduce) {
   * {
     /* Very short durations means JavaScript that relies on events still works */

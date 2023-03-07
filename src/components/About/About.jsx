@@ -25,7 +25,7 @@ const About = () => {
     <>
       <StyledAboutSection>
         <StyledAboutHeading>
-          <h2>About Me</h2>
+          <h2>about me</h2>
         </StyledAboutHeading>
 
         <StyledPictureContainer

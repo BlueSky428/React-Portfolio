@@ -8,7 +8,7 @@ const StyledTextBox = styled(motion.div)`
     margin-top: 26rem;
   }
   & h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: 600;
     display: block;
     line-height: 1.4;
@@ -36,8 +36,10 @@ const StyledTextBox = styled(motion.div)`
     margin-top: 0.5rem;
     line-height: 0.9;
     font-size: 3.8rem;
+    font-size: 3.2rem;
     @media ${props => props.theme.bp.desktopL} {
       font-size: 3.4rem;
+      font-size: 2.8rem;
     }
   }
 
