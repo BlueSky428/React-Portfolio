@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const StyledTextBox = styled(motion.div)`
@@ -31,20 +31,18 @@ const StyledTextBox = styled(motion.div)`
     }
   }
 
-  & h2 {
+  h2 {
     font-family: ${props => props.theme.fonts.primary};
-    color: ${props => props.theme.primary.h2};
     margin-top: 0.5rem;
     line-height: 0.9;
     font-size: 3.8rem;
-
     @media ${props => props.theme.bp.desktopL} {
       font-size: 3.4rem;
     }
   }
+
   & p {
     margin-top: 2rem;
-
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.5rem;
     }

@@ -67,7 +67,8 @@ export const lightTheme = {
     sunShadow: lightPalette.tertiary[600],
   },
   neutrals: {
-    body: lightPalette.neutrals[200],
+    heroBackdrop: lightPalette.neutrals[200],
+    aboutBackdrop: lightPalette.neutrals[200],
     imageBorder: lightPalette.neutrals[200],
     textSelectionColor: lightPalette.neutrals[100],
   },

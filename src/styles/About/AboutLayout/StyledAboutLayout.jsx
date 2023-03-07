@@ -4,16 +4,16 @@ export const StyledAboutSection = styled.section`
   position: relative;
   padding: 12rem 0;
   /* Previous style no white fade */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to bottom,
-      ${props => props.theme.neutrals.body} 0%,
+      ${props => props.theme.neutrals.aboutBackdrop} 0%,
       rgba(194, 178, 128, 0.3) 40%
     ),
-    url(src/assets/images/illustrations/water-color.jpg);
+    url(src/assets/images/illustrations/water-color.jpg); */
 
   background-image: linear-gradient(
       to bottom,
-      ${props => props.theme.neutrals.body} 0%,
+      ${props => props.theme.neutrals.aboutBackdrop} 0%,
       rgba(194, 178, 128, 0.3) 40%,
       rgba(194, 178, 128, 0.25) 50%,
       rgba(194, 178, 128, 0.2) 60%,

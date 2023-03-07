@@ -93,7 +93,6 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         line-height: 1.6;
         font-weight: 300; 
-        background-color: ${props => props.theme.neutrals.body};
         }
 
     img, picture, svg, video {
@@ -107,6 +106,12 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         cursor: pointer;
         
+    }
+
+    h2 {
+      font-family: ${props => props.theme.fonts.secondary};
+      font-size: 5rem;
+      color: ${props => props.theme.primary.h2};
     }
 
     p {

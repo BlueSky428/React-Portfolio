@@ -5,11 +5,6 @@ import { motion } from 'framer-motion';
 export const StyledAboutHeading = styled.div`
   grid-column: 1 / -1;
   justify-self: center;
-  & h2 {
-    font-family: ${props => props.theme.fonts.secondary};
-    font-size: 5rem;
-    color: ${props => props.theme.primary.h2};
-  }
 `;
 
 // About text
