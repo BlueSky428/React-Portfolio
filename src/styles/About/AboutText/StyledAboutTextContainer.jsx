@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// About heading
-export const StyledAboutHeading = styled.div`
-  grid-column: 1 / -1;
-  justify-self: center;
-  text-transform: capitalize;
-`;
-
 // About text
 export const StyledAboutTextContainer = styled(motion.div)`
   display: flex;

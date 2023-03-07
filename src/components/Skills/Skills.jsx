@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { skillData } from '../../data/skillData';
+import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
 import Skill from './Skill';
 
 const StyledSkillsSection = styled.section`
@@ -26,11 +27,6 @@ const StyledSkillsSection = styled.section`
   background-repeat: no-repeat;
   background-position: center;
 `;
-const StyledSkillsHeading = styled.div`
-  text-transform: capitalize;
-  grid-column: 1 / -1;
-  justify-self: center;
-`;
 
 const StyledSkillsContainer = styled.div`
   max-width: 70rem;
@@ -53,9 +49,9 @@ const StyledSkillsContainer = styled.div`
 const Skills = () => {
   return (
     <StyledSkillsSection>
-      <StyledSkillsHeading>
+      <StyledSectionHeading>
         <h2>technology</h2>
-      </StyledSkillsHeading>
+      </StyledSectionHeading>
       <StyledSkillsContainer>
         <ul>
           {skillData.map(skill => {

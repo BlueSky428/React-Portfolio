@@ -3,10 +3,7 @@ import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
 import { StyledRedTempleContainer } from '../../styles/About/AboutBackground/StyledRedTempleContainer';
 import { StyledAboutSection } from '../../styles/About/AboutLayout/StyledAboutLayout';
-import {
-  StyledAboutHeading,
-  StyledAboutTextContainer,
-} from '../../styles/About/AboutText/StyledAboutTextContainer';
+import { StyledAboutTextContainer } from '../../styles/About/AboutText/StyledAboutTextContainer';
 import {
   StyledPictureContainer,
   StyledPictureCollage,
@@ -18,15 +15,16 @@ import {
   redTempleVariants,
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
+import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
 
 const About = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
       <StyledAboutSection>
-        <StyledAboutHeading>
+        <StyledSectionHeading>
           <h2>about me</h2>
-        </StyledAboutHeading>
+        </StyledSectionHeading>
 
         <StyledPictureContainer
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
