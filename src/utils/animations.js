@@ -125,7 +125,22 @@ export const lanternVariants = {
   },
 };
 
-// About Animations //
+// Sidebar animations //
+export const socialIconVariants = {
+  noMotion: noMotion,
+  hidden: {
+    y: 0,
+  },
+  visible: {
+    y: '-.3rem',
+    transition: {
+      duration: 0.25,
+      ease: cubicBezierEase,
+    },
+  },
+};
+
+// About animations //
 export const picturesTextVariants = {
   noMotion: noMotion,
   hidden: {
@@ -142,6 +157,7 @@ export const picturesTextVariants = {
   },
 };
 
+// Red temple
 export const redTempleVariants = {
   hidden: {
     opacity: 0.01,
@@ -155,6 +171,9 @@ export const redTempleVariants = {
   },
 };
 
+// Technology animations //
+
+// Parent skills ul
 export const parentTechnologyVariants = {
   noMotion: noMotion,
   hidden: { opacity: 0.01 },
@@ -167,6 +186,7 @@ export const parentTechnologyVariants = {
   },
 };
 
+// Child skills li
 export const childTechnologyVariants = {
   hidden: { opacity: 0.01, y: '2rem' },
   visible: {

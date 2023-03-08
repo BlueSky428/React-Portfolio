@@ -130,6 +130,19 @@ const GlobalStyles = createGlobalStyle`
       list-style-type: none;
     }
 
+    a:link, a:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: ${props => props.theme.primary.link};
+      position: relative;
+      text-decoration-skip-ink: auto;
+    }
+
+    a:hover, a:active {
+      color: ${props => props.theme.primary.linkHover};
+      transition: color 0.25s;
+    }
+
     @media screen and (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     /* Very short durations means JavaScript that relies on events still works */

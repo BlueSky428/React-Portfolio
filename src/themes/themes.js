@@ -64,12 +64,14 @@ export const lightTheme = {
     skillLiText: lightPalette.primary[300],
     scrollbarThumbHover: lightPalette.primary[300],
     scrollbarTrack: lightPalette.primary[300],
+    linkHover: lightPalette.primary[300],
     skillLiBg: lightPalette.primary[200],
   },
   tertiary: {
     textSelection: lightPalette.tertiary[600],
     focusOutline: lightPalette.tertiary[600],
     sunShadow: lightPalette.tertiary[600],
+    sidebarBorder: lightPalette.tertiary[600],
   },
   neutrals: {
     heroBackdrop: lightPalette.neutrals[200],
