@@ -30,9 +30,9 @@ const HeroBackground = () => {
         animate='visible'
         variants={branchVariants}
       >
-        <TreeBranchSVG title='Japanese tree branch with pretty flowers' />
+        <TreeBranchSVG />
         <StyledLanternContainer animate='visible' variants={lanternVariants}>
-          <LanternSVG title='Japanese paper lantern' />
+          <LanternSVG />
         </StyledLanternContainer>
       </StyledTreeBranchContainer>
       <StyledFujiContainer
@@ -40,21 +40,21 @@ const HeroBackground = () => {
         animate='visible'
         variants={fujiVariants}
       >
-        <FujiSVG title="Hokusai's Mount Fuji near Ejiri piece" />
+        <FujiSVG />
       </StyledFujiContainer>
       <StyledSunContainer
         initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
         animate='visible'
         variants={sunVariants}
       >
-        <SunSVG title='Rising red sun' />
+        <SunSVG />
         <StyledCloudContainer
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
           animate='visible'
           // animate='animate'
           variants={rightCloudVariants}
         >
-          <CloudSVG title='Japanese-style curly clouds' />
+          <CloudSVG />
         </StyledCloudContainer>
         <StyledCloudContainer
           left
@@ -62,7 +62,7 @@ const HeroBackground = () => {
           animate='visible'
           variants={leftCloudVariants}
         >
-          <CloudSVG title='Japanese-style curly clouds' />
+          <CloudSVG />
         </StyledCloudContainer>
       </StyledSunContainer>
     </>

@@ -3,6 +3,8 @@
 <!--  width="256"
    height="256" -->
 <svg
+role='img'
+   aria-labelledby="Rising red sun"
 width="256"
 height="256"
    id="svg2"

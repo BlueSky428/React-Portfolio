@@ -73,7 +73,7 @@ const Sidebar = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            <GithubSVG title='Github' />
+            <GithubSVG />
           </motion.a>
         </StyledSocialLink>
         <StyledSocialLink>
@@ -86,7 +86,7 @@ const Sidebar = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            <LinkedInSVG title='LinkedIn' />
+            <LinkedInSVG />
           </motion.a>
         </StyledSocialLink>
         <StyledSocialLink>
@@ -99,7 +99,7 @@ const Sidebar = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            <MailSVG title='Gmail' />
+            <MailSVG />
           </motion.a>
         </StyledSocialLink>
       </StyledSocialList>

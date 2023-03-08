@@ -34,10 +34,10 @@ const About = () => {
         >
           <StyledPictureCollage>
             <StyledLandscapeContainer>
-              <NickLandscapeSVG title='Nick looking out at a vast mountain landscape' />
+              <NickLandscapeSVG />
             </StyledLandscapeContainer>
             <StyledPortraitContainer>
-              <NickPortraitSVG title='Portrait of Nick with greenery' />
+              <NickPortraitSVG />
             </StyledPortraitContainer>
           </StyledPictureCollage>
         </StyledPictureContainer>
@@ -68,7 +68,7 @@ const About = () => {
           viewport={{ once: true }}
           variants={redTempleVariants}
         >
-          <RedTempleSVG title='Red temple amidst falling snow' />
+          <RedTempleSVG />
         </StyledRedTempleContainer>
       </StyledAboutSection>
     </>
