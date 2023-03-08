@@ -170,7 +170,7 @@ export const parentTechnologyVariants = {
 export const childTechnologyVariants = {
   hidden: { opacity: 0.01, y: '2rem' },
   visible: {
-    opacity: 0.8,
+    opacity: 0.83,
     y: 0,
     transition: {
       duration: 0.4,
