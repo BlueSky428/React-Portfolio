@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { childTechnologyVariants } from '../../utils/animations';
 
-const StyledSkillItem = styled.li`
+const StyledSkillItem = styled(motion.li)`
   padding: 0.8rem 1.4rem;
   padding: 1.4rem 2rem;
   text-transform: none;
@@ -11,11 +13,14 @@ const StyledSkillItem = styled.li`
   font-family: ${props => props.theme.fonts.primary};
   font-weight: 600;
   font-size: 1.8rem;
-  opacity: 0.83;
 `;
 
 const Skill = ({ skill }) => {
-  return <StyledSkillItem>{skill.technology}</StyledSkillItem>;
+  return (
+    <StyledSkillItem variants={childTechnologyVariants}>
+      {skill.technology}
+    </StyledSkillItem>
+  );
 };
 
 export default Skill;

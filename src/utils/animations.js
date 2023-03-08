@@ -154,3 +154,27 @@ export const redTempleVariants = {
     },
   },
 };
+
+export const parentTechnologyVariants = {
+  noMotion: noMotion,
+  hidden: { opacity: 0.01 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const childTechnologyVariants = {
+  hidden: { opacity: 0.01, y: '2rem' },
+  visible: {
+    opacity: 0.8,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: cubicBezierEase,
+    },
+  },
+};

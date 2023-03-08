@@ -103,7 +103,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     button {
-        outline: transparent;
+        outline-color: transparent;
         border: none;
         text-decoration: none;
         cursor: pointer;
@@ -131,7 +131,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media screen and (prefers-reduced-motion: reduce) {
-  * {
+  *, *::before, *::after {
     /* Very short durations means JavaScript that relies on events still works */
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;

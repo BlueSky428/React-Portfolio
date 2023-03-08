@@ -1,7 +1,10 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { skillData } from '../../data/skillData';
 import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
+import { parentTechnologyVariants } from '../../utils/animations';
 import Skill from './Skill';
+import { useReducedMotion } from 'framer-motion';
 
 const StyledSkillsSection = styled.section`
   display: grid;
@@ -32,32 +35,38 @@ const StyledSkillsContainer = styled.div`
   max-width: 70rem;
   max-width: 80rem;
   margin: 0 auto;
-  & ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* display: grid;
+`;
+
+const StyledSkillsList = styled(motion.ul)`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(4, 1fr); */
-    gap: 1.6rem;
-    width: 95%;
-    width: 100%;
-  }
+  gap: 1.6rem;
+  width: 95%;
+  width: 100%;
 `;
 
 const Skills = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <StyledSkillsSection>
       <StyledSectionHeading>
         <h2>technology</h2>
       </StyledSectionHeading>
       <StyledSkillsContainer>
-        <ul>
+        <StyledSkillsList
+          initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+          whileInView='visible'
+          variants={parentTechnologyVariants}
+        >
           {skillData.map(skill => {
             return <Skill key={skill.id} skill={skill} />;
           })}
-        </ul>
+        </StyledSkillsList>
       </StyledSkillsContainer>
     </StyledSkillsSection>
   );
