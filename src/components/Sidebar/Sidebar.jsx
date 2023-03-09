@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import GithubSVG from '/src/assets/icons/github.svg';
 import LinkedInSVG from '/src/assets/icons/linkedin.svg';
 import MailSVG from '/src/assets/icons/mail.svg';
-import { socialIconVariants } from '../../utils/animations';
+import { socialIconVariants, socialListVariants } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 
 const StyledSidebarContainer = styled(motion.div)`
@@ -61,12 +61,17 @@ const StyledSocialLink = styled.li`
 const Sidebar = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
-    <StyledSidebarContainer>
+    <StyledSidebarContainer
+      initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+      animate='visible'
+      variants={socialListVariants}
+    >
       <StyledSocialList>
         <StyledSocialLink>
           <motion.a
-            initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+            initial='hidden'
             whileHover='visible'
+            animate='hidden'
             variants={socialIconVariants}
             href='https://github.com/Mully7773'
             aria-label='Github'
@@ -78,8 +83,9 @@ const Sidebar = () => {
         </StyledSocialLink>
         <StyledSocialLink>
           <motion.a
-            initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+            initial='hidden'
             whileHover='visible'
+            animate='hidden'
             variants={socialIconVariants}
             href='https://www.linkedin.com/in/nick-mullenmeister-b7a62078'
             aria-label='LinkedIn'
@@ -91,8 +97,9 @@ const Sidebar = () => {
         </StyledSocialLink>
         <StyledSocialLink>
           <motion.a
-            initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+            initial='hidden'
             whileHover='visible'
+            animate='hidden'
             variants={socialIconVariants}
             href='mailto:mully7773@gmail.com'
             aria-label='Gmail'

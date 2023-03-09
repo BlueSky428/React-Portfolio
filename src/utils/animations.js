@@ -126,15 +126,44 @@ export const lanternVariants = {
 };
 
 // Sidebar animations //
+
+// Icon hover
 export const socialIconVariants = {
-  noMotion: noMotion,
   hidden: {
+    opacity: 1,
     y: 0,
+    transition: {
+      duration: 0.25,
+      type: 'tween',
+      ease: cubicBezierEase,
+    },
   },
   visible: {
+    opacity: 1,
     y: '-.3rem',
     transition: {
       duration: 0.25,
+      type: 'tween',
+      ease: cubicBezierEase,
+    },
+  },
+};
+
+// List slide-in
+export const socialListVariants = {
+  noMotion: noMotion,
+  hidden: {
+    opacity: 0.1,
+    x: '-5rem',
+    y: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      delay: 3,
+      duration: 1.5,
       ease: cubicBezierEase,
     },
   },
