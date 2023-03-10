@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import GlobalStyles from './styles/Global/GlobalStyles';
 import Skills from './components/Skills/Skills';
 import Sidebar from './components/Sidebar/Sidebar';
+import Projects from './components/Projects/Projects';
 
 function App() {
   const theme = { ...base, ...lightTheme };
@@ -15,6 +16,7 @@ function App() {
       <Sidebar />
       <About />
       <Skills />
+      <Projects />
     </ThemeProvider>
   );
 }

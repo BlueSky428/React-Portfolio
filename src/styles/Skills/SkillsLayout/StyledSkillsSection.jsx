@@ -9,9 +9,9 @@ export const StyledSkillsSection = styled.section`
   padding: 12rem 0 14rem 0;
   background-image: linear-gradient(
       to top,
-      rgb(247, 247, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 10%,
-      rgba(255, 255, 255, 0.1) 60%,
+      rgb(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.05) 13%,
+      rgba(255, 255, 255, 0.1) 50%,
       rgba(255, 255, 255, 0.75) 90%
     ),
     url(src/assets/images/illustrations/wisp.svg);
