@@ -9,12 +9,15 @@ const StyledProjectsSection = styled.section`
   padding: 12rem 0 14rem 0;
 `;
 
+const StyledProjects = styled.ul``;
+
 const Projects = () => {
   return (
     <StyledProjectsSection>
       <StyledSectionHeading>
         <h2>projects</h2>
       </StyledSectionHeading>
+      <StyledProjects></StyledProjects>
     </StyledProjectsSection>
   );
 };
