@@ -135,6 +135,8 @@ const GlobalStyles = createGlobalStyle`
 
     li {
       list-style-type: none;
+      color: ${props => props.theme.primary.li};
+
     }
 
     a:link, a:visited {

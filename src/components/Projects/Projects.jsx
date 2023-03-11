@@ -23,8 +23,14 @@ const Projects = () => {
         <h2>projects</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
-        {projectData.map(project => {
-          return <Project key={project.id} project={project} />;
+        {projectData.map((project, index) => {
+          return (
+            <Project
+              key={project.id}
+              project={project}
+              alternate={index % 2 !== 0}
+            />
+          );
         })}
       </StyledProjectsList>
     </StyledProjectsSection>
