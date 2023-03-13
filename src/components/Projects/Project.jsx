@@ -1,11 +1,13 @@
 import styled, { css } from 'styled-components';
+import GithubSVG from '/src/assets/icons/github.svg';
+import ExternalLinkSVG from '/src/assets/icons/external-link.svg';
 
 const StyledProjectItem = styled.li`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 14rem;
 `;
 
 const StyledProjectImage = styled.div`
@@ -70,6 +72,7 @@ const StyledProjectContent = styled.div`
     & li {
       font-family: ${props => props.theme.fonts.primary};
       color: ${props => props.theme.primary.li};
+      font-weight: 500;
     }
   }
 
@@ -144,8 +147,28 @@ const Project = ({ project, alternate }) => {
             })}
           </ul>
           <div>
-            <a href='#'>Github</a>
-            <a href='#'>LiveLink</a>
+            <ul>
+              <li>
+                <a
+                  href={project.repository}
+                  aria-label='Github'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <GithubSVG />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={project.livelink}
+                  aria-label='Live website'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <ExternalLinkSVG />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </StyledProjectContent>
