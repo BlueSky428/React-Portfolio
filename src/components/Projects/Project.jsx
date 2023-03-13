@@ -39,10 +39,6 @@ const StyledProjectContent = styled.div`
   grid-column: 7 / -1;
   grid-area: 1 / 7 / -1 / -1;
 
-  & div {
-    text-align: end;
-  }
-
   & p {
     font-size: 1.4rem;
     font-weight: 500;
@@ -86,11 +82,38 @@ const StyledProjectContent = styled.div`
     `}
 `;
 
+const StyledProjectContentBorder = styled.div`
+  border-inline-end: 0.2rem solid;
+  border-block-start: 0.2rem solid;
+  text-align: end;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+  border-image-source: radial-gradient(
+    circle at top right,
+    ${props => props.theme.tertiary.sidebarBorder},
+    transparent 30%
+  );
+  border-image-slice: 1;
+
+  ${props =>
+    props.alternate &&
+    css`
+      border-inline-start: 0.2rem solid;
+      padding-left: 1.2rem;
+      padding-right: 0;
+      border-image-source: radial-gradient(
+        circle at top left,
+        ${props => props.theme.tertiary.projectBorder},
+        transparent 30%
+      );
+    `}
+`;
+
 const StyledProjectDescriptionContainer = styled.div`
   margin-bottom: 1rem;
   padding: 2.5rem;
   text-align: end;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   background-color: ${props => props.theme.primary.projectDescBg};
   & p {
     text-transform: none;
@@ -109,7 +132,7 @@ const StyledProjectImageContainer = styled.div`
   height: auto;
   height: 40rem;
   /* outline: 0.2rem solid ${props => props.theme.tertiary.textSelection}; */
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   background-color: red;
 
   & svg {
@@ -135,7 +158,7 @@ const Project = ({ project, alternate }) => {
         </StyledProjectImageContainer>
       </StyledProjectImage>
       <StyledProjectContent alternate={alternate}>
-        <div>
+        <StyledProjectContentBorder alternate={alternate}>
           <p>featured project</p>
           <h3>{project.title}</h3>
           <StyledProjectDescriptionContainer>
@@ -170,7 +193,7 @@ const Project = ({ project, alternate }) => {
               </li>
             </ul>
           </div>
-        </div>
+        </StyledProjectContentBorder>
       </StyledProjectContent>
     </StyledProjectItem>
   );

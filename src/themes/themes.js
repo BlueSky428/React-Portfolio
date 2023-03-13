@@ -76,6 +76,7 @@ export const lightTheme = {
     focusOutline: lightPalette.tertiary[600],
     sunShadow: lightPalette.tertiary[600],
     sidebarBorder: lightPalette.tertiary[600],
+    projectBorder: lightPalette.tertiary[600],
   },
   neutrals: {
     heroBackdrop: lightPalette.neutrals[200],
