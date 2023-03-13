@@ -11,7 +11,7 @@ const StyledProjectsSection = styled.section`
   row-gap: 6rem;
   padding: 12rem 0 14rem 0;
   margin: 0 auto;
-  max-width: 100rem;
+  max-width: 107rem;
 `;
 
 const StyledProjectsList = styled.ul``;

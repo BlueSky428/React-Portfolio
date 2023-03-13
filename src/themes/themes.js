@@ -35,6 +35,7 @@ export const base = {
 // Light Theme
 const lightPalette = {
   primary: {
+    100: '#ecf6faed',
     200: '#ecf6fa',
     300: '#407ac3',
     400: '#2b548a',
