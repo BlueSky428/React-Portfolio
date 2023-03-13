@@ -18,7 +18,7 @@ export const projectData = [
     id: crypto.randomUUID(),
     title: 'Task-Manager',
     description:
-      "A 'task manager' or todo application built with React. Users can add, delete, edit, and view their tasks. I've also included drag and drop functionality to reorder tasks, a mark as complete capability, and a dark/light theme toggler.",
+      "A 'task manager' or todo application built with React. Users can add, delete, edit, and view their tasks. I've also included drag and drop functionality to reorder tasks, a mark as complete option, and a dark/light theme toggler.",
     technologies: ['React', 'Styled-Components', 'Framer-Motion', 'Vite'],
     Image: TaskManagerSVG,
     repository: 'https://github.com/Mully7773/Task-Manager',

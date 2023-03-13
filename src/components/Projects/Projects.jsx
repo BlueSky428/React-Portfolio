@@ -9,7 +9,7 @@ const StyledProjectsSection = styled.section`
   grid-template-rows: min-content 1fr;
   grid-auto-rows: 1fr;
   row-gap: 6rem;
-  padding: 12rem 0 14rem 0;
+  padding: 8rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
 `;

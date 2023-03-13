@@ -1,8 +1,13 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 import GithubSVG from '/src/assets/icons/github.svg';
 import ExternalLinkSVG from '/src/assets/icons/external-link.svg';
+import {
+  projectSlideLeftVariants,
+  projectSlideRightVariants,
+} from '../../utils/animations';
 
-const StyledProjectItem = styled.li`
+const StyledProjectItem = styled(motion.li)`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
@@ -15,7 +20,7 @@ const StyledProjectImage = styled.div`
   grid-area: 1 / 1 / -1 / 8;
   box-shadow: 0 0.3rem 0.3rem 0 rgb(0 0 0 / 15%);
   box-shadow: 0 1rem 2.5rem -1.8rem ${props => props.theme.primary.li};
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   /* height: 35rem;
   width: 56rem; */
   /* height: 100%;
@@ -26,7 +31,7 @@ const StyledProjectImage = styled.div`
   & svg {
     height: fit-content;
     width: fit-content;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
   }
   ${props =>
     props.alternate &&
@@ -133,7 +138,6 @@ const StyledProjectImageContainer = styled.div`
   height: 40rem;
   /* outline: 0.2rem solid ${props => props.theme.tertiary.textSelection}; */
   border-radius: 0.2rem;
-  background-color: red;
 
   & svg {
     height: 100%;
@@ -149,9 +153,19 @@ const StyledProjectImageContainer = styled.div`
 `;
 
 const Project = ({ project, alternate }) => {
+  // Image = SVG image from data
   const { Image } = project;
   return (
-    <StyledProjectItem>
+    <StyledProjectItem
+      initial='hidden'
+      whileInView='visible'
+      // 'amount' = when about half the component is visible animate
+      viewport={{ once: true, amount: 0.4 }}
+      variants={
+        !alternate ? projectSlideLeftVariants : projectSlideRightVariants
+      }
+      alternate={alternate}
+    >
       <StyledProjectImage alternate={alternate}>
         <StyledProjectImageContainer>
           <Image />

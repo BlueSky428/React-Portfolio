@@ -227,3 +227,41 @@ export const childTechnologyVariants = {
     },
   },
 };
+
+// Project animations //
+
+// Project slide right
+export const projectSlideRightVariants = {
+  noMotion: noMotion,
+  hidden: {
+    opacity: 0,
+    x: '-7rem',
+    y: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+// Project slide left
+export const projectSlideLeftVariants = {
+  noMotion: noMotion,
+  hidden: {
+    opacity: 0,
+    x: '7rem',
+    y: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
