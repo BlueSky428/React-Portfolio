@@ -1,5 +1,7 @@
 import FFSearchSVG from '/src/assets/images/FF-Search.svg';
 import TaskManagerSVG from '/src/assets/images/task-manager.svg';
+import RPSLSSVG from '/src/assets/images/RPSLS.svg';
+import CalculatorSVG from '/src/assets/images/calculator.svg';
 
 export const projectData = [
   {
@@ -28,7 +30,7 @@ export const projectData = [
     description:
       "An application based on the traditional game with two extra player choices originating from 'The Big Bang Theory'. Users can play against a computer on their mobile device or desktop and try to get a high score.",
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'MVC'],
-    Image: TaskManagerSVG,
+    Image: RPSLSSVG,
     repository: 'https://github.com/Mully7773/RPSLS',
     livelink: 'https://mully7773.github.io/RPSLS/',
   },
@@ -38,7 +40,7 @@ export const projectData = [
     description:
       'A thematic and responsive calculator that allows users to easily add, subtract, and divide positive integers and floating point numbers.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'MVC'],
-    Image: FFSearchSVG,
+    Image: CalculatorSVG,
     repository: 'https://github.com/Mully7773/Calculator',
     livelink: 'https://mully7773.github.io/Calculator/',
   },
