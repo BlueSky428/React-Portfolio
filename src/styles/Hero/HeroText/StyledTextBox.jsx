@@ -60,7 +60,7 @@ const StyledTextBox = styled(motion.div)`
     border-radius: 0.4rem;
     padding: 1.45rem 2.45rem;
     letter-spacing: 0.1rem;
-    border: 0.12rem solid ${props => props.theme.primary.link};
+    border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
     color: ${props => props.theme.primary.link};
     margin-top: 3.6rem;
     line-height: 1;

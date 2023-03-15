@@ -6,12 +6,14 @@ import GlobalStyles from './styles/Global/GlobalStyles';
 import Skills from './components/Skills/Skills';
 import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './components/Projects/Projects';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   const theme = { ...base, ...lightTheme };
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Navigation />
       <Hero />
       <Sidebar />
       <About />

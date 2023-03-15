@@ -107,7 +107,6 @@ const GlobalStyles = createGlobalStyle`
         border: none;
         text-decoration: none;
         cursor: pointer;
-        
     }
 
     h2 {

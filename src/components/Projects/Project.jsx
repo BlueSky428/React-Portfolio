@@ -128,27 +128,17 @@ const StyledProjectDescriptionContainer = styled.div`
 const StyledProjectImageContainer = styled.div`
   max-width: 150rem;
   display: block;
-  /* height: 35rem;
-  width: 56rem; */
   height: 100%;
   width: 100%;
 
   width: 62rem;
   height: auto;
   height: 40rem;
-  /* outline: 0.2rem solid ${props => props.theme.tertiary.textSelection}; */
   border-radius: 0.2rem;
 
   & svg {
     height: 100%;
     width: 100%;
-    /* object-fit: contain;
-    object-fit: cover;
-    object-fit: fill; */
-    /* width: inherit;
-    height: inherit; */
-    /* height: 35rem;
-    width: 56rem; */
   }
 `;
 

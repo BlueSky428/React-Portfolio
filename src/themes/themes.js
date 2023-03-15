@@ -75,8 +75,10 @@ export const lightTheme = {
     textSelection: lightPalette.tertiary[600],
     focusOutline: lightPalette.tertiary[600],
     sunShadow: lightPalette.tertiary[600],
+    linkBorder: lightPalette.tertiary[600],
     sidebarBorder: lightPalette.tertiary[600],
     projectBorder: lightPalette.tertiary[600],
+    navigationBorder: lightPalette.tertiary[600],
   },
   neutrals: {
     heroBackdrop: lightPalette.neutrals[200],
