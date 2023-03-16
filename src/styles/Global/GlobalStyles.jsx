@@ -129,13 +129,11 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     font-family: ${props => props.theme.fonts.primary};
     color: ${props => props.theme.primary.p};
-
     }
 
     li {
       list-style-type: none;
       color: ${props => props.theme.primary.li};
-
     }
 
     a:link, a:visited {

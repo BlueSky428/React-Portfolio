@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const variants = {
   open: {
@@ -17,19 +18,29 @@ const variants = {
   },
 };
 
-const colors = ['#FF008C', '#D309E1', '#9C1AFF', '#7700FF', '#4400FF'];
+const StyledMenuItem = styled(motion.li)`
+  font-family: ${props => props.theme.fonts.secondary};
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: 600;
 
-export const MenuItem = ({ i }) => {
-  const style = { border: `2px solid ${colors[i]}` };
+  & :hover {
+    color: ${props => props.theme.primary.navLinkHover};
+  }
+`;
+
+export const MenuItem = ({ section }) => {
   return (
     <>
-      {/* <motion.li
+      <StyledMenuItem
         variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        About
-      </motion.li> */}
+        <div>
+          <a href={section.sectionHref}>{section.sectionTitle}</a>
+        </div>
+      </StyledMenuItem>
     </>
   );
 };

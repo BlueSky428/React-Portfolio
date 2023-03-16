@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
 import { MenuItem } from './MenuItem';
 // import { MenuItem } from './MenuItem';
 
@@ -11,15 +12,43 @@ const variants = {
   },
 };
 
-const itemIds = [0, 1, 2, 3, 4];
+const StyledMenuList = styled(motion.ul)`
+  position: absolute;
+  top: 6.5rem;
+  right: 8rem;
+  width: fit-content;
+  z-index: 2000000;
+`;
 
+const sections = [
+  {
+    id: crypto.randomUUID(),
+    sectionTitle: 'home',
+    sectionHref: '/#home',
+  },
+  {
+    id: crypto.randomUUID(),
+    sectionTitle: 'about',
+    sectionHref: '/#about',
+  },
+  {
+    id: crypto.randomUUID(),
+    sectionTitle: 'technology',
+    sectionHref: '/#technology',
+  },
+  {
+    id: crypto.randomUUID(),
+    sectionTitle: 'projects',
+    sectionHref: '/#projects',
+  },
+];
 const NavMenu = () => {
   return (
-    <motion.ul>
-      {itemIds.map(i => (
-        <MenuItem key={i} i={i} />
+    <StyledMenuList variants={variants}>
+      {sections.map(section => (
+        <MenuItem key={section.id} section={section} />
       ))}
-    </motion.ul>
+    </StyledMenuList>
   );
 };
 
