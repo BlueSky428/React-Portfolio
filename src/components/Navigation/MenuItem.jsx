@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const variants = {
   open: {
     y: 0,
+    visibility: 'visible',
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
@@ -11,6 +12,7 @@ const variants = {
   },
   closed: {
     y: 50,
+    visibility: 'hidden',
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },

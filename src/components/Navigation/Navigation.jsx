@@ -10,7 +10,6 @@ const StyledNavigationContainer = styled(motion.nav)`
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   width: 38rem;
   z-index: 100000;
 `;
