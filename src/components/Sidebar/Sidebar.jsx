@@ -12,9 +12,9 @@ const Sidebar = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <StyledSidebarContainer
-    // initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
-    // animate='visible'
-    // variants={socialListVariants}
+      initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+      animate='visible'
+      variants={socialListVariants}
     >
       <StyledSocialList>
         <StyledSocialLink>

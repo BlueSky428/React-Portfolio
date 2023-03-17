@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledSocialLink = styled.li`
   & a {
     padding: 1rem;
-    position: absolute;
+    /* position: absolute; */
     right: -2rem;
   }
 
