@@ -42,11 +42,15 @@ const sections = [
     sectionHref: '/#projects',
   },
 ];
-const NavMenu = () => {
+const NavMenu = ({ toggle }) => {
   return (
-    <StyledMenuList variants={variants}>
+    <StyledMenuList
+      variants={variants}
+      role='menubar'
+      aria-label='menubar navigation'
+    >
       {sections.map(section => (
-        <MenuItem key={section.id} section={section} />
+        <MenuItem key={section.id} section={section} toggle={toggle} />
       ))}
     </StyledMenuList>
   );

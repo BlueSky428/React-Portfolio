@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <StyledSkillsSection>
       <StyledSectionHeading>
-        <h2>technology</h2>
+        <h2 id='technology'>technology</h2>
       </StyledSectionHeading>
       <StyledSkillsContainer>
         <StyledSkillsList

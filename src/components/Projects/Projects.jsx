@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <StyledProjectsSection>
       <StyledSectionHeading>
-        <h2>projects</h2>
+        <h2 id='projects'>projects</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
         {projectData.map((project, index) => {

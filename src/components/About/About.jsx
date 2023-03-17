@@ -23,7 +23,7 @@ const About = () => {
     <>
       <StyledAboutSection>
         <StyledSectionHeading>
-          <h2>about me</h2>
+          <h2 id='about'>about me</h2>
         </StyledSectionHeading>
 
         <StyledPictureContainer

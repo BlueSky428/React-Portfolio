@@ -23,23 +23,25 @@ const StyledMenuItem = styled(motion.li)`
   text-transform: capitalize;
   font-size: 3rem;
   font-weight: 600;
+  width: fit-content;
 
   & :hover {
     color: ${props => props.theme.primary.navLinkHover};
   }
 `;
 
-export const MenuItem = ({ section }) => {
+export const MenuItem = ({ section, toggle }) => {
   return (
     <>
       <StyledMenuItem
         variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
+        tabIndex={-1}
       >
-        <div>
-          <a href={section.sectionHref}>{section.sectionTitle}</a>
-        </div>
+        <a href={section.sectionHref} onClick={toggle}>
+          {section.sectionTitle}
+        </a>
       </StyledMenuItem>
     </>
   );

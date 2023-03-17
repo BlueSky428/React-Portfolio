@@ -1,4 +1,5 @@
 import { easeInOut, motion, useCycle } from 'framer-motion';
+import { Fragment } from 'react';
 import { useRef } from 'react';
 import styled from 'styled-components';
 import { MenuToggle } from './MenuToggle';
@@ -54,16 +55,18 @@ const Navigation = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (
-    <StyledNavigationContainer
-      initial={false}
-      animate={isOpen ? 'open' : 'closed'}
-      custom={height}
-      ref={containerRef}
-    >
-      <StyledNavigationBg variants={menubar} />
-      <NavMenu />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </StyledNavigationContainer>
+    <Fragment>
+      <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
+      <StyledNavigationContainer
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={height}
+        ref={containerRef}
+      >
+        <StyledNavigationBg variants={menubar} />
+        <NavMenu toggle={() => toggleOpen()} />
+      </StyledNavigationContainer>
+    </Fragment>
   );
 };
 

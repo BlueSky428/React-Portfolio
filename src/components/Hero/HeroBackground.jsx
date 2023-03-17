@@ -26,6 +26,7 @@ const HeroBackground = () => {
       <StyledHeroBgClouds />
       <StyledHeroBgClouds small />
       <StyledTreeBranchContainer
+        id='home'
         initial='hidden'
         animate='visible'
         variants={branchVariants}
