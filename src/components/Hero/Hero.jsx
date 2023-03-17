@@ -43,7 +43,7 @@ const Hero = () => {
               <motion.div variants={childHeroTextVariants}>
                 <motion.a
                   whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
-                  href='src\assets\resume\Nick-Mullenmeister-Resume.pdf'
+                  href='\Nick-Mullenmeister-Resume.pdf'
                   target='_blank'
                   rel='noopener noreferrer'
                 >

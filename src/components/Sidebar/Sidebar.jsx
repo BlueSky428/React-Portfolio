@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { StyledSidebarContainer } from '../../styles/Sidebar/StyledSidebarContainer';
 import { StyledSocialList } from '../../styles/Sidebar/StyledSocialList';

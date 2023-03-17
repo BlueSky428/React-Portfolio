@@ -14,8 +14,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Navigation />
-      <Hero />
       <Sidebar />
+      <Hero />
       <About />
       <Skills />
       <Projects />

@@ -22,7 +22,7 @@ export const StyledAboutSection = styled.section`
       rgba(255, 255, 255, 0.85) 99%,
       rgba(255, 255, 255, 0.9) 99.3%
     ),
-    url('src/assets/images/illustrations/watercolor-background.svg');
+    url('/watercolor-background.svg');
 
   background-repeat: no-repeat;
   background-size: cover;

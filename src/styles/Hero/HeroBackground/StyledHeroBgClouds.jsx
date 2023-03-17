@@ -16,7 +16,7 @@ export const StyledHeroBgClouds = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: url('src/assets/images/illustrations/bg_kumo_lg.png');
+  background: url('/bg_kumo_lg.png');
   animation: ${horizontalDrift} 45s linear infinite;
   -webkit-animation: ${horizontalDrift} 45s linear infinite;
   animation-duration: 45s;
