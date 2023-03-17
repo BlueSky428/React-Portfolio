@@ -14,7 +14,7 @@ export const StyledSkillsSection = styled.section`
       rgba(255, 255, 255, 0.1) 50%,
       rgba(255, 255, 255, 0.75) 90%
     ),
-    url(src/assets/images/illustrations/wisp.svg);
+    url('src/assets/images/illustrations/wisp.svg');
   background-repeat: no-repeat;
   background-position: center;
 `;
