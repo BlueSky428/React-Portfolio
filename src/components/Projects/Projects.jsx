@@ -1,20 +1,10 @@
-import styled from 'styled-components';
 import { projectData } from '../../data/projectData';
 import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
+import {
+  StyledProjectsSection,
+  StyledProjectsList,
+} from '../../styles/Projects/ProjectsLayout/StyledProjectsSection';
 import Project from './Project';
-
-const StyledProjectsSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
-  grid-auto-rows: 1fr;
-  row-gap: 6rem;
-  padding: 8rem 0 12rem 0;
-  margin: 0 auto;
-  max-width: 107rem;
-`;
-
-const StyledProjectsList = styled.ul``;
 
 const Projects = () => {
   return (
