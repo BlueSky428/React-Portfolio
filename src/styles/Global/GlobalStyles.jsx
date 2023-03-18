@@ -103,10 +103,24 @@ const GlobalStyles = createGlobalStyle`
     }
 
     button {
+        display: inline-block;
+        font-family: ${props => props.theme.fonts.primary};
+        color: ${props => props.theme.primary.link};
         outline-color: transparent;
         border: none;
         text-decoration: none;
         cursor: pointer;
+        text-transform: capitalize;
+        font-weight: 600;
+        line-height: 1;
+        font-size: 1.6rem;
+        border-radius: 0.4rem;
+        letter-spacing: 0.1rem;
+        padding: 1.45rem 2.45rem;
+        &:hover {
+          color: ${props => props.theme.primary.linkHover};
+          transition: color 0.25s;
+    }
     }
 
     h2 {

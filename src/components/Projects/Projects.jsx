@@ -23,6 +23,7 @@ const Projects = () => {
           );
         })}
       </StyledProjectsList>
+      <button>show more</button>
     </StyledProjectsSection>
   );
 };

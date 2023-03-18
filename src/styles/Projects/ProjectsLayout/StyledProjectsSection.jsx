@@ -5,11 +5,18 @@ export const StyledProjectsSection = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
-  grid-auto-rows: 1fr;
+  /* grid-auto-rows: 1fr; */
   row-gap: 6rem;
   padding: 8rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
+
+  & button {
+    justify-self: center;
+    padding: 1.45rem 2.45rem;
+    border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
+    background-color: transparent;
+  }
 `;
 
 export const StyledProjectsList = styled.ul`
