@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components';
-import { motion } from 'framer-motion';
 import { StyledProjectItem } from '../../styles/Projects/ProjectsLayout/StyledProjectsSection';
 import {
   StyledProjectImageContainer,
@@ -18,8 +16,6 @@ import {
 } from '../../utils/animations';
 
 const Project = ({ project, alternate }) => {
-  // Image = SVG image from data
-  const { Image } = project;
   return (
     <StyledProjectItem
       initial='hidden'
@@ -33,7 +29,10 @@ const Project = ({ project, alternate }) => {
     >
       <StyledProjectImage alternate={alternate}>
         <StyledProjectImageContainer>
-          <Image />
+          <picture>
+            <source type='image/webp' srcSet={project.imageUrl} />
+            <img src={project.imageUrl} alt={project.description} />
+          </picture>
         </StyledProjectImageContainer>
       </StyledProjectImage>
       <StyledProjectContent alternate={alternate}>

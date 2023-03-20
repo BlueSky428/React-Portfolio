@@ -1,16 +1,22 @@
 import styled, { css } from 'styled-components';
 
 export const StyledProjectImageContainer = styled.div`
-  max-width: 150rem;
-  display: block;
-  width: 62rem;
-  height: 40rem;
-  border-radius: 0.2rem;
-
-  & svg {
-    height: 100%;
-    width: 100%;
+  & picture {
+    max-width: 70rem;
+    display: block;
+    width: 62rem;
+    height: 40rem;
     border-radius: 0.2rem;
+    object-fit: cover;
+
+    & img {
+      object-fit: cover;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 0.2rem;
+    }
   }
 `;
 
