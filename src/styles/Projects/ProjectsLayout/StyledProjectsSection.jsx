@@ -13,7 +13,6 @@ export const StyledProjectsSection = styled.section`
 
   & button {
     justify-self: center;
-    padding: 1.45rem 2.45rem;
     border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
     background-color: transparent;
   }

@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills';
 import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './components/Projects/Projects';
 import Navigation from './components/Navigation/Navigation';
+import ProjectGallery from './components/AdditionalProjects/ProjectGallery';
 
 function App() {
   const theme = { ...base, ...lightTheme };
@@ -19,6 +20,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <ProjectGallery />
     </ThemeProvider>
   );
 }
