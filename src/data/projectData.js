@@ -45,7 +45,7 @@ export const projectData = [
     description:
       'A web application I made with HTML, CSS, and JavaScript for a friend to help him connect fiber internet at work more efficiently.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)'],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/FiberChart.webp',
     repository: 'https://github.com/Mully7773/FiberChart',
     livelink: 'https://mully7773.github.io/FiberChart/',
   },
@@ -60,7 +60,7 @@ export const projectData = [
       'Vite',
       'React-intersection-observer',
     ],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/Huddle.webp',
     repository: 'https://github.com/Mully7773/Huddle',
     livelink: 'https://huddle-nickm.netlify.app/',
   },

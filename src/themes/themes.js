@@ -66,6 +66,7 @@ export const lightTheme = {
     h2: lightPalette.primary[400],
     navLinkHover: lightPalette.primary[400],
     h3: lightPalette.primary[300],
+    h4: lightPalette.primary[300],
     skillLiText: lightPalette.primary[300],
     scrollbarThumbHover: lightPalette.primary[300],
     scrollbarTrack: lightPalette.primary[300],

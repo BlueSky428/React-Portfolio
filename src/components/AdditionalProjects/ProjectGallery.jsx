@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { projectData } from '../../data/projectData';
+import GalleryItem from './GalleryItem';
 
 const StyledProjectGallery = styled.section`
   padding: 8rem 0 12rem 0;
@@ -15,7 +17,13 @@ const StyledProjectGallery = styled.section`
 `;
 
 const ProjectGallery = () => {
-  return <StyledProjectGallery></StyledProjectGallery>;
+  return (
+    <StyledProjectGallery>
+      {projectData.slice(4).map(project => {
+        return <GalleryItem key={project.id} project={project} />;
+      })}
+    </StyledProjectGallery>
+  );
 };
 
 export default ProjectGallery;

@@ -135,6 +135,13 @@ const GlobalStyles = createGlobalStyle`
       color: ${props => props.theme.primary.h3};
     }
 
+    h4 {
+      font-family: ${props => props.theme.fonts.primary};
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: ${props => props.theme.primary.h4};
+    }
+
     p {
       font-weight: 600;
     letter-spacing: 0.1rem;

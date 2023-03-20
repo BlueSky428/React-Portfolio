@@ -38,7 +38,7 @@ const About = () => {
                   srcSet='src/assets/images/rasters/n02.webp'
                 />
                 <img
-                  src='src/assets/images/rasters/n01.webp'
+                  src='src/assets/images/rasters/n02.webp'
                   alt='Landscape picture of Nick looking out at a vast mountain scenery'
                 />
               </picture>
