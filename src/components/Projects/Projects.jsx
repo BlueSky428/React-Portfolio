@@ -13,7 +13,7 @@ const Projects = () => {
         <h2 id='projects'>projects</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
-        {projectData.map((project, index) => {
+        {projectData.slice(0, 4).map((project, index) => {
           return (
             <Project
               key={project.id}

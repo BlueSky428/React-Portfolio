@@ -2,6 +2,7 @@ import FFSearchSVG from '/src/assets/images/FF-Search.svg';
 import TaskManagerSVG from '/src/assets/images/task-manager.svg';
 import RPSLSSVG from '/src/assets/images/RPSLS.svg';
 import CalculatorSVG from '/src/assets/images/calculator.svg';
+import FiberChartSVG from '/src/assets/images/FiberChart.svg';
 
 export const projectData = [
   {
@@ -43,5 +44,76 @@ export const projectData = [
     Image: CalculatorSVG,
     repository: 'https://github.com/Mully7773/Calculator',
     livelink: 'https://mully7773.github.io/Calculator/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'FiberChart',
+    description:
+      'A web application I made with HTML, CSS, and JavaScript for a friend to help him connect fiber internet at work more efficiently.',
+    technologies: ['HTML', 'CSS', 'JavaScript (ES6+)'],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/FiberChart',
+    livelink: 'https://mully7773.github.io/FiberChart/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Huddle',
+    description:
+      "A mobile responsive landing page for a fictional messaging company called 'Huddle'.",
+    technologies: [
+      'React',
+      'Styled-Components',
+      'Vite',
+      'React-intersection-observer',
+    ],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/Huddle',
+    livelink: 'https://huddle-nickm.netlify.app/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Advice Generator',
+    description:
+      'A mobile-responsive app that allows users to get random pieces of advice with the click of a button.',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript (ES6+)',
+      'MVC',
+      'Advice Slip API (RESTful API)',
+    ],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/Advice-Generator',
+    livelink: 'https://mully7773.github.io/Advice-Generator/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Etch-A-Glow',
+    description:
+      'This is a browser art pad inspired by the mechanical drawing toy, Etch A Sketch. I named it "Etch-A-Glow" because users can use glowing squares to sketch their designs.',
+    technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'html2pdf'],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/Etch-A-Glow',
+    livelink: 'https://mully7773.github.io/Etch-A-Glow/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'AdventureMap',
+    description:
+      'This is an interactive map application I developed using HTML, CSS, and JavaScript. Users can record their adventures and details such as how much it cost, when it happened, and the duration for future reference.',
+    technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'Leaflet', 'Moment.js'],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/AdventureMap',
+    livelink: 'https://mully7773.github.io/AdventureMap/',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Nexter',
+    description:
+      "A fully responsive web page for a fictional luxury hotel company called 'Nexter'.",
+    technologies: ['React', 'Vite', 'SASS'],
+    Image: FiberChartSVG,
+    repository: 'https://github.com/Mully7773/Nexter',
+    livelink: 'https://nexter-nickm.netlify.app/',
   },
 ];

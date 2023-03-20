@@ -116,7 +116,6 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1.6rem;
         border-radius: 0.4rem;
         letter-spacing: 0.1rem;
-        padding: 1.45rem 2.45rem;
         &:hover {
           color: ${props => props.theme.primary.linkHover};
           transition: color 0.25s;
