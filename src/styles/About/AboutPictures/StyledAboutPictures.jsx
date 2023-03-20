@@ -16,7 +16,7 @@ export const StyledPictureContainer = styled(motion.div)`
 export const StyledPictureCollage = styled.div`
   position: relative;
   margin-left: 5rem;
-  & svg {
+  & img {
     height: fit-content;
     width: fit-content;
     box-shadow: 0.4rem 0.8rem 2.2rem -0.9rem rgba(0, 0, 0, 0.75);
@@ -31,7 +31,8 @@ export const StyledPictureCollage = styled.div`
 export const StyledLandscapeContainer = styled.div`
   width: 45rem;
   height: auto;
-  & svg {
+  & img {
+    object-fit: cover;
     /* Consider for something a bit more unique */
     /* border-radius: 50%; */
   }
@@ -52,7 +53,16 @@ export const StyledPortraitContainer = styled.div`
   @media ${props => props.theme.bp.desktopL} {
     width: 13.5rem;
   }
-  & svg {
+  & img {
+    height: 100%;
+    width: 100%;
+    height: 17rem;
+    width: 17rem;
     border-radius: 50%;
+    object-fit: cover;
+    @media ${props => props.theme.bp.desktopL} {
+      height: 13.5rem;
+      width: 13.5rem;
+    }
   }
 `;

@@ -1,5 +1,3 @@
-import NickPortraitSVG from '/src/assets/images/nick01V2.svg';
-import NickLandscapeSVG from '/src/assets/images/nick02V2.svg';
 import RedTempleSVG from '/src/assets/images/illustrations/red-temple-winter.svg';
 import { StyledRedTempleContainer } from '../../styles/About/AboutBackground/StyledRedTempleContainer';
 import { StyledAboutSection } from '../../styles/About/AboutLayout/StyledAboutLayout';
@@ -34,10 +32,28 @@ const About = () => {
         >
           <StyledPictureCollage>
             <StyledLandscapeContainer>
-              <NickLandscapeSVG />
+              <picture>
+                <source
+                  type='image/webp'
+                  srcSet='src/assets/images/rasters/n02.webp'
+                />
+                <img
+                  src='src/assets/images/rasters/n01.webp'
+                  alt='Landscape picture of Nick looking out at a vast mountain scenery'
+                />
+              </picture>
             </StyledLandscapeContainer>
             <StyledPortraitContainer>
-              <NickPortraitSVG />
+              <picture>
+                <source
+                  type='image/webp'
+                  srcSet='src/assets/images/rasters/n01.webp'
+                />
+                <img
+                  src='src/assets/images/rasters/n01.webp'
+                  alt='Portrait of Nick amidst greenery'
+                />
+              </picture>
             </StyledPortraitContainer>
           </StyledPictureCollage>
         </StyledPictureContainer>
