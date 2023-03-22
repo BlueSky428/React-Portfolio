@@ -137,8 +137,8 @@ const GlobalStyles = createGlobalStyle`
 
     h4 {
       font-family: ${props => props.theme.fonts.primary};
-      font-size: 1.6rem;
-      font-weight: 500;
+      font-size: 1.8rem;
+      font-weight: 600;
       color: ${props => props.theme.primary.h4};
     }
 
