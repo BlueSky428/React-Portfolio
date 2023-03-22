@@ -9,10 +9,11 @@ const StyledProjectGallery = styled.section`
   display: grid;
   gap: 2.4rem;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 
   & div {
     border-radius: 0.2rem;
-    height: 4rem;
+    /* height: 4rem; */
   }
 `;
 
