@@ -76,7 +76,7 @@ export const projectData = [
       'MVC',
       'Advice Slip API (RESTful API)',
     ],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/Advice-Generator.webp',
     repository: 'https://github.com/Mully7773/Advice-Generator',
     livelink: 'https://mully7773.github.io/Advice-Generator/',
   },
@@ -86,7 +86,7 @@ export const projectData = [
     description:
       'This is a browser art pad inspired by the mechanical drawing toy, Etch A Sketch. I named it "Etch-A-Glow" because users can use glowing squares to sketch their designs.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'html2pdf'],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/Etch-A-Glow.webp',
     repository: 'https://github.com/Mully7773/Etch-A-Glow',
     livelink: 'https://mully7773.github.io/Etch-A-Glow/',
   },
@@ -96,7 +96,7 @@ export const projectData = [
     description:
       'This is an interactive map application I developed using HTML, CSS, and JavaScript. Users can record their adventures and details such as how much it cost, when it happened, and the duration for future reference.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'Leaflet', 'Moment.js'],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/Adventure-Map.webp',
     repository: 'https://github.com/Mully7773/AdventureMap',
     livelink: 'https://mully7773.github.io/AdventureMap/',
   },
@@ -106,7 +106,7 @@ export const projectData = [
     description:
       "A fully responsive web page for a fictional luxury hotel company called 'Nexter'.",
     technologies: ['React', 'Vite', 'SASS'],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'src/assets/images/rasters/Nexter.webp',
     repository: 'https://github.com/Mully7773/Nexter',
     livelink: 'https://nexter-nickm.netlify.app/',
   },

@@ -11,6 +11,7 @@ const StyledGalleryCard = styled.div`
   height: 100%;
   width: 100%;
   /* height: 23rem; */
+
   & button {
     background-color: transparent;
     font-size: 1.4rem;
@@ -34,10 +35,11 @@ const StyledCardHeader = styled.header`
 
 const StyledThumbnail = styled.div`
   & picture {
-    box-shadow: 0 0.3rem 0.3rem 0 rgb(0 0 0 / 15%);
+    box-shadow: 0 0.3rem 0.3rem 0 rgb(0 0 0 / 20%);
     width: auto;
     height: 16.5rem;
     height: 19rem;
+    height: 18.5rem;
   }
   & img {
     width: 100%;

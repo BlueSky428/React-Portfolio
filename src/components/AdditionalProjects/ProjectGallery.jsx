@@ -3,7 +3,7 @@ import { projectData } from '../../data/projectData';
 import GalleryItem from './GalleryItem';
 
 const StyledProjectGallery = styled.section`
-  padding: 8rem 0 12rem 0;
+  padding: 4rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
   /* max-width: 120rem; */
