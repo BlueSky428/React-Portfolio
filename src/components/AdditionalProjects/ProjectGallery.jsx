@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useGlobalContext } from '../../Context/Context';
 import { projectData } from '../../data/projectData';
 import GalleryItem from './GalleryItem';
 
@@ -21,12 +22,17 @@ const StyledProjectGallery = styled.section`
 `;
 
 const ProjectGallery = () => {
+  const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
-    <StyledProjectGallery>
-      {projectData.slice(4).map(project => {
-        return <GalleryItem key={project.id} project={project} />;
-      })}
-    </StyledProjectGallery>
+    <>
+      {showMoreProjects && (
+        <StyledProjectGallery>
+          {projectData.slice(4).map(project => {
+            return <GalleryItem key={project.id} project={project} />;
+          })}
+        </StyledProjectGallery>
+      )}
+    </>
   );
 };
 

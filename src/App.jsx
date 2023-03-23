@@ -8,19 +8,22 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './components/Projects/Projects';
 import Navigation from './components/Navigation/Navigation';
 import ProjectGallery from './components/AdditionalProjects/ProjectGallery';
+import { AppProvider } from './Context/Context';
 
 function App() {
   const theme = { ...base, ...lightTheme };
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Navigation />
-      <Sidebar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <ProjectGallery />
+      <AppProvider>
+        <GlobalStyles />
+        <Navigation />
+        <Sidebar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <ProjectGallery />
+      </AppProvider>
     </ThemeProvider>
   );
 }

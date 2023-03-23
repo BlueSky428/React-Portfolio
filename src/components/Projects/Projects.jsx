@@ -5,8 +5,11 @@ import {
   StyledProjectsList,
 } from '../../styles/Projects/ProjectsLayout/StyledProjectsSection';
 import Project from './Project';
+import { useGlobalContext } from '../../Context/Context';
 
 const Projects = () => {
+  const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
+  console.log(showMoreProjects);
   return (
     <StyledProjectsSection>
       <StyledSectionHeading>
@@ -23,7 +26,9 @@ const Projects = () => {
           );
         })}
       </StyledProjectsList>
-      <button>show more</button>
+      {!showMoreProjects && (
+        <button onClick={() => toggleMoreProjects()}>show more</button>
+      )}
     </StyledProjectsSection>
   );
 };
