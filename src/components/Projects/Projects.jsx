@@ -6,6 +6,7 @@ import {
 } from '../../styles/Projects/ProjectsLayout/StyledProjectsSection';
 import Project from './Project';
 import { useGlobalContext } from '../../Context/Context';
+import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 
 const Projects = () => {
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
@@ -27,7 +28,9 @@ const Projects = () => {
         })}
       </StyledProjectsList>
       {!showMoreProjects && (
-        <button onClick={() => toggleMoreProjects()}>show more</button>
+        <StyledProjectButton onClick={() => toggleMoreProjects()}>
+          show more
+        </StyledProjectButton>
       )}
     </StyledProjectsSection>
   );

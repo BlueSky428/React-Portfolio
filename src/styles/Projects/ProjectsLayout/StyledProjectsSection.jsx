@@ -10,13 +10,6 @@ export const StyledProjectsSection = styled.section`
   padding: 8rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
-
-  & button {
-    justify-self: center;
-    border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
-    background-color: transparent;
-    padding: 1.45rem 2.45rem;
-  }
 `;
 
 export const StyledProjectsList = styled.ul`

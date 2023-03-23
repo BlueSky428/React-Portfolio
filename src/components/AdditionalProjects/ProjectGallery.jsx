@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useGlobalContext } from '../../Context/Context';
 import { projectData } from '../../data/projectData';
+import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import GalleryItem from './GalleryItem';
 
 const StyledProjectGallery = styled.section`
@@ -19,6 +20,10 @@ const StyledProjectGallery = styled.section`
     border-radius: 0.2rem;
     /* height: 4rem; */
   }
+
+  & button:last-child {
+    grid-column: -3 / 2;
+  }
 `;
 
 const ProjectGallery = () => {
@@ -26,11 +31,16 @@ const ProjectGallery = () => {
   return (
     <>
       {showMoreProjects && (
-        <StyledProjectGallery>
-          {projectData.slice(4).map(project => {
-            return <GalleryItem key={project.id} project={project} />;
-          })}
-        </StyledProjectGallery>
+        <>
+          <StyledProjectGallery>
+            {projectData.slice(4).map(project => {
+              return <GalleryItem key={project.id} project={project} />;
+            })}
+            <StyledProjectButton onClick={() => toggleMoreProjects()}>
+              show less
+            </StyledProjectButton>
+          </StyledProjectGallery>
+        </>
       )}
     </>
   );
