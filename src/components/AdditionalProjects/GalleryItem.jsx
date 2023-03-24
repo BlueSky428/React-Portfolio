@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { AnimatePresence, motion } from 'framer-motion';
 import ExpandSVG from '/src/assets/icons/maximize-2.svg';
+import { childProjectVariants } from '../../utils/animations';
 
-const StyledGalleryCard = styled.div`
+const StyledGalleryCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
@@ -53,7 +55,10 @@ const StyledThumbnail = styled.div`
 
 const GalleryItem = ({ project }) => {
   return (
-    <StyledGalleryCard>
+    <StyledGalleryCard
+      key={crypto.randomUUID()}
+      variants={childProjectVariants}
+    >
       <StyledCardHeader>
         <h4>{project.title}</h4>
         <button>

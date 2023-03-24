@@ -265,3 +265,71 @@ export const projectSlideLeftVariants = {
     },
   },
 };
+
+// More Projects animations //
+
+// See more button
+export const buttonVariant = {
+  hidden: {
+    opacity: 0,
+    x: '-60rem',
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    x: '60rem',
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+// Parent Project Gallery Section
+export const parentProjectVariants = {
+  noMotion: noMotion,
+  hidden: { opacity: 0.01 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.3,
+      delayChildren: 0.2,
+      staggerChildren: 0.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 5,
+      delay: 0,
+      delayChildren: 0.2,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+// Child Project Gallery Cards
+export const childProjectVariants = {
+  hidden: { opacity: 0.01, y: '2rem' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: cubicBezierEase,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      // duration: 0.5,
+      duration: 5,
+      ease: cubicBezierEase,
+    },
+  },
+};

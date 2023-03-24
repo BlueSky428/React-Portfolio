@@ -7,6 +7,8 @@ import {
 import Project from './Project';
 import { useGlobalContext } from '../../Context/Context';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
+import { buttonVariant } from '../../utils/animations';
+import { AnimatePresence } from 'framer-motion';
 
 const Projects = () => {
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
@@ -27,11 +29,19 @@ const Projects = () => {
           );
         })}
       </StyledProjectsList>
-      {!showMoreProjects && (
-        <StyledProjectButton onClick={() => toggleMoreProjects()}>
-          show more
-        </StyledProjectButton>
-      )}
+      <AnimatePresence>
+        {!showMoreProjects && (
+          <StyledProjectButton
+            variants={buttonVariant}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            onClick={() => toggleMoreProjects()}
+          >
+            show more
+          </StyledProjectButton>
+        )}
+      </AnimatePresence>
     </StyledProjectsSection>
   );
 };

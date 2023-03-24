@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useGlobalContext } from '../../Context/Context';
 import { projectData } from '../../data/projectData';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import GalleryItem from './GalleryItem';
+import {
+  childProjectVariants,
+  parentProjectVariants,
+} from '../../utils/animations';
 
-const StyledProjectGallery = styled.section`
+const StyledProjectGallery = styled(motion.section)`
   padding: 4rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
@@ -32,14 +37,22 @@ const ProjectGallery = () => {
     <>
       {showMoreProjects && (
         <>
-          <StyledProjectGallery>
-            {projectData.slice(4).map(project => {
-              return <GalleryItem key={project.id} project={project} />;
-            })}
-            <StyledProjectButton onClick={() => toggleMoreProjects()}>
-              show less
-            </StyledProjectButton>
-          </StyledProjectGallery>
+          <AnimatePresence>
+            <StyledProjectGallery
+              key={crypto.randomUUID()}
+              initial='hidden'
+              animate='visible'
+              variants={parentProjectVariants}
+              exit='exit'
+            >
+              {projectData.slice(4).map(project => {
+                return <GalleryItem key={project.id} project={project} />;
+              })}
+              <StyledProjectButton onClick={() => toggleMoreProjects()}>
+                show less
+              </StyledProjectButton>
+            </StyledProjectGallery>
+          </AnimatePresence>
         </>
       )}
     </>
