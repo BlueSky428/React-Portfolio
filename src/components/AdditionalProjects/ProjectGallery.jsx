@@ -5,6 +5,7 @@ import { projectData } from '../../data/projectData';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import GalleryItem from './GalleryItem';
 import {
+  buttonVariant,
   childProjectVariants,
   parentProjectVariants,
 } from '../../utils/animations';
@@ -35,9 +36,9 @@ const ProjectGallery = () => {
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
     <>
-      {showMoreProjects && (
-        <>
-          <AnimatePresence>
+      <AnimatePresence>
+        {showMoreProjects && (
+          <>
             <StyledProjectGallery
               key={crypto.randomUUID()}
               initial='hidden'
@@ -48,13 +49,19 @@ const ProjectGallery = () => {
               {projectData.slice(4).map(project => {
                 return <GalleryItem key={project.id} project={project} />;
               })}
-              <StyledProjectButton onClick={() => toggleMoreProjects()}>
+              <StyledProjectButton
+                variants={buttonVariant}
+                initial='hidden'
+                animate='visible'
+                exit='exit'
+                onClick={() => toggleMoreProjects()}
+              >
                 show less
               </StyledProjectButton>
             </StyledProjectGallery>
-          </AnimatePresence>
-        </>
-      )}
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };

@@ -279,6 +279,7 @@ export const buttonVariant = {
     opacity: 1,
     transition: {
       duration: 0.5,
+      delay: 1.5,
     },
   },
   exit: {
@@ -303,12 +304,11 @@ export const parentProjectVariants = {
     },
   },
   exit: {
-    opacity: 0,
     transition: {
-      duration: 5,
+      // duration: 2,
       delay: 0,
-      delayChildren: 0.2,
-      staggerChildren: 0.3,
+      delayChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -326,9 +326,10 @@ export const childProjectVariants = {
   },
   exit: {
     opacity: 0,
+    y: '2rem',
     transition: {
       // duration: 0.5,
-      duration: 5,
+      duration: 0.3,
       ease: cubicBezierEase,
     },
   },
