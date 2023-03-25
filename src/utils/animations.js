@@ -270,6 +270,7 @@ export const projectSlideLeftVariants = {
 
 // See more button
 export const buttonVariant = {
+  noMotion: noMotion,
   hidden: {
     opacity: 0,
     x: '-60rem',

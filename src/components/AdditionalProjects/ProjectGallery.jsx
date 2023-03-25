@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useGlobalContext } from '../../Context/Context';
 import { projectData } from '../../data/projectData';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
@@ -33,6 +33,7 @@ const StyledProjectGallery = styled(motion.section)`
 `;
 
 const ProjectGallery = () => {
+  const shouldReduceMotion = useReducedMotion();
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
     <>
@@ -41,7 +42,7 @@ const ProjectGallery = () => {
           <>
             <StyledProjectGallery
               key={crypto.randomUUID()}
-              initial='hidden'
+              initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
               animate='visible'
               variants={parentProjectVariants}
               exit='exit'
@@ -51,9 +52,9 @@ const ProjectGallery = () => {
               })}
               <StyledProjectButton
                 variants={buttonVariant}
-                initial='hidden'
+                initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
                 animate='visible'
-                exit='exit'
+                exit={shouldReduceMotion ? 'noMotion' : 'exit'}
                 onClick={() => toggleMoreProjects()}
               >
                 show less

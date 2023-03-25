@@ -8,11 +8,11 @@ import Project from './Project';
 import { useGlobalContext } from '../../Context/Context';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import { buttonVariant } from '../../utils/animations';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, useReducedMotion } from 'framer-motion';
 
 const Projects = () => {
+  const shouldReduceMotion = useReducedMotion();
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
-  console.log(showMoreProjects);
   return (
     <StyledProjectsSection>
       <StyledSectionHeading>
@@ -33,9 +33,9 @@ const Projects = () => {
         {!showMoreProjects && (
           <StyledProjectButton
             variants={buttonVariant}
-            initial='hidden'
+            initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
             animate='visible'
-            exit='exit'
+            exit={shouldReduceMotion ? 'noMotion' : 'exit'}
             onClick={() => toggleMoreProjects()}
           >
             show more

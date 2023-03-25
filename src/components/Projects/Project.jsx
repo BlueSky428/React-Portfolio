@@ -14,11 +14,13 @@ import {
   projectSlideLeftVariants,
   projectSlideRightVariants,
 } from '../../utils/animations';
+import { useReducedMotion } from 'framer-motion';
 
 const Project = ({ project, alternate }) => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <StyledProjectItem
-      initial='hidden'
+      initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
       whileInView='visible'
       // 'amount' = when about half the component is visible animate
       viewport={{ once: true, amount: 0.4 }}
