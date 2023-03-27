@@ -5,11 +5,11 @@ export const StyledProjectsSection = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
-  /* grid-auto-rows: 1fr; */
   row-gap: 6rem;
   padding: 8rem 0 12rem 0;
   margin: 0 auto;
   max-width: 107rem;
+  position: relative;
 `;
 
 export const StyledProjectsList = styled.ul`
