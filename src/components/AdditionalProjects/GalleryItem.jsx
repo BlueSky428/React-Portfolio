@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 import ExpandSVG from '/src/assets/icons/maximize-2.svg';
+import GithubSVG from '/src/assets/icons/github.svg';
+import ExternalLinkSVG from '/src/assets/icons/external-link.svg';
 import { childProjectVariants } from '../../utils/animations';
 import { useState } from 'react';
 import { useRef } from 'react';
@@ -40,6 +42,7 @@ const StyledGalleryCard = styled(motion.div)`
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
+      gap: 0;
     `}
 `;
 
@@ -64,7 +67,10 @@ const StyledCardHeader = styled.header`
 `;
 
 const StyledThumbnail = styled.div`
+  border-radius: 0.2rem;
+
   & picture {
+    border-radius: 0.2rem;
     box-shadow: 0 0.3rem 0.3rem 0 rgb(0 0 0 / 20%);
     width: auto;
     height: 16.5rem;
@@ -75,6 +81,13 @@ const StyledThumbnail = styled.div`
       props.isCardOpened &&
       css`
         height: 35rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        & img {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       `}
   }
   & img {
@@ -88,7 +101,7 @@ const StyledThumbnail = styled.div`
 `;
 
 const CardDescription = styled(motion.p)`
-  color: #fff;
+  color: ${props => props.theme.primary.p};
 `;
 
 const CardBackground = styled(motion.div)`
@@ -101,6 +114,34 @@ const CardBackground = styled(motion.div)`
   left: 0;
   bottom: 0;
   background: rgba(10, 10, 10, 0.7);
+`;
+
+const StyledOpenContainer = styled.div`
+  background-color: ${props => props.theme.primary.projectDescBg};
+  padding: 4.5rem 3.5rem 3.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+`;
+
+const StyledOpenTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 2rem; */
+
+  & h3 {
+    line-height: 1;
+  }
+  & ul {
+    display: flex;
+    /* align-items: center;
+    justify-content: flex-end; */
+    gap: 2rem;
+    line-height: 1;
+  }
 `;
 
 const GalleryItem = ({ project }) => {
@@ -140,12 +181,36 @@ const GalleryItem = ({ project }) => {
           </picture>
         </StyledThumbnail>
         {isCardOpened && (
-          <>
-            <h4>{project.title}</h4>
+          <StyledOpenContainer>
+            <StyledOpenTitleContainer>
+              <h3>{project.title}</h3>
+              <ul>
+                <li>
+                  <a
+                    href={project.repository}
+                    aria-label='Github'
+                    target='_blank'
+                    rel='noreferrer noopener'
+                  >
+                    <GithubSVG />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={project.livelink}
+                    aria-label='Live website'
+                    target='_blank'
+                    rel='noreferrer noopener'
+                  >
+                    <ExternalLinkSVG />
+                  </a>
+                </li>
+              </ul>
+            </StyledOpenTitleContainer>
             <CardDescription initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               {project.description}
             </CardDescription>
-          </>
+          </StyledOpenContainer>
         )}
       </StyledGalleryCard>
       {isCardOpened && (
