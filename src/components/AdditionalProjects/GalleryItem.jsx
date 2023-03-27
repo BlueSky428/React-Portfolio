@@ -38,7 +38,7 @@ const StyledGalleryCard = styled(motion.div)`
       bottom: 0;
       left: 0;
       margin: auto;
-      z-index: 10;
+      z-index: 10002;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -100,15 +100,24 @@ const StyledThumbnail = styled.div`
   }
 `;
 
-const CardDescription = styled(motion.p)`
+const StyledOpenCardDescription = styled(motion.p)`
   color: ${props => props.theme.primary.p};
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
 `;
 
-const CardBackground = styled(motion.div)`
+const StyledOpenCardBackground = styled(motion.div)`
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: 9;
+  z-index: 10001;
   top: 0;
   right: 0;
   left: 0;
@@ -121,7 +130,7 @@ const StyledOpenContainer = styled.div`
   padding: 4.5rem 3.5rem 3.5rem 3.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.4rem;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 `;
@@ -137,8 +146,6 @@ const StyledOpenTitleContainer = styled.div`
   }
   & ul {
     display: flex;
-    /* align-items: center;
-    justify-content: flex-end; */
     gap: 2rem;
     line-height: 1;
   }
@@ -207,9 +214,17 @@ const GalleryItem = ({ project }) => {
                 </li>
               </ul>
             </StyledOpenTitleContainer>
-            <CardDescription initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <StyledOpenCardDescription
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
               {project.description}
-            </CardDescription>
+              <ul>
+                {project.technologies.map(tech => {
+                  return <li key={tech}>{tech}</li>;
+                })}
+              </ul>
+            </StyledOpenCardDescription>
           </StyledOpenContainer>
         )}
       </StyledGalleryCard>
@@ -221,7 +236,7 @@ const GalleryItem = ({ project }) => {
               height: cardDimensions.height,
             }}
           ></div>
-          <CardBackground
+          <StyledOpenCardBackground
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setIsCardOpened(false)}
