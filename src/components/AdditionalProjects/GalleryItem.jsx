@@ -38,7 +38,7 @@ const StyledGalleryCard = styled(motion.div)`
       bottom: 0;
       left: 0;
       margin: auto;
-      z-index: 10002;
+      z-index: 10000002;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -117,12 +117,13 @@ const StyledOpenCardBackground = styled(motion.div)`
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: 10001;
+  z-index: 10000001;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background: rgba(10, 10, 10, 0.7);
+  cursor: pointer;
 `;
 
 const StyledOpenContainer = styled.div`
@@ -155,6 +156,15 @@ const GalleryItem = ({ project }) => {
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
   const card = useRef(null);
+
+  // Prevents background scrolling while expanded card is visible
+  const setNoScroll = () => {
+    document.body.style.overflow = 'hidden';
+  };
+  const setScroll = () => {
+    document.body.style.overflowY = 'auto';
+  };
+
   return (
     <>
       <StyledGalleryCard
@@ -164,19 +174,21 @@ const GalleryItem = ({ project }) => {
         ref={card}
         isCardOpened={isCardOpened}
         layout
-        onClick={() => {
-          setIsCardOpened(true);
-          if (!isCardOpened) {
-            setCardDimensions({
-              width: card.current.clientWidth,
-              height: card.current.clientHeight,
-            });
-          }
-        }}
       >
         <StyledCardHeader isCardOpened={isCardOpened} layout='position'>
           <h4>{project.title}</h4>
-          <button>
+          <button
+            onClick={() => {
+              setIsCardOpened(true);
+              setNoScroll();
+              if (!isCardOpened) {
+                setCardDimensions({
+                  width: card.current.clientWidth,
+                  height: card.current.clientHeight,
+                });
+              }
+            }}
+          >
             more info
             <ExpandSVG />
           </button>
@@ -239,7 +251,10 @@ const GalleryItem = ({ project }) => {
           <StyledOpenCardBackground
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            onClick={() => setIsCardOpened(false)}
+            onClick={() => {
+              setIsCardOpened(false);
+              setScroll();
+            }}
           />
         </Fragment>
       )}

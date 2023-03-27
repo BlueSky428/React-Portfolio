@@ -60,6 +60,8 @@ const GlobalStyles = createGlobalStyle`
   /* Scrollbar styles */
   /* TODO */
   html {
+    /* Preserve scrollbar space after hiding it in ProjectGallery to prevent layout issue */
+    scrollbar-gutter: stable;
     scrollbar-width: thin;
     scrollbar-color: ${props => props.theme.primary.scrollbarTrack} ${props =>
   props.theme.primary.scrollbarThumb};
