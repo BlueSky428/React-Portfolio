@@ -33,24 +33,18 @@ const About = () => {
           <StyledPictureCollage>
             <StyledLandscapeContainer>
               <picture>
-                <source
-                  type='image/webp'
-                  srcSet='src/assets/images/rasters/n02.webp'
-                />
+                <source type='image/webp' srcSet='/rasters/n02.webp' />
                 <img
-                  src='src/assets/images/rasters/n02.webp'
+                  src='/rasters/n02.webp'
                   alt='Landscape picture of Nick looking out at a vast mountain scenery'
                 />
               </picture>
             </StyledLandscapeContainer>
             <StyledPortraitContainer>
               <picture>
-                <source
-                  type='image/webp'
-                  srcSet='src/assets/images/rasters/n01.webp'
-                />
+                <source type='image/webp' srcSet='/rasters/n01.webp' />
                 <img
-                  src='src/assets/images/rasters/n01.webp'
+                  src='/rasters/n01.webp'
                   alt='Portrait of Nick amidst greenery'
                 />
               </picture>

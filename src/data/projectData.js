@@ -5,7 +5,7 @@ export const projectData = [
     description:
       'A search application that utilizes the moogle API to search for Final Fantasy characters; users can search for the games and characters from the main series.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'MVC', 'RESTfulAPI'],
-    imageUrl: 'src/assets/images/rasters/FF-Search.webp',
+    imageUrl: 'rasters/FF-Search.webp',
     repository: 'https://github.com/Mully7773/FF-Search',
     livelink: 'https://mully7773.github.io/FF-Search/',
   },
@@ -15,7 +15,7 @@ export const projectData = [
     description:
       "A 'task manager' or todo application built with React. Users can add, delete, edit, and view their tasks. I've also included drag and drop functionality to reorder tasks, a mark as complete option, and a dark/light theme toggler.",
     technologies: ['React', 'Styled-Components', 'Framer-Motion', 'Vite'],
-    imageUrl: 'src/assets/images/rasters/Task-Manager.webp',
+    imageUrl: 'rasters/Task-Manager.webp',
     repository: 'https://github.com/Mully7773/Task-Manager',
     livelink: 'https://task-manager-fm.netlify.app/',
   },
@@ -25,7 +25,7 @@ export const projectData = [
     description:
       "An application based on the traditional game with two extra player choices originating from 'The Big Bang Theory'. Users can play against a computer on their mobile device or desktop and try to get a high score.",
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'MVC'],
-    imageUrl: 'src/assets/images/rasters/RPSLS.webp',
+    imageUrl: 'rasters/RPSLS.webp',
     repository: 'https://github.com/Mully7773/RPSLS',
     livelink: 'https://mully7773.github.io/RPSLS/',
   },
@@ -35,7 +35,7 @@ export const projectData = [
     description:
       'A thematic and responsive calculator that allows users to easily add, subtract, and divide positive integers and floating point numbers.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'MVC'],
-    imageUrl: 'src/assets/images/rasters/Calculator.webp',
+    imageUrl: 'rasters/Calculator.webp',
     repository: 'https://github.com/Mully7773/Calculator',
     livelink: 'https://mully7773.github.io/Calculator/',
   },
@@ -45,7 +45,7 @@ export const projectData = [
     description:
       'A web application I made with HTML, CSS, and JavaScript for a friend to help him connect fiber internet at work more efficiently.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)'],
-    imageUrl: 'src/assets/images/rasters/FiberChart.webp',
+    imageUrl: 'rasters/FiberChart.webp',
     repository: 'https://github.com/Mully7773/FiberChart',
     livelink: 'https://mully7773.github.io/FiberChart/',
   },
@@ -60,7 +60,7 @@ export const projectData = [
       'Vite',
       'React-intersection-observer',
     ],
-    imageUrl: 'src/assets/images/rasters/Huddle.webp',
+    imageUrl: 'rasters/Huddle.webp',
     repository: 'https://github.com/Mully7773/Huddle',
     livelink: 'https://huddle-nickm.netlify.app/',
   },
@@ -76,7 +76,7 @@ export const projectData = [
       'MVC',
       'Advice Slip API (RESTful API)',
     ],
-    imageUrl: 'src/assets/images/rasters/Advice-Generator.webp',
+    imageUrl: 'rasters/Advice-Generator.webp',
     repository: 'https://github.com/Mully7773/Advice-Generator',
     livelink: 'https://mully7773.github.io/Advice-Generator/',
   },
@@ -86,7 +86,7 @@ export const projectData = [
     description:
       'This is a browser art pad inspired by the mechanical drawing toy, Etch A Sketch. I named it "Etch-A-Glow" because users can use glowing squares to sketch their designs.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'html2pdf'],
-    imageUrl: 'src/assets/images/rasters/Etch-A-Glow.webp',
+    imageUrl: 'rasters/Etch-A-Glow.webp',
     repository: 'https://github.com/Mully7773/Etch-A-Glow',
     livelink: 'https://mully7773.github.io/Etch-A-Glow/',
   },
@@ -96,7 +96,7 @@ export const projectData = [
     description:
       'This is an interactive map application I developed using HTML, CSS, and JavaScript. Users can record their adventures and details such as how much it cost, when it happened, and the duration for future reference.',
     technologies: ['HTML', 'CSS', 'JavaScript (ES6+)', 'Leaflet', 'Moment.js'],
-    imageUrl: 'src/assets/images/rasters/Adventure-Map.webp',
+    imageUrl: '/rasters/Adventure-Map.webp',
     repository: 'https://github.com/Mully7773/AdventureMap',
     livelink: 'https://mully7773.github.io/AdventureMap/',
   },
@@ -106,7 +106,7 @@ export const projectData = [
     description:
       "A fully responsive web page for a fictional luxury hotel company called 'Nexter'.",
     technologies: ['React', 'Vite', 'SASS'],
-    imageUrl: 'src/assets/images/rasters/Nexter.webp',
+    imageUrl: 'rasters/Nexter.webp',
     repository: 'https://github.com/Mully7773/Nexter',
     livelink: 'https://nexter-nickm.netlify.app/',
   },
