@@ -5,6 +5,7 @@ import { projectData } from '../../data/projectData';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import GalleryItem from './GalleryItem';
 import { buttonVariant, parentProjectVariants } from '../../utils/animations';
+import { CONSTANTS } from '../../constants';
 
 const StyledProjectGallery = styled(motion.section)`
   padding: 0rem 0 12rem 0;
@@ -45,9 +46,11 @@ const ProjectGallery = () => {
               variants={parentProjectVariants}
               exit='exit'
             >
-              {projectData.slice(4).map(project => {
-                return <GalleryItem key={project.id} project={project} />;
-              })}
+              {projectData
+                .slice(CONSTANTS.FEATURED_PROJECT_CUTOFF)
+                .map(project => {
+                  return <GalleryItem key={project.id} project={project} />;
+                })}
               <StyledProjectButton
                 variants={buttonVariant}
                 initial={shouldReduceMotion ? 'noMotion' : 'hidden'}

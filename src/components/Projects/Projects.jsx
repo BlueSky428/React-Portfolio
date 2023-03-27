@@ -9,6 +9,7 @@ import { useGlobalContext } from '../../Context/Context';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import { buttonVariant } from '../../utils/animations';
 import { AnimatePresence, useReducedMotion } from 'framer-motion';
+import { CONSTANTS } from '../../constants';
 
 const Projects = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -19,15 +20,20 @@ const Projects = () => {
         <h2 id='projects'>projects</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
-        {projectData.slice(0, 4).map((project, index) => {
-          return (
-            <Project
-              key={project.id}
-              project={project}
-              alternate={index % 2 !== 0}
-            />
-          );
-        })}
+        {projectData
+          .slice(
+            CONSTANTS.FEATURED_PROJECT_START,
+            CONSTANTS.FEATURED_PROJECT_CUTOFF
+          )
+          .map((project, index) => {
+            return (
+              <Project
+                key={project.id}
+                project={project}
+                alternate={index % 2 !== 0}
+              />
+            );
+          })}
       </StyledProjectsList>
       <AnimatePresence>
         {!showMoreProjects && (
