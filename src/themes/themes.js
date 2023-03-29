@@ -52,6 +52,7 @@ const lightPalette = {
   },
   gradients: {
     hero: ['#fedccdcc', '#f5cce9cc'],
+    footer: ['#fedccdcc', '#f5cce9cc'],
   },
 };
 
@@ -63,6 +64,7 @@ export const lightTheme = {
     link: lightPalette.primary[600],
     navigationBars: lightPalette.primary[600],
     scrollbarThumb: lightPalette.primary[600],
+    footerContentBg: lightPalette.primary[500],
     h2: lightPalette.primary[400],
     navLinkHover: lightPalette.primary[400],
     h3: lightPalette.primary[300],
@@ -92,5 +94,7 @@ export const lightTheme = {
   gradients: {
     heroBgBottom: lightPalette.gradients.hero[0],
     heroBgTop: lightPalette.gradients.hero[1],
+    footerBgBottom: lightPalette.gradients.footer[0],
+    footerBgTop: lightPalette.gradients.footer[1],
   },
 };
