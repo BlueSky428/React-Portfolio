@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
+import KoiSVG from '/src/assets/images/illustrations/koiV2.svg';
+import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
+import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
 
 const StyledFooter = styled.footer`
   display: grid;
   grid-template-rows: 1.7fr 1fr;
   height: 75rem;
-  margin-top: 8rem;
-  background-color: ${props => props.theme.primary.projectDescBg};
+  margin-top: 7rem;
   background: linear-gradient(
     to bottom,
     transparent,
@@ -34,30 +36,54 @@ const StyledFooterContent = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 35% 65%;
-  /* column-gap: 10rem; */
   /* grid-template-columns: 1fr 1fr; */
   align-items: center;
+  position: relative;
 `;
 
 const StyledNav = styled.ul`
   justify-self: end;
   & li {
-    color: #eee;
+    color: #f1f2daff;
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.4rem;
     text-transform: capitalize;
   }
 `;
 
-const StyledContact = styled.ul`
+const StyledContactInfo = styled.ul`
   margin-left: 10rem;
   margin-top: 5rem;
   & li {
-    color: #eee;
+    color: #f1f2daff;
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.6rem;
     /* text-transform: capitalize; */
   }
+`;
+
+const StyledKoiContainer = styled.div`
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  right: 52rem;
+  bottom: 11rem;
+`;
+
+const StyledSeaweedContainer = styled.div`
+  position: absolute;
+  bottom: 0.7rem;
+  right: 7rem;
+  width: 11.5rem;
+  height: 11.5rem;
+`;
+
+const StyledSeaweed2Container = styled.div`
+  position: absolute;
+  bottom: 2.5rem;
+  right: 17rem;
+  width: 7rem;
+  height: 7rem;
 `;
 
 const Footer = () => {
@@ -69,16 +95,25 @@ const Footer = () => {
         </div>
       </StyledFooterBackground>
       <StyledFooterContent>
+        <StyledKoiContainer>
+          <KoiSVG />
+        </StyledKoiContainer>
         <StyledNav>
           <li>home</li>
           <li>about</li>
           <li>technology</li>
           <li>projects</li>
         </StyledNav>
-        <StyledContact>
+        <StyledContactInfo>
           <li>e-mail: test@test.com</li>
           <li>phone: 503-234-2343</li>
-        </StyledContact>
+        </StyledContactInfo>
+        <StyledSeaweedContainer>
+          <SeaweedSVG />
+        </StyledSeaweedContainer>
+        <StyledSeaweed2Container>
+          <Seaweed2SVG />
+        </StyledSeaweed2Container>
       </StyledFooterContent>
     </StyledFooter>
   );

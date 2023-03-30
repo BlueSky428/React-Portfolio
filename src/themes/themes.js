@@ -49,6 +49,7 @@ const lightPalette = {
   neutrals: {
     100: '#eee',
     200: '#fbf3e2',
+    300: '#f1f2daff',
   },
   gradients: {
     hero: ['#fedccdcc', '#f5cce9cc'],
@@ -64,7 +65,7 @@ export const lightTheme = {
     link: lightPalette.primary[600],
     navigationBars: lightPalette.primary[600],
     scrollbarThumb: lightPalette.primary[600],
-    footerContentBg: lightPalette.primary[500],
+    footerContentBg: lightPalette.primary[400],
     h2: lightPalette.primary[400],
     navLinkHover: lightPalette.primary[400],
     h3: lightPalette.primary[300],
