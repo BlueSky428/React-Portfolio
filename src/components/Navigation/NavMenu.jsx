@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { navSections } from '../../data/navData';
 import { MenuItem } from './MenuItem';
 // import { MenuItem } from './MenuItem';
 
@@ -20,28 +21,6 @@ const StyledMenuList = styled(motion.ul)`
   z-index: 2000000;
 `;
 
-const sections = [
-  {
-    id: crypto.randomUUID(),
-    sectionTitle: 'home',
-    sectionHref: '/#home',
-  },
-  {
-    id: crypto.randomUUID(),
-    sectionTitle: 'about',
-    sectionHref: '/#about',
-  },
-  {
-    id: crypto.randomUUID(),
-    sectionTitle: 'technology',
-    sectionHref: '/#technology',
-  },
-  {
-    id: crypto.randomUUID(),
-    sectionTitle: 'projects',
-    sectionHref: '/#projects',
-  },
-];
 const NavMenu = ({ toggle }) => {
   return (
     <StyledMenuList
@@ -49,7 +28,7 @@ const NavMenu = ({ toggle }) => {
       role='menubar'
       aria-label='menubar navigation'
     >
-      {sections.map(section => (
+      {navSections.map(section => (
         <MenuItem key={section.id} section={section} toggle={toggle} />
       ))}
     </StyledMenuList>

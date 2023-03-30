@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import NavMenu from '../Navigation/NavMenu';
 
 import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
 import KoiSVG from '/src/assets/images/illustrations/koiV2.svg';
@@ -9,7 +10,7 @@ const StyledFooter = styled.footer`
   display: grid;
   grid-template-rows: 1.7fr 1fr;
   height: 75rem;
-  margin-top: 7rem;
+  margin-top: 8rem;
   background: linear-gradient(
     to bottom,
     transparent,
@@ -48,6 +49,28 @@ const StyledNav = styled.ul`
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.4rem;
     text-transform: capitalize;
+  }
+`;
+
+const StyledFooterNavContainer = styled.div`
+  justify-self: end;
+  z-index: 500;
+  & ul {
+    position: static;
+    & li {
+      color: #f1f2daff;
+      font-size: 2.4rem;
+      text-transform: capitalize;
+
+      & :hover {
+        color: inherit;
+      }
+
+      & a {
+        color: #f1f2daff;
+        font-weight: 400;
+      }
+    }
   }
 `;
 
@@ -98,12 +121,15 @@ const Footer = () => {
         <StyledKoiContainer>
           <KoiSVG />
         </StyledKoiContainer>
-        <StyledNav>
+        {/* <StyledNav>
           <li>home</li>
           <li>about</li>
           <li>technology</li>
           <li>projects</li>
-        </StyledNav>
+        </StyledNav> */}
+        <StyledFooterNavContainer>
+          <NavMenu />
+        </StyledFooterNavContainer>
         <StyledContactInfo>
           <li>e-mail: test@test.com</li>
           <li>phone: 503-234-2343</li>
