@@ -7,17 +7,21 @@ import LinkedInSVG from '/src/assets/icons/linkedin.svg';
 import MailSVG from '/src/assets/icons/mail.svg';
 import { socialIconVariants, socialListVariants } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
+import { useGlobalContext } from '../../Context/Context';
 
 const Sidebar = () => {
+  const { atBottom } = useGlobalContext();
+
   const shouldReduceMotion = useReducedMotion();
   return (
     <StyledSidebarContainer
+      atBottom={atBottom}
       initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
       animate='visible'
       variants={socialListVariants}
     >
       <StyledSocialList>
-        <StyledSocialLink>
+        <StyledSocialLink atBottom={atBottom}>
           <motion.a
             initial='hidden'
             whileHover='visible'
@@ -31,7 +35,7 @@ const Sidebar = () => {
             <GithubSVG />
           </motion.a>
         </StyledSocialLink>
-        <StyledSocialLink>
+        <StyledSocialLink atBottom={atBottom}>
           <motion.a
             initial='hidden'
             whileHover='visible'
@@ -45,7 +49,7 @@ const Sidebar = () => {
             <LinkedInSVG />
           </motion.a>
         </StyledSocialLink>
-        <StyledSocialLink>
+        <StyledSocialLink atBottom={atBottom}>
           <motion.a
             initial='hidden'
             whileHover='visible'

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import NavMenu from '../Navigation/NavMenu';
 
 import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
@@ -80,7 +81,7 @@ const StyledContactInfo = styled.ul`
   & li {
     color: #f1f2daff;
     font-family: ${props => props.theme.fonts.secondary};
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     /* text-transform: capitalize; */
   }
 `;
@@ -121,18 +122,12 @@ const Footer = () => {
         <StyledKoiContainer>
           <KoiSVG />
         </StyledKoiContainer>
-        {/* <StyledNav>
-          <li>home</li>
-          <li>about</li>
-          <li>technology</li>
-          <li>projects</li>
-        </StyledNav> */}
         <StyledFooterNavContainer>
           <NavMenu />
         </StyledFooterNavContainer>
         <StyledContactInfo>
-          <li>e-mail: test@test.com</li>
-          <li>phone: 503-234-2343</li>
+          <li>e-mail: mully7773@gmail.com</li>
+          <li>website by Nick Mullenmeister</li>
         </StyledContactInfo>
         <StyledSeaweedContainer>
           <SeaweedSVG />

@@ -87,6 +87,7 @@ export const lightTheme = {
     navigationBorder: lightPalette.tertiary[600],
   },
   neutrals: {
+    footerText: lightPalette.neutrals[300],
     heroBackdrop: lightPalette.neutrals[200],
     aboutBackdrop: lightPalette.neutrals[200],
     imageBorder: lightPalette.neutrals[200],

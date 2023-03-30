@@ -8,9 +8,18 @@ export const StyledSidebarContainer = styled(motion.div)`
   top: 68.5%;
   display: flex;
   flex-direction: column;
-  border-top: 1.5px solid ${props => props.theme.tertiary.sidebarBorder};
   z-index: 10000;
-  border-bottom: 1.5px solid ${props => props.theme.tertiary.sidebarBorder};
   padding: 1rem 0 1rem 1rem;
   border-radius: 1.5rem;
+  border-top: 1.5px solid
+    ${props =>
+      props.atBottom
+        ? props.theme.neutrals.footerText
+        : props.theme.tertiary.sidebarBorder};
+  border-bottom: 1.5px solid
+    ${props =>
+      props.atBottom
+        ? props.theme.neutrals.footerText
+        : props.theme.tertiary.sidebarBorder};
+  transition: border-bottom 0.3s;
 `;

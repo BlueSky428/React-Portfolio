@@ -14,5 +14,8 @@ export const StyledSocialLink = styled.li`
   & svg {
     height: 2.1rem;
     width: 2.1rem;
+    transition: stroke 0.3s;
+    stroke: ${props =>
+      props.atBottom ? props.theme.neutrals.footerText : null};
   }
 `;
