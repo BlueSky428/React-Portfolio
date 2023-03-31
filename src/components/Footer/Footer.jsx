@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import NavMenu from '../Navigation/NavMenu';
 
 import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
-import KoiSVG from '/src/assets/images/illustrations/koiV2.svg';
+import Koi1SVG from '/src/assets/images/illustrations/koi1.svg';
+import Koi2SVG from '/src/assets/images/illustrations/koi2.svg';
 import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
 import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
 
@@ -56,6 +57,14 @@ const StyledNav = styled.ul`
 const StyledFooterNavContainer = styled.div`
   justify-self: end;
   z-index: 500;
+  position: relative;
+  & div {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    bottom: -5rem;
+    transform: translateX(-7rem);
+  }
   & ul {
     position: static;
     & li {
@@ -75,6 +84,17 @@ const StyledFooterNavContainer = styled.div`
   }
 `;
 
+const StyledContactInfoContainer = styled.div`
+  position: relative;
+  & div {
+    width: 6.5rem;
+    height: 6.5rem;
+    position: absolute;
+    top: 0;
+    transform: translateX(32rem);
+  }
+`;
+
 const StyledContactInfo = styled.ul`
   margin-left: 10rem;
   margin-top: 5rem;
@@ -90,7 +110,7 @@ const StyledKoiContainer = styled.div`
   width: 7.5rem;
   height: 7.5rem;
   position: absolute;
-  right: 52rem;
+  right: 49rem;
   bottom: 11rem;
 `;
 
@@ -119,16 +139,21 @@ const Footer = () => {
         </div>
       </StyledFooterBackground>
       <StyledFooterContent>
-        <StyledKoiContainer>
-          <KoiSVG />
-        </StyledKoiContainer>
         <StyledFooterNavContainer>
           <NavMenu />
+          <div>
+            <Koi1SVG />
+          </div>
         </StyledFooterNavContainer>
-        <StyledContactInfo>
-          <li>e-mail: mully7773@gmail.com</li>
-          <li>website by Nick Mullenmeister</li>
-        </StyledContactInfo>
+        <StyledContactInfoContainer>
+          <div>
+            <Koi2SVG />
+          </div>
+          <StyledContactInfo>
+            <li>e-mail: mully7773@gmail.com</li>
+            <li>website by Nick Mullenmeister</li>
+          </StyledContactInfo>
+        </StyledContactInfoContainer>
         <StyledSeaweedContainer>
           <SeaweedSVG />
         </StyledSeaweedContainer>
