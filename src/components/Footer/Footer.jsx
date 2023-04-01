@@ -44,16 +44,6 @@ const StyledFooterContent = styled.div`
   position: relative;
 `;
 
-const StyledNav = styled.ul`
-  justify-self: end;
-  & li {
-    color: #f1f2daff;
-    font-family: ${props => props.theme.fonts.secondary};
-    font-size: 2.4rem;
-    text-transform: capitalize;
-  }
-`;
-
 const StyledFooterNavContainer = styled.div`
   justify-self: end;
   z-index: 500;
