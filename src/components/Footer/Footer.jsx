@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-
 import NavMenu from '../Navigation/NavMenu';
-
 import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
 import Koi1SVG from '/src/assets/images/illustrations/koi1.svg';
 import Koi2SVG from '/src/assets/images/illustrations/koi2.svg';
+import BoulderSVG from '/src/assets/images/illustrations/boulder.svg';
 import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
 import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
+import PlantSVG from '/src/assets/images/illustrations/underwater-plant.svg';
 
 const StyledFooter = styled.footer`
   display: grid;
@@ -58,13 +58,7 @@ const StyledFooterNavContainer = styled.div`
   justify-self: end;
   z-index: 500;
   position: relative;
-  & div {
-    width: 8rem;
-    height: 8rem;
-    position: absolute;
-    bottom: -5rem;
-    transform: translateX(-7rem);
-  }
+
   & ul {
     position: static;
     & li {
@@ -86,13 +80,21 @@ const StyledFooterNavContainer = styled.div`
 
 const StyledContactInfoContainer = styled.div`
   position: relative;
-  & div {
-    width: 6.5rem;
-    height: 6.5rem;
-    position: absolute;
-    top: 0;
-    transform: translateX(32rem);
-  }
+`;
+
+const StyledKoi1Container = styled.div`
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  bottom: -5rem;
+  transform: translateX(-7rem);
+`;
+const StyledKoi2Container = styled.div`
+  width: 6.5rem;
+  height: 6.5rem;
+  position: absolute;
+  top: 0;
+  transform: translateX(32rem);
 `;
 
 const StyledContactInfo = styled.ul`
@@ -106,12 +108,12 @@ const StyledContactInfo = styled.ul`
   }
 `;
 
-const StyledKoiContainer = styled.div`
-  width: 7.5rem;
-  height: 7.5rem;
+const StyledPlantContainer = styled.div`
   position: absolute;
-  right: 49rem;
-  bottom: 11rem;
+  bottom: 0;
+  left: 10rem;
+  width: 9rem;
+  height: auto;
 `;
 
 const StyledSeaweedContainer = styled.div`
@@ -130,6 +132,17 @@ const StyledSeaweed2Container = styled.div`
   height: 7rem;
 `;
 
+const StyledBoulderContainer = styled.div`
+  & svg {
+    width: 10rem;
+    height: auto;
+  }
+
+  position: absolute;
+  bottom: -8rem;
+  transform: translateX(15rem);
+`;
+
 const Footer = () => {
   return (
     <StyledFooter>
@@ -141,19 +154,25 @@ const Footer = () => {
       <StyledFooterContent>
         <StyledFooterNavContainer>
           <NavMenu />
-          <div>
+          <StyledKoi1Container>
             <Koi1SVG />
-          </div>
+          </StyledKoi1Container>
         </StyledFooterNavContainer>
         <StyledContactInfoContainer>
-          <div>
+          <StyledKoi2Container>
             <Koi2SVG />
-          </div>
+          </StyledKoi2Container>
+          <StyledBoulderContainer>
+            <BoulderSVG />
+          </StyledBoulderContainer>
           <StyledContactInfo>
             <li>e-mail: mully7773@gmail.com</li>
             <li>website by Nick Mullenmeister</li>
           </StyledContactInfo>
         </StyledContactInfoContainer>
+        <StyledPlantContainer>
+          <PlantSVG />
+        </StyledPlantContainer>
         <StyledSeaweedContainer>
           <SeaweedSVG />
         </StyledSeaweedContainer>
