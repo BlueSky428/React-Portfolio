@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import NavMenu from '../Navigation/NavMenu';
-import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette.svg';
+import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette-mount.svg';
 import Koi1SVG from '/src/assets/images/illustrations/koi1.svg';
 import Koi2SVG from '/src/assets/images/illustrations/koi2.svg';
 import BoulderSVG from '/src/assets/images/illustrations/boulder.svg';
@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
     to bottom,
     transparent,
     ${props => props.theme.gradients.footerBgBottom},
-    ${props => props.theme.gradients.footerBgTop} 50%
+    ${props => props.theme.gradients.footerBgTop} 80%
   );
 `;
 
@@ -52,7 +52,6 @@ const StyledFooterNavContainer = styled.div`
   & ul {
     position: static;
     & li {
-      color: #f1f2daff;
       font-size: 2.4rem;
       text-transform: capitalize;
 
@@ -61,7 +60,7 @@ const StyledFooterNavContainer = styled.div`
       }
 
       & a {
-        color: #f1f2daff;
+        color: ${props => props.theme.neutrals.footerText};
         font-weight: 400;
       }
     }
@@ -91,7 +90,7 @@ const StyledContactInfo = styled.ul`
   margin-left: 10rem;
   margin-top: 5rem;
   & li {
-    color: #f1f2daff;
+    color: ${props => props.theme.neutrals.footerText};
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.2rem;
     /* text-transform: capitalize; */
@@ -129,7 +128,7 @@ const StyledBoulderContainer = styled.div`
   }
 
   position: absolute;
-  bottom: -8rem;
+  bottom: -7.9rem;
   transform: translateX(15rem);
 `;
 

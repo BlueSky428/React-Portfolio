@@ -97,6 +97,6 @@ export const lightTheme = {
     heroBgBottom: lightPalette.gradients.hero[0],
     heroBgTop: lightPalette.gradients.hero[1],
     footerBgBottom: lightPalette.gradients.footer[0],
-    footerBgTop: lightPalette.gradients.footer[1],
+    footerBgTop: lightPalette.gradients.footer[0],
   },
 };
