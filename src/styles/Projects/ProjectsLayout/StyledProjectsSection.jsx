@@ -10,6 +10,10 @@ export const StyledProjectsSection = styled.section`
   margin: 0 auto;
   max-width: 107rem;
   position: relative;
+
+  @media ${props => props.theme.bp.desktopS} {
+    margin: 0 12rem;
+  }
 `;
 
 export const StyledProjectsList = styled.ul`

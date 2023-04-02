@@ -25,6 +25,10 @@ export const StyledFujiContainer = styled(motion.div)`
     bottom: -9.5rem;
   }
 
+  @media ${props => props.theme.bp.desktopS} {
+    transform: translateX(8.5rem);
+  }
+
   & svg {
     height: min-content;
     height: auto;

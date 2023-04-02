@@ -33,6 +33,11 @@ export const StyledSunContainer = styled(motion.div)`
     right: 32.55rem;
   }
 
+  @media ${props => props.theme.bp.desktopS} {
+    /* transform: translateX(8rem); */
+    right: 24.5rem;
+  }
+
   @media ${props => props.theme.bp.desktopXS} {
     right: 30.6rem;
   }

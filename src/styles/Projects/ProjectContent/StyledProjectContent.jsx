@@ -4,11 +4,18 @@ export const StyledProjectContent = styled.div`
   grid-column: 7 / -1;
   grid-area: 1 / 7 / -1 / -1;
 
+  @media ${props => props.theme.bp.desktopS} {
+    grid-column: 5 / -1;
+  }
+
   & p {
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: lowercase;
     margin-bottom: 0.3rem;
+    @media ${props => props.theme.bp.desktopS} {
+      font-size: 1.2rem;
+    }
   }
 
   & h3 {
@@ -24,10 +31,25 @@ export const StyledProjectContent = styled.div`
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 
+    @media ${props => props.theme.bp.desktopS} {
+      /* max-width: 40rem; */
+      /* background-color: lightblue; */
+      /* padding: 1rem; */
+      margin-left: 25rem;
+    }
+
     ${props =>
       props.alternate &&
       css`
         justify-content: flex-start;
+
+        @media ${props => props.theme.bp.desktopS} {
+          /* max-width: 40rem; */
+          /* background-color: lightblue; */
+          /* padding: 1rem; */
+          margin-left: 0rem;
+          margin-right: 25rem;
+        }
       `}
 
     & li {
@@ -41,6 +63,9 @@ export const StyledProjectContent = styled.div`
     props.alternate &&
     css`
       grid-column: 1 / 7;
+      @media ${props => props.theme.bp.desktopS} {
+        grid-column: 1 / 9;
+      }
       & div {
         text-align: start;
       }

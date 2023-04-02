@@ -14,4 +14,10 @@ export const StyledAboutTextContainer = styled(motion.div)`
   /* margin-right: 75rem; */
   padding-right: 5rem;
   z-index: 100000;
+  @media ${props => props.theme.bp.desktopM} {
+    padding-left: 1rem;
+  }
+  @media ${props => props.theme.bp.desktopS} {
+    padding-left: 5rem;
+  }
 `;
