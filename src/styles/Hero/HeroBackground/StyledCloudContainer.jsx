@@ -3,10 +3,18 @@ import styled, { css } from 'styled-components';
 
 export const StyledCloudContainer = styled(motion.div)`
   width: 19rem;
+  width: 22rem;
   position: absolute;
   bottom: 16.3rem;
   right: -12.7rem;
+  right: -14.7rem;
   z-index: 100000;
+
+  @media ${props => props.theme.bp.desktopL} {
+    width: 19rem;
+    bottom: 16.3rem;
+    right: -12.7rem;
+  }
 
   & svg {
     filter: none;
@@ -17,8 +25,13 @@ export const StyledCloudContainer = styled(motion.div)`
     css`
       bottom: 5rem;
       right: 21.2rem;
+      right: 23.2rem;
       @media ${props => props.theme.bp.desktopL} {
-        right: 21.8rem;
+        width: 19rem;
+        bottom: 5rem;
+        right: 21.1rem;
       }
+      @media ${props => props.theme.bp.desktopXS} {
+    right: 19.5rem;
     `};
 `;

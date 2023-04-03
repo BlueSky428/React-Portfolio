@@ -28,6 +28,13 @@ export const StyledHeroSection = styled.section`
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
   overflow: hidden;
   position: relative;
+
+  @media ${props => props.theme.bp.desktopXS} {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 94.5%, 0px 100%);
+  }
 `;
 
 export const StyledHeroContainer = styled.div`
@@ -39,4 +46,12 @@ export const StyledHeroContainer = styled.div`
   max-width: 114rem;
   position: relative;
   z-index: 1500;
+
+  @media ${props => props.theme.bp.desktopXS} {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 1 / 2;
+    margin: 0 18rem;
+    place-items: start;
+  }
 `;

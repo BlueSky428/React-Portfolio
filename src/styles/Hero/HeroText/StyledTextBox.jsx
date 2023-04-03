@@ -7,6 +7,13 @@ const StyledTextBox = styled(motion.div)`
   @media ${props => props.theme.bp.desktopL} {
     margin-top: 28rem;
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    grid-row: 1 / 2;
+    max-width: 40rem;
+    margin-top: 15rem;
+    /* justify-self: center; */
+    align-self: center;
+  }
 
   & h1 {
     font-size: 3.8rem;
@@ -27,6 +34,9 @@ const StyledTextBox = styled(motion.div)`
       @media ${props => props.theme.bp.desktopM} {
         font-size: 4rem;
       }
+      @media ${props => props.theme.bp.desktopXS} {
+        font-size: 3rem;
+      }
     }
 
     @media ${props => props.theme.bp.desktopL} {
@@ -35,6 +45,9 @@ const StyledTextBox = styled(motion.div)`
     }
     @media ${props => props.theme.bp.desktopM} {
       font-size: 3rem;
+    }
+    @media ${props => props.theme.bp.desktopXS} {
+      font-size: 2rem;
     }
   }
 
@@ -51,12 +64,18 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.desktopM} {
       font-size: 2.4rem;
     }
+    @media ${props => props.theme.bp.desktopXS} {
+      font-size: 1.8rem;
+    }
   }
 
   & p {
     margin-top: 2rem;
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.4rem;
+    }
+    @media ${props => props.theme.bp.desktopXS} {
+      font-size: 1.2rem;
     }
   }
 
@@ -77,6 +96,11 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.5rem;
       margin-top: 3rem;
+    }
+
+    @media ${props => props.theme.bp.desktopXS} {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
     }
   }
 `;

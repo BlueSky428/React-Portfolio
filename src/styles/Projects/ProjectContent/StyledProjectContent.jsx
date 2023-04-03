@@ -32,9 +32,6 @@ export const StyledProjectContent = styled.div`
     margin-bottom: 1rem;
 
     @media ${props => props.theme.bp.desktopS} {
-      /* max-width: 40rem; */
-      /* background-color: lightblue; */
-      /* padding: 1rem; */
       margin-left: 25rem;
     }
 
@@ -44,9 +41,6 @@ export const StyledProjectContent = styled.div`
         justify-content: flex-start;
 
         @media ${props => props.theme.bp.desktopS} {
-          /* max-width: 40rem; */
-          /* background-color: lightblue; */
-          /* padding: 1rem; */
           margin-left: 0rem;
           margin-right: 25rem;
         }

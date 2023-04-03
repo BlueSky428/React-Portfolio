@@ -15,4 +15,9 @@ export const StyledLanternContainer = styled(motion.div)`
     left: 21rem;
     bottom: -1rem;
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    width: 9rem;
+    left: 7.5rem;
+    bottom: -17rem;
+  }
 `;

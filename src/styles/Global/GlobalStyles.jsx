@@ -122,6 +122,7 @@ const GlobalStyles = createGlobalStyle`
           color: ${props => props.theme.primary.linkHover};
           transition: color 0.25s;
     }
+ 
     }
 
     h2 {

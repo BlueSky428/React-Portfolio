@@ -6,8 +6,10 @@ export const StyledTreeBranchContainer = styled(motion.div)`
   top: 0;
   left: -0.1rem;
   z-index: 100;
-  /* height: 75rem;
-width: 50rem; */
+
+  @media ${props => props.theme.bp.desktopXS} {
+    top: -32rem;
+  }
 
   & svg {
     /* Original SVG params */
@@ -16,6 +18,9 @@ width: 50rem; */
     /* height: 75rem; */
     width: 50rem;
     @media ${props => props.theme.bp.desktopL} {
+      width: 46rem;
+    }
+    @media ${props => props.theme.bp.desktopXS} {
       width: 46rem;
     }
   }
