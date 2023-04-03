@@ -35,4 +35,7 @@ export const StyledAboutSection = styled.section`
   @media ${props => props.theme.bp.desktopL} {
     grid-template-columns: 48% 52%;
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    grid-template-columns: 1fr;
+  }
 `;

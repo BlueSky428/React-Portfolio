@@ -20,4 +20,9 @@ export const StyledAboutTextContainer = styled(motion.div)`
   @media ${props => props.theme.bp.desktopS} {
     padding-left: 5rem;
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    padding-left: 0;
+    align-self: center;
+    justify-self: center;
+  }
 `;

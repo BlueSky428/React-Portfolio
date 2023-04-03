@@ -12,6 +12,16 @@ export const StyledProjectGallery = styled(motion.section)`
   grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
   position: relative;
 
+  @media ${props => props.theme.bp.desktopS} {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 75rem;
+  }
+
+  @media ${props => props.theme.bp.desktopXS} {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 70rem;
+  }
+
   & div {
     border-radius: 0.2rem;
   }

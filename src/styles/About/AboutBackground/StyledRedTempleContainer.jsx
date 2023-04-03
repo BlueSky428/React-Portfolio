@@ -7,6 +7,9 @@ export const StyledRedTempleContainer = styled(motion.div)`
   right: 0;
   height: fit-content;
   width: fit-content;
+  @media ${props => props.theme.bp.desktopXS} {
+    bottom: 5rem;
+  }
 
   /* Mask/feathering for red temple */
   & svg {

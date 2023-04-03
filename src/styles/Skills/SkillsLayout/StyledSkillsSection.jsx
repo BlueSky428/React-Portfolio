@@ -17,6 +17,9 @@ export const StyledSkillsSection = styled.section`
     url('/wisp.webp');
   background-repeat: no-repeat;
   background-position: center;
+  @media ${props => props.theme.bp.desktopXS} {
+    padding-top: 8rem;
+  }
 `;
 
 export const StyledSkillsContainer = styled.div`

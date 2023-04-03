@@ -14,6 +14,10 @@ export const StyledProjectsSection = styled.section`
   @media ${props => props.theme.bp.desktopS} {
     margin: 0 12rem;
   }
+
+  @media ${props => props.theme.bp.desktopXS} {
+    padding-top: 6rem;
+  }
 `;
 
 export const StyledProjectsList = styled.ul`

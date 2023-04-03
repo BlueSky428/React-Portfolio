@@ -25,6 +25,9 @@ export const StyledPictureCollage = styled.div`
       outline: 0.6rem solid ${props => props.theme.neutrals.imageBorder};
     }
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    margin-left: 0;
+  }
 `;
 
 // Wrapper for landscape/larger picture svg
@@ -38,6 +41,9 @@ export const StyledLandscapeContainer = styled.div`
   }
   @media ${props => props.theme.bp.desktopL} {
     width: 40rem;
+  }
+  @media ${props => props.theme.bp.desktopXS} {
+    width: 50rem;
   }
 `;
 
@@ -53,6 +59,10 @@ export const StyledPortraitContainer = styled.div`
   @media ${props => props.theme.bp.desktopL} {
     width: 13.5rem;
   }
+  @media ${props => props.theme.bp.desktopXS} {
+    height: 17rem;
+    width: 17rem;
+  }
   & img {
     height: 100%;
     width: 100%;
@@ -63,6 +73,10 @@ export const StyledPortraitContainer = styled.div`
     @media ${props => props.theme.bp.desktopL} {
       height: 13.5rem;
       width: 13.5rem;
+    }
+    @media ${props => props.theme.bp.desktopXS} {
+      height: 17rem;
+      width: 17rem;
     }
   }
 `;

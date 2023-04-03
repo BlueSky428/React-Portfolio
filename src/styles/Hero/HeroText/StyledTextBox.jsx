@@ -47,7 +47,7 @@ const StyledTextBox = styled(motion.div)`
       font-size: 3rem;
     }
     @media ${props => props.theme.bp.desktopXS} {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -75,7 +75,7 @@ const StyledTextBox = styled(motion.div)`
       font-size: 1.4rem;
     }
     @media ${props => props.theme.bp.desktopXS} {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
 

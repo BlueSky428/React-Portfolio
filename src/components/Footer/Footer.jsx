@@ -19,6 +19,9 @@ const StyledFooter = styled.footer`
     ${props => props.theme.gradients.footerBgBottom},
     ${props => props.theme.gradients.footerBgTop} 80%
   );
+  @media ${props => props.theme.bp.desktopXS} {
+    margin-top: 0;
+  }
 `;
 
 const StyledFooterBackground = styled.div`
@@ -77,6 +80,9 @@ const StyledKoi1Container = styled.div`
   position: absolute;
   bottom: -5rem;
   transform: translateX(-7rem);
+  @media ${props => props.theme.bp.desktopXS} {
+    width: 7rem;
+  }
 `;
 const StyledKoi2Container = styled.div`
   width: 6.5rem;
@@ -84,6 +90,14 @@ const StyledKoi2Container = styled.div`
   position: absolute;
   top: 0;
   transform: translateX(32rem);
+  @media ${props => props.theme.bp.desktopS} {
+    width: 6rem;
+    top: 2rem;
+  }
+  @media ${props => props.theme.bp.desktopXS} {
+    width: 5rem;
+    height: auto;
+  }
 `;
 
 const StyledContactInfo = styled.ul`
@@ -103,6 +117,10 @@ const StyledPlantContainer = styled.div`
   left: 10rem;
   width: 9rem;
   height: auto;
+  @media ${props => props.theme.bp.desktopXS} {
+    width: 6rem;
+    left: 8rem;
+  }
 `;
 
 const StyledSeaweedContainer = styled.div`
