@@ -7,19 +7,37 @@ export const StyledProjectContent = styled.div`
   @media ${props => props.theme.bp.desktopS} {
     grid-column: 5 / -1;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+  }
 
-  & p {
+  & span {
     font-size: 1.4rem;
     font-weight: 500;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    font-family: ${props => props.theme.fonts.primary};
+    color: ${props => props.theme.primary.span};
     text-transform: lowercase;
     margin-bottom: 0.3rem;
     @media ${props => props.theme.bp.desktopS} {
       font-size: 1.2rem;
     }
+    @media ${props => props.theme.bp.tabletL} {
+      font-size: 1.8rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
   }
 
   & h3 {
     margin-bottom: 1.6rem;
+    @media ${props => props.theme.bp.tabletL} {
+      padding-right: 2rem;
+      padding-left: 2rem;
+      font-size: 2.4rem;
+    }
   }
 
   & ul {
@@ -33,6 +51,11 @@ export const StyledProjectContent = styled.div`
 
     @media ${props => props.theme.bp.desktopS} {
       margin-left: 25rem;
+    }
+
+    @media ${props => props.theme.bp.tabletL} {
+      padding-right: 2rem;
+      padding-left: 2rem;
     }
 
     ${props =>
@@ -50,6 +73,11 @@ export const StyledProjectContent = styled.div`
       font-family: ${props => props.theme.fonts.primary};
       color: ${props => props.theme.primary.li};
       font-weight: 500;
+
+      & svg {
+        width: 2.6rem;
+        height: auto;
+      }
     }
   }
 
@@ -59,6 +87,9 @@ export const StyledProjectContent = styled.div`
       grid-column: 1 / 7;
       @media ${props => props.theme.bp.desktopS} {
         grid-column: 1 / 9;
+      }
+      @media ${props => props.theme.bp.tabletL} {
+        grid-column: 1 / -1;
       }
       & div {
         text-align: start;
@@ -79,6 +110,11 @@ export const StyledProjectContentBorder = styled.div`
   );
   border-image-slice: 1;
 
+  @media ${props => props.theme.bp.tabletL} {
+    border: none;
+    padding: 0;
+  }
+
   ${props =>
     props.alternate &&
     css`
@@ -90,5 +126,9 @@ export const StyledProjectContentBorder = styled.div`
         ${props => props.theme.tertiary.projectBorder},
         transparent 30%
       );
+      @media ${props => props.theme.bp.tabletL} {
+        border: none;
+        padding: 0;
+      }
     `}
 `;

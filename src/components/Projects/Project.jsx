@@ -39,7 +39,7 @@ const Project = ({ project, alternate }) => {
       </StyledProjectImage>
       <StyledProjectContent alternate={alternate}>
         <StyledProjectContentBorder alternate={alternate}>
-          <p>featured project</p>
+          <span>featured project</span>
           <h3>{project.title}</h3>
           <StyledProjectDescriptionContainer>
             <p>{project.description}</p>

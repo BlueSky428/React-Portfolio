@@ -125,7 +125,7 @@ const StyledPlantContainer = styled.div`
 
 const StyledSeaweedContainer = styled.div`
   position: absolute;
-  bottom: 0.7rem;
+  bottom: 0.8rem;
   right: 7rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -146,7 +146,7 @@ const StyledBoulderContainer = styled.div`
   }
 
   position: absolute;
-  bottom: -7.9rem;
+  bottom: -7.8rem;
   transform: translateX(15rem);
 `;
 

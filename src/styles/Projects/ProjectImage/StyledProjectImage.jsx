@@ -14,6 +14,15 @@ export const StyledProjectImageContainer = styled.div`
       width: 52rem;
     }
 
+    @media ${props => props.theme.bp.tabletL} {
+      height: auto;
+      width: auto;
+      height: 100%;
+      width: 100%;
+      /* height: 50rem; */
+      max-width: 100%;
+    }
+
     & img {
       object-fit: cover;
 
@@ -35,10 +44,22 @@ export const StyledProjectImage = styled.div`
     height: 32rem;
     width: 52rem;
   }
+
+  @media ${props => props.theme.bp.tabletL} {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: auto;
+    width: auto;
+  }
   ${props =>
     props.alternate &&
     css`
       grid-column: 6 / -1;
       grid-area: 1 / 6 / -1 / -1;
+
+      @media ${props => props.theme.bp.tabletL} {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+      }
     `}
 `;

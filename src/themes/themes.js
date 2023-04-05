@@ -61,6 +61,7 @@ export const lightTheme = {
   primary: {
     h1: lightPalette.primary[600],
     p: lightPalette.primary[600],
+    span: lightPalette.primary[600],
     li: lightPalette.primary[600],
     link: lightPalette.primary[600],
     navigationBars: lightPalette.primary[600],

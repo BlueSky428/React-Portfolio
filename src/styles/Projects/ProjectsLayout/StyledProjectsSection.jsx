@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledProjectsSection = styled.section`
@@ -18,6 +18,10 @@ export const StyledProjectsSection = styled.section`
   @media ${props => props.theme.bp.desktopXS} {
     padding-top: 6rem;
   }
+
+  @media ${props => props.theme.bp.tabletL} {
+    margin: 0;
+  }
 `;
 
 export const StyledProjectsList = styled.ul`
@@ -31,4 +35,20 @@ export const StyledProjectItem = styled(motion.li)`
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
   align-items: center;
+
+  @media ${props => props.theme.bp.tabletL} {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+    gap: 2rem;
+  }
+
+  ${props =>
+    props.alternate &&
+    css`
+      @media ${props => props.theme.bp.tabletL} {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+        gap: 2rem;
+      }
+    `}
 `;
