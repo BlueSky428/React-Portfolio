@@ -17,9 +17,9 @@ export const StyledProjectImageContainer = styled.div`
     @media ${props => props.theme.bp.tabletL} {
       height: auto;
       width: auto;
-      height: 100%;
       width: 100%;
-      /* height: 50rem; */
+      height: auto;
+      /* max-height: 40rem; */
       max-width: 100%;
     }
 
@@ -60,6 +60,8 @@ export const StyledProjectImage = styled.div`
       @media ${props => props.theme.bp.tabletL} {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
+        height: auto;
+        width: auto;
       }
     `}
 `;
