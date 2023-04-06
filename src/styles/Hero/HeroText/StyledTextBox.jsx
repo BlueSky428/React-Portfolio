@@ -14,6 +14,9 @@ const StyledTextBox = styled(motion.div)`
     /* justify-self: center; */
     align-self: center;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    margin-top: 12rem;
+  }
 
   & h1 {
     font-size: 3.8rem;
@@ -101,6 +104,10 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.desktopXS} {
       font-size: 1.2rem;
       padding: 1rem 2rem;
+    }
+    @media ${props => props.theme.bp.tabletS} {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.8rem;
     }
   }
 `;

@@ -45,6 +45,11 @@ export const StyledFujiContainer = styled(motion.div)`
     right: 0;
   }
 
+  @media ${props => props.theme.bp.tabletS} {
+    width: 60rem;
+    bottom: -8rem;
+  }
+
   & svg {
     width: 100%;
     height: 100%;

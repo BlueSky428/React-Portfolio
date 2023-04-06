@@ -20,4 +20,9 @@ export const StyledLanternContainer = styled(motion.div)`
     left: 7.5rem;
     bottom: -17rem;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    width: 6rem;
+    left: 6rem;
+    bottom: -11rem;
+  }
 `;

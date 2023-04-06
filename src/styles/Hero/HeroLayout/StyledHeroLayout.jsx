@@ -54,4 +54,7 @@ export const StyledHeroContainer = styled.div`
     margin: 0 18rem;
     place-items: start;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    margin: 0 12rem;
+  }
 `;
