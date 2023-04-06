@@ -36,5 +36,8 @@ export const StyledGalleryCard = styled(motion.div)`
         width: min(50rem, 95%);
         height: calc(100% - 20rem);
       }
+      @media ${props => props.theme.bp.mobileL} {
+        width: min(60rem, 80%);
+      }
     `}
 `;

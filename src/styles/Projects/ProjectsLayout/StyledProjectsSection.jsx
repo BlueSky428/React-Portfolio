@@ -28,6 +28,10 @@ export const StyledProjectsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 14rem;
+
+  @media ${props => props.theme.bp.mobileL} {
+    gap: 6rem;
+  }
 `;
 
 export const StyledProjectItem = styled(motion.li)`

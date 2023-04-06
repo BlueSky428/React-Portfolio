@@ -12,5 +12,12 @@ export const StyledOpenTitleContainer = styled.div`
     display: flex;
     gap: 2rem;
     line-height: 1;
+
+    & svg {
+      @media ${props => props.theme.bp.mobileL} {
+        height: 2.2rem;
+        width: 2.2rem;
+      }
+    }
   }
 `;

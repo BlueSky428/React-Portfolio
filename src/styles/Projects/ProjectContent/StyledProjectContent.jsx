@@ -58,6 +58,10 @@ export const StyledProjectContent = styled.div`
       padding-left: 2rem;
     }
 
+    @media ${props => props.theme.bp.mobileL} {
+      margin-left: 0;
+    }
+
     ${props =>
       props.alternate &&
       css`
@@ -66,6 +70,9 @@ export const StyledProjectContent = styled.div`
         @media ${props => props.theme.bp.desktopS} {
           margin-left: 0rem;
           margin-right: 25rem;
+        }
+        @media ${props => props.theme.bp.mobileL} {
+          margin-right: 0;
         }
       `}
 
