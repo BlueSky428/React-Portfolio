@@ -48,6 +48,9 @@ export const StyledLandscapeContainer = styled.div`
   @media ${props => props.theme.bp.tabletS} {
     width: 40rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    display: none;
+  }
 `;
 
 // Wrapper for portrait/smaller picture svg
@@ -70,6 +73,15 @@ export const StyledPortraitContainer = styled.div`
     height: 15rem;
     width: 15rem;
   }
+
+  @media ${props => props.theme.bp.mobileL} {
+    position: relative;
+    transform: none;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   & img {
     height: 100%;
     width: 100%;
@@ -88,6 +100,12 @@ export const StyledPortraitContainer = styled.div`
     @media ${props => props.theme.bp.tabletS} {
       height: 15rem;
       width: 15rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      border-radius: 0;
+      width: 20rem;
+      height: 20rem;
+      position: relative;
     }
   }
 `;

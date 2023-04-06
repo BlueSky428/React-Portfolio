@@ -10,6 +10,11 @@ export const StyledRedTempleContainer = styled(motion.div)`
   @media ${props => props.theme.bp.desktopXS} {
     bottom: 5rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    bottom: 34rem;
+    right: -1rem;
+    overflow: hidden;
+  }
 
   /* Mask/feathering for red temple */
   & svg {
@@ -35,5 +40,8 @@ export const StyledRedTempleContainer = styled(motion.div)`
       black 10%,
       transparent 69%
     );
+    @media ${props => props.theme.bp.mobileL} {
+      height: 40rem;
+    }
   }
 `;

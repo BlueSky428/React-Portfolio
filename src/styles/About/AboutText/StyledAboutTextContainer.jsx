@@ -33,4 +33,7 @@ export const StyledAboutTextContainer = styled(motion.div)`
   @media ${props => props.theme.bp.tabletS} {
     max-width: 38rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    padding-right: 0;
+  }
 `;

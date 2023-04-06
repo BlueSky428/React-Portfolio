@@ -38,4 +38,10 @@ export const StyledAboutSection = styled.section`
   @media ${props => props.theme.bp.desktopXS} {
     grid-template-columns: 1fr;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    grid-template-rows: min-content 1fr 1fr;
+    row-gap: 0;
+    overflow: hidden;
+    padding: 6rem 0;
+  }
 `;

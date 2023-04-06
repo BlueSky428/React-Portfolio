@@ -129,6 +129,10 @@ const GlobalStyles = createGlobalStyle`
       font-family: ${props => props.theme.fonts.secondary};
       font-size: 5rem;
       color: ${props => props.theme.primary.h2};
+
+      @media ${props => props.theme.bp.mobileL} {
+      font-size: 4rem;
+    }
     }
 
     h3 {
