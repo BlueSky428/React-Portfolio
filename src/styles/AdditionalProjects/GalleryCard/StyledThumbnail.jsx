@@ -22,6 +22,9 @@ export const StyledThumbnail = styled.div`
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
+        @media ${props => props.theme.bp.tabletS} {
+          height: 25rem;
+        }
       `}
   }
   & img {

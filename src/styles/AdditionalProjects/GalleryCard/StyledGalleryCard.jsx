@@ -32,5 +32,9 @@ export const StyledGalleryCard = styled(motion.div)`
       justify-content: flex-start;
       flex-direction: column;
       gap: 0;
+      @media ${props => props.theme.bp.tabletS} {
+        width: min(50rem, 95%);
+        height: calc(100% - 20rem);
+      }
     `}
 `;

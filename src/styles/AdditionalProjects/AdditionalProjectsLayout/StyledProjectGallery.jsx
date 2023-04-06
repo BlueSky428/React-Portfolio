@@ -21,6 +21,10 @@ export const StyledProjectGallery = styled(motion.section)`
     grid-template-columns: repeat(2, 1fr);
     max-width: 70rem;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    grid-template-columns: 1fr;
+    max-width: 35rem;
+  }
 
   & div {
     border-radius: 0.2rem;
