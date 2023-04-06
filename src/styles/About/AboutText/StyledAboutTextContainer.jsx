@@ -14,6 +14,11 @@ export const StyledAboutTextContainer = styled(motion.div)`
   /* margin-right: 75rem; */
   padding-right: 5rem;
   z-index: 100000;
+  & p {
+    @media ${props => props.theme.bp.tabletS} {
+      font-size: 1.4rem;
+    }
+  }
   @media ${props => props.theme.bp.desktopM} {
     padding-left: 1rem;
   }
@@ -24,5 +29,8 @@ export const StyledAboutTextContainer = styled(motion.div)`
     padding-left: 0;
     align-self: center;
     justify-self: center;
+  }
+  @media ${props => props.theme.bp.tabletS} {
+    max-width: 38rem;
   }
 `;
