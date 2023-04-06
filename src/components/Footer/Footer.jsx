@@ -22,6 +22,9 @@ const StyledFooter = styled.footer`
   @media ${props => props.theme.bp.desktopXS} {
     margin-top: 0;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    height: auto;
+  }
 `;
 
 const StyledFooterBackground = styled.div`
@@ -45,6 +48,11 @@ const StyledFooterContent = styled.div`
   /* grid-template-columns: 1fr 1fr; */
   align-items: center;
   position: relative;
+  @media ${props => props.theme.bp.tabletS} {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+    row-gap: 2rem;
+  }
 `;
 
 const StyledFooterNavContainer = styled.div`
@@ -68,10 +76,17 @@ const StyledFooterNavContainer = styled.div`
       }
     }
   }
+  @media ${props => props.theme.bp.tabletS} {
+    justify-self: center;
+    margin-top: 2rem;
+  }
 `;
 
 const StyledContactInfoContainer = styled.div`
   position: relative;
+  @media ${props => props.theme.bp.tabletS} {
+    justify-self: center;
+  }
 `;
 
 const StyledKoi1Container = styled.div`
@@ -86,6 +101,9 @@ const StyledKoi1Container = styled.div`
   @media ${props => props.theme.bp.tabletL} {
     width: 6rem;
     transform: translateX(-5.5rem);
+  }
+  @media ${props => props.theme.bp.tabletS} {
+    display: none;
   }
 `;
 const StyledKoi2Container = styled.div`
@@ -105,6 +123,9 @@ const StyledKoi2Container = styled.div`
   @media ${props => props.theme.bp.tabletL} {
     transform: translateX(28rem);
   }
+  @media ${props => props.theme.bp.tabletS} {
+    display: none;
+  }
 `;
 
 const StyledContactInfo = styled.ul`
@@ -115,9 +136,15 @@ const StyledContactInfo = styled.ul`
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.2rem;
     /* text-transform: capitalize; */
+    @media ${props => props.theme.bp.tabletS} {
+      font-size: 1.4rem;
+    }
   }
   @media ${props => props.theme.bp.tabletL} {
     margin-left: 5rem;
+  }
+  @media ${props => props.theme.bp.tabletS} {
+    margin: 0;
   }
 `;
 
@@ -135,6 +162,10 @@ const StyledPlantContainer = styled.div`
     width: 5rem;
     left: 6rem;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    width: 4rem;
+    left: 10rem;
+  }
 `;
 
 const StyledSeaweedContainer = styled.div`
@@ -147,6 +178,13 @@ const StyledSeaweedContainer = styled.div`
     width: 10rem;
     height: 10rem;
     right: 3rem;
+  }
+  @media ${props => props.theme.bp.tabletS} {
+    right: 11.3rem;
+    bottom: 0.5rem;
+    width: 7rem;
+    height: 7rem;
+    display: none;
   }
 `;
 
@@ -161,6 +199,9 @@ const StyledSeaweed2Container = styled.div`
     height: 6rem;
     right: 11.5rem;
   }
+  @media ${props => props.theme.bp.tabletS} {
+    display: none;
+  }
 `;
 
 const StyledBoulderContainer = styled.div`
@@ -172,6 +213,11 @@ const StyledBoulderContainer = styled.div`
   position: absolute;
   bottom: -7.8rem;
   transform: translateX(15rem);
+  @media ${props => props.theme.bp.tabletS} {
+    transform: translateX(24rem);
+    bottom: 0;
+    width: 7rem;
+  }
 `;
 
 const Footer = () => {
