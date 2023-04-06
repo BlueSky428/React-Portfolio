@@ -11,4 +11,8 @@ export const StyledSkillItem = styled(motion.li)`
   font-family: ${props => props.theme.fonts.primary};
   font-weight: 600;
   font-size: 1.8rem;
+  @media ${props => props.theme.bp.mobileL} {
+    font-size: 1.2rem;
+    padding: 1rem 1.6rem;
+  }
 `;

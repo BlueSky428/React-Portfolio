@@ -20,6 +20,10 @@ export const StyledSkillsSection = styled.section`
   @media ${props => props.theme.bp.desktopXS} {
     padding-top: 8rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    padding-bottom: 4rem;
+    padding-top: 0;
+  }
 `;
 
 export const StyledSkillsContainer = styled.div`
