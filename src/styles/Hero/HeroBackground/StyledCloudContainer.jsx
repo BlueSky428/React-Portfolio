@@ -15,6 +15,10 @@ export const StyledCloudContainer = styled(motion.div)`
     bottom: 16.3rem;
     right: -12.7rem;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    right: -12rem;
+    bottom: 15.3rem;
+  }
 
   & svg {
     filter: none;
@@ -33,5 +37,8 @@ export const StyledCloudContainer = styled(motion.div)`
       }
       @media ${props => props.theme.bp.desktopXS} {
     right: 19.5rem;
+    @media ${props => props.theme.bp.tabletL} {
+    right: 17.5rem;
+  }
     `};
 `;

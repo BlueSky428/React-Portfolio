@@ -83,6 +83,10 @@ const StyledKoi1Container = styled.div`
   @media ${props => props.theme.bp.desktopXS} {
     width: 7rem;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    width: 6rem;
+    transform: translateX(-5.5rem);
+  }
 `;
 const StyledKoi2Container = styled.div`
   width: 6.5rem;
@@ -98,6 +102,9 @@ const StyledKoi2Container = styled.div`
     width: 5rem;
     height: auto;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    transform: translateX(28rem);
+  }
 `;
 
 const StyledContactInfo = styled.ul`
@@ -108,6 +115,9 @@ const StyledContactInfo = styled.ul`
     font-family: ${props => props.theme.fonts.secondary};
     font-size: 2.2rem;
     /* text-transform: capitalize; */
+  }
+  @media ${props => props.theme.bp.tabletL} {
+    margin-left: 5rem;
   }
 `;
 
@@ -121,6 +131,10 @@ const StyledPlantContainer = styled.div`
     width: 6rem;
     left: 8rem;
   }
+  @media ${props => props.theme.bp.tabletL} {
+    width: 5rem;
+    left: 6rem;
+  }
 `;
 
 const StyledSeaweedContainer = styled.div`
@@ -129,6 +143,11 @@ const StyledSeaweedContainer = styled.div`
   right: 7rem;
   width: 11.5rem;
   height: 11.5rem;
+  @media ${props => props.theme.bp.tabletL} {
+    width: 10rem;
+    height: 10rem;
+    right: 3rem;
+  }
 `;
 
 const StyledSeaweed2Container = styled.div`
@@ -137,6 +156,11 @@ const StyledSeaweed2Container = styled.div`
   right: 17rem;
   width: 7rem;
   height: 7rem;
+  @media ${props => props.theme.bp.tabletL} {
+    width: 6rem;
+    height: 6rem;
+    right: 11.5rem;
+  }
 `;
 
 const StyledBoulderContainer = styled.div`

@@ -67,6 +67,13 @@ export const StyledSunContainer = styled(motion.div)`
     width: fit-content; */
   }
 
+  @media ${props => props.theme.bp.tabletL} {
+    /* transform: translateX(8rem); */
+    height: 22rem;
+    width: 22rem;
+    right: 24rem;
+  }
+
   & svg {
     width: 100%;
     height: 100%;
