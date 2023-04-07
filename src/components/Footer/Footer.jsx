@@ -96,6 +96,9 @@ const StyledContactInfoContainer = styled.div`
   @media ${props => props.theme.bp.tabletS} {
     justify-self: center;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    position: static;
+  }
 `;
 
 const StyledKoi1Container = styled.div`
@@ -147,6 +150,9 @@ const StyledContactInfo = styled.ul`
     /* text-transform: capitalize; */
     @media ${props => props.theme.bp.tabletS} {
       font-size: 1.4rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      font-size: 1.8rem;
     }
   }
   @media ${props => props.theme.bp.tabletL} {
@@ -204,6 +210,7 @@ const StyledSeaweedContainer = styled.div`
     bottom: 0rem;
     width: 5.5rem;
     height: auto;
+    display: none;
   }
 `;
 
@@ -243,6 +250,7 @@ const StyledBoulderContainer = styled.div`
   @media ${props => props.theme.bp.mobileM} {
     transform: translateX(4rem);
     bottom: -11rem;
+    bottom: 0;
     width: 10rem;
   }
 `;

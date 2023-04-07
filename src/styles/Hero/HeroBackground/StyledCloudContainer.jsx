@@ -31,9 +31,11 @@ export const StyledCloudContainer = styled(motion.div)`
   }
 
   @media ${props => props.theme.bp.mobileM} {
-    width: 14rem;
-    right: -8rem;
-    bottom: 12rem;
+    /* width: 14rem; */
+    /* right: -8rem; */
+    /* bottom: 12rem; */
+    bottom: 15rem;
+    right: -9rem;
   }
 
   & svg {
@@ -64,10 +66,12 @@ export const StyledCloudContainer = styled(motion.div)`
     width: 16rem;
     right: 13rem;
     bottom: 1.5rem;
+
+    right: 15rem;
   }
-  @media ${props => props.theme.bp.mobileM} {
+  /* @media ${props => props.theme.bp.mobileM} {
     width: 14rem;
     right: 12.5rem
-  }
+  } */
     `};
 `;

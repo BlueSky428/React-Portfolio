@@ -44,6 +44,8 @@ export const StyledProjectItem = styled(motion.li)`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr min-content;
     gap: 2rem;
+    /* Disable slide animation when the project image takes up the entire view-width */
+    transform: translateX(0) !important;
   }
 
   ${props =>

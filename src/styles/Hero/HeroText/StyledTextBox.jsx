@@ -18,7 +18,7 @@ const StyledTextBox = styled(motion.div)`
     margin-top: 12rem;
   }
   @media ${props => props.theme.bp.mobileL} {
-    margin-top: 15rem;
+    margin-top: 4rem;
   }
 
   & h1 {
@@ -43,6 +43,9 @@ const StyledTextBox = styled(motion.div)`
       @media ${props => props.theme.bp.desktopXS} {
         font-size: 3rem;
       }
+      @media ${props => props.theme.bp.mobileL} {
+        font-size: 4.2rem;
+      }
     }
 
     @media ${props => props.theme.bp.desktopL} {
@@ -54,6 +57,9 @@ const StyledTextBox = styled(motion.div)`
     }
     @media ${props => props.theme.bp.desktopXS} {
       font-size: 2.2rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      font-size: 3.2rem;
     }
   }
 
@@ -72,6 +78,10 @@ const StyledTextBox = styled(motion.div)`
     }
     @media ${props => props.theme.bp.desktopXS} {
       font-size: 1.8rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      font-size: 2.2rem;
+      line-height: 1.2;
     }
   }
 
@@ -114,6 +124,9 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.tabletS} {
       margin-top: 1.5rem;
       padding: 0.8rem 1.8rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      margin-top: 2rem;
     }
   }
 `;

@@ -13,10 +13,12 @@ export const StyledRedTempleContainer = styled(motion.div)`
   @media ${props => props.theme.bp.mobileL} {
     bottom: 34rem;
     right: -1rem;
+
+    bottom: 25.5rem;
   }
-  @media ${props => props.theme.bp.mobileM} {
+  /* @media ${props => props.theme.bp.mobileM} {
     bottom: 36rem;
-  }
+  } */
 
   /* Mask/feathering for red temple */
   & svg {

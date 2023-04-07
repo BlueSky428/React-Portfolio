@@ -39,5 +39,6 @@ export const StyledAboutTextContainer = styled(motion.div)`
   }
   @media ${props => props.theme.bp.mobileL} {
     padding-right: 0;
+    padding-top: 2rem;
   }
 `;

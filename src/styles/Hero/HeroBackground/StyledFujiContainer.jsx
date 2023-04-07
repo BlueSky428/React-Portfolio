@@ -51,12 +51,16 @@ export const StyledFujiContainer = styled(motion.div)`
   }
 
   @media ${props => props.theme.bp.mobileL} {
-    width: 55rem;
+    /* width: 55rem; */
+    width: 70rem;
+    transform: translateX(13rem);
   }
   @media ${props => props.theme.bp.mobileM} {
-    width: 45rem;
+    /* width: 45rem;
     bottom: -5rem;
-    transform: translateX(2.5rem);
+    transform: translateX(2.5rem); */
+
+    /* transform: translateX(20rem); */
   }
 
   & svg {
