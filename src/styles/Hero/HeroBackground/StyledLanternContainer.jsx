@@ -28,4 +28,7 @@ export const StyledLanternContainer = styled(motion.div)`
   @media ${props => props.theme.bp.mobileL} {
     left: 3rem;
   }
+  @media ${props => props.theme.bp.mobileM} {
+    bottom: -14rem;
+  }
 `;

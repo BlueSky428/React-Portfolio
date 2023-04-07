@@ -86,6 +86,12 @@ export const StyledSunContainer = styled(motion.div)`
     right: 17rem;
   }
 
+  @media ${props => props.theme.bp.mobileM} {
+    height: 17rem;
+    width: 17rem;
+    right: 13rem;
+  }
+
   & svg {
     width: 100%;
     height: 100%;
