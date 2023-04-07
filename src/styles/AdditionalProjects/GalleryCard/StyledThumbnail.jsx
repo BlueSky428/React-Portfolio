@@ -25,6 +25,9 @@ export const StyledThumbnail = styled.div`
         @media ${props => props.theme.bp.tabletS} {
           height: 25rem;
         }
+        @media ${props => props.theme.bp.mobileM} {
+          height: 20rem;
+        }
       `}
   }
   & img {

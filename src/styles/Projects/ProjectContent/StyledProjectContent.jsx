@@ -29,6 +29,9 @@ export const StyledProjectContent = styled.div`
       padding-right: 2rem;
       padding-left: 2rem;
     }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 1.6rem;
+    }
   }
 
   & h3 {
@@ -37,6 +40,9 @@ export const StyledProjectContent = styled.div`
       padding-right: 2rem;
       padding-left: 2rem;
       font-size: 2.4rem;
+    }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 2rem;
     }
   }
 
@@ -81,9 +87,16 @@ export const StyledProjectContent = styled.div`
       color: ${props => props.theme.primary.li};
       font-weight: 500;
 
+      @media ${props => props.theme.bp.mobileM} {
+        font-size: 1.2rem;
+      }
+
       & svg {
         width: 2.6rem;
         height: auto;
+        @media ${props => props.theme.bp.mobileM} {
+          width: 2.2rem;
+        }
       }
     }
   }

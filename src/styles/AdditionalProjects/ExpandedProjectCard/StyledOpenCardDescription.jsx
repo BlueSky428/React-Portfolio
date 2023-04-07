@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 export const StyledOpenCardDescription = styled(motion.div)`
   & p {
     color: ${props => props.theme.primary.p};
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 1.2rem;
+    }
   }
   & ul {
     display: flex;
@@ -16,5 +19,8 @@ export const StyledOpenCardDescription = styled(motion.div)`
     line-height: 1.5;
 
     font-family: ${props => props.theme.fonts.primary};
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 1rem;
+    }
   }
 `;

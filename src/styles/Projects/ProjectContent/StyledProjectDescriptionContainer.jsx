@@ -16,6 +16,9 @@ export const StyledProjectDescriptionContainer = styled.div`
     @media ${props => props.theme.bp.tabletL} {
       font-size: 1.6rem;
     }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 1.2rem;
+    }
   }
 
   @media ${props => props.theme.bp.tabletL} {

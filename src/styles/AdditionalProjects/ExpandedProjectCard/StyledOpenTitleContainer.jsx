@@ -7,6 +7,9 @@ export const StyledOpenTitleContainer = styled.div`
 
   & h3 {
     line-height: 1;
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 2rem;
+    }
   }
   & ul {
     display: flex;

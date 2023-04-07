@@ -13,7 +13,9 @@ export const StyledRedTempleContainer = styled(motion.div)`
   @media ${props => props.theme.bp.mobileL} {
     bottom: 34rem;
     right: -1rem;
-    overflow: hidden;
+  }
+  @media ${props => props.theme.bp.mobileM} {
+    bottom: 36rem;
   }
 
   /* Mask/feathering for red temple */
@@ -42,6 +44,9 @@ export const StyledRedTempleContainer = styled(motion.div)`
     );
     @media ${props => props.theme.bp.mobileL} {
       height: 40rem;
+    }
+    @media ${props => props.theme.bp.mobileM} {
+      height: 30rem;
     }
   }
 `;
