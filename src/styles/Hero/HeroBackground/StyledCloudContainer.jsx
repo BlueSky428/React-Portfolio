@@ -26,6 +26,10 @@ export const StyledCloudContainer = styled(motion.div)`
     bottom: 13rem;
   }
 
+  @media ${props => props.theme.bp.mobileL} {
+    width: 16rem;
+  }
+
   & svg {
     filter: none;
   }
@@ -49,6 +53,11 @@ export const StyledCloudContainer = styled(motion.div)`
   @media ${props => props.theme.bp.tabletS} {
     width: 17rem;
     right: 15.5rem;
+  }
+  @media ${props => props.theme.bp.mobileL} {
+    width: 16rem;
+    right: 13rem;
+    bottom: 1.5rem;
   }
     `};
 `;

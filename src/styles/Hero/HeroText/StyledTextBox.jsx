@@ -17,6 +17,9 @@ const StyledTextBox = styled(motion.div)`
   @media ${props => props.theme.bp.tabletS} {
     margin-top: 12rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    margin-top: 15rem;
+  }
 
   & h1 {
     font-size: 3.8rem;
@@ -79,6 +82,9 @@ const StyledTextBox = styled(motion.div)`
     }
     @media ${props => props.theme.bp.desktopXS} {
       font-size: 1.3rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      display: none;
     }
   }
 

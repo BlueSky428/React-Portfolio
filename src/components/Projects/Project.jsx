@@ -33,12 +33,12 @@ const Project = ({ project, alternate }) => {
         <StyledProjectImageContainer>
           <picture>
             <source
-              srcset={project.imageUrl}
+              srcSet={project.imageUrl}
               type='image/webp'
               media='(min-width: 768px)'
             />
             <source
-              srcset={project.mobileUrl}
+              srcSet={project.mobileUrl}
               type='image/webp'
               media='(max-width: 768px)'
             />

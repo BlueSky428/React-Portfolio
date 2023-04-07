@@ -57,4 +57,8 @@ export const StyledHeroContainer = styled.div`
   @media ${props => props.theme.bp.tabletS} {
     margin: 0 12rem;
   }
+  @media ${props => props.theme.bp.mobileL} {
+    margin: 0 6rem;
+    grid-template-rows: 1fr;
+  }
 `;

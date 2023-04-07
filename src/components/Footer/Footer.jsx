@@ -214,9 +214,12 @@ const StyledBoulderContainer = styled.div`
   bottom: -7.8rem;
   transform: translateX(15rem);
   @media ${props => props.theme.bp.tabletS} {
-    transform: translateX(24rem);
+    transform: translateX(23rem);
     bottom: 0;
     width: 7rem;
+  }
+  @media ${props => props.theme.bp.mobileL} {
+    transform: translateX(19rem);
   }
 `;
 
