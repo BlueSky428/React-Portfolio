@@ -25,6 +25,9 @@ const StyledFooter = styled.footer`
   @media ${props => props.theme.bp.tabletS} {
     height: auto;
   }
+  @media ${props => props.theme.bp.mobileM} {
+    height: 70rem;
+  }
 `;
 
 const StyledFooterBackground = styled.div`
@@ -53,6 +56,9 @@ const StyledFooterContent = styled.div`
     grid-template-rows: min-content min-content;
     row-gap: 2rem;
   }
+  @media ${props => props.theme.bp.mobileM} {
+    height: 40rem;
+  }
 `;
 
 const StyledFooterNavContainer = styled.div`
@@ -65,6 +71,9 @@ const StyledFooterNavContainer = styled.div`
     & li {
       font-size: 2.4rem;
       text-transform: capitalize;
+      @media ${props => props.theme.bp.mobileM} {
+        font-size: 3.2rem;
+      }
 
       & :hover {
         color: inherit;
@@ -166,6 +175,9 @@ const StyledPlantContainer = styled.div`
     width: 4rem;
     left: 10rem;
   }
+  @media ${props => props.theme.bp.mobileM} {
+    display: none;
+  }
 `;
 
 const StyledSeaweedContainer = styled.div`
@@ -185,6 +197,13 @@ const StyledSeaweedContainer = styled.div`
     width: 7rem;
     height: 7rem;
     display: none;
+  }
+  @media ${props => props.theme.bp.mobileM} {
+    display: block;
+    right: 20.7rem;
+    bottom: 0rem;
+    width: 5.5rem;
+    height: auto;
   }
 `;
 
@@ -220,6 +239,11 @@ const StyledBoulderContainer = styled.div`
   }
   @media ${props => props.theme.bp.mobileL} {
     transform: translateX(19rem);
+  }
+  @media ${props => props.theme.bp.mobileM} {
+    transform: translateX(4rem);
+    bottom: -11rem;
+    width: 10rem;
   }
 `;
 

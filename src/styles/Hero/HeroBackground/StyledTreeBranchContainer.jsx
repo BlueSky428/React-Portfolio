@@ -23,5 +23,8 @@ export const StyledTreeBranchContainer = styled(motion.div)`
     @media ${props => props.theme.bp.desktopXS} {
       width: 46rem;
     }
+    @media ${props => props.theme.bp.mobileM} {
+      width: 35rem;
+    }
   }
 `;

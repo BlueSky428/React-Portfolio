@@ -18,6 +18,10 @@ export const StyledAboutTextContainer = styled(motion.div)`
     @media ${props => props.theme.bp.tabletS} {
       font-size: 1.4rem;
     }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    }
   }
   @media ${props => props.theme.bp.desktopM} {
     padding-left: 1rem;
