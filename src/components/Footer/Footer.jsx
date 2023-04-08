@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import NavMenu from '../Navigation/NavMenu';
-import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette-mount.svg';
-import Koi1SVG from '/src/assets/images/illustrations/koi1.svg';
-import Koi2SVG from '/src/assets/images/illustrations/koi2.svg';
-import BoulderSVG from '/src/assets/images/illustrations/boulder.svg';
+import FooterSVG from '/src/assets/images/illustrations/footer-background-silhouette-mountOG.svg';
+import Koi1SVG from '/src/assets/images/illustrations/koi1V2.svg';
+import Koi2SVG from '/src/assets/images/illustrations/koi2V2.svg';
+import BoulderSVG from '/src/assets/images/illustrations/boulderV2.svg';
 import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
 import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
-import PlantSVG from '/src/assets/images/illustrations/underwater-plant.svg';
+import PlantSVG from '/src/assets/images/illustrations/underwater-plantV2.svg';
 
 const StyledFooter = styled.footer`
   display: grid;

@@ -89,6 +89,8 @@ export const StyledSunContainer = styled(motion.div)`
     bottom: 16rem;
     height: 22rem;
     width: 22rem;
+
+    transform: translate(0) !important;
   }
 
   @media ${props => props.theme.bp.mobileM} {

@@ -28,6 +28,7 @@ export const StyledCloudContainer = styled(motion.div)`
 
   @media ${props => props.theme.bp.mobileL} {
     width: 16rem;
+    transform: translateX(0) !important;
   }
 
   @media ${props => props.theme.bp.mobileM} {
@@ -63,6 +64,8 @@ export const StyledCloudContainer = styled(motion.div)`
     right: 15.5rem;
   }
   @media ${props => props.theme.bp.mobileL} {
+    /* In order to preserve the mirrored cloud while disabling the slide animations on mobile devices */
+    transform: scaleX(-1) !important;
     width: 16rem;
     right: 13rem;
     bottom: 1.5rem;

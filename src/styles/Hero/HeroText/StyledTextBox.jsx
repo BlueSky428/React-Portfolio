@@ -10,7 +10,7 @@ const StyledTextBox = styled(motion.div)`
   @media ${props => props.theme.bp.desktopXS} {
     grid-row: 1 / 2;
     max-width: 40rem;
-    margin-top: 15rem;
+    margin-top: 22rem;
     /* justify-self: center; */
     align-self: center;
   }

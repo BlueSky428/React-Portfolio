@@ -40,6 +40,8 @@ export const MenuItem = ({ section, toggle }) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         tabIndex={-1}
+        role='menu item'
+        aria-selected='false'
       >
         <a href={section.sectionHref} onClick={toggle}>
           {section.sectionTitle}
