@@ -25,8 +25,8 @@ const NavMenu = ({ toggle }) => {
   return (
     <StyledMenuList
       variants={variants}
-      role='menubar'
-      aria-label='menubar navigation'
+      // role='menubar'
+      // aria-label='menubar navigation'
     >
       {navSections.map(section => (
         <MenuItem key={section.id} section={section} toggle={toggle} />

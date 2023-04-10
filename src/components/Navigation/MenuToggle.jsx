@@ -46,7 +46,12 @@ export const MenuToggle = ({ toggle, isOpen }) => {
 
   const middleBarProps = isOpen ? null : { d: 'M 2 9.423 L 20 9.423' };
   return (
-    <StyledButton aria-label='Menu' onClick={toggle}>
+    <StyledButton
+      aria-label='Menu'
+      aria-controls='mainnav'
+      onClick={toggle}
+      tabIndex={1}
+    >
       <svg width='23' height='23' viewBox='0 0 23 23'>
         <Path {...topBarProps} />
         <Path {...middleBarProps} />

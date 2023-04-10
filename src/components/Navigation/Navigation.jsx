@@ -61,8 +61,10 @@ const Navigation = () => {
         animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
+        id='mainnav'
+        aria-labelledby='mainnav'
       >
-        <StyledNavigationBg variants={menubar} />
+        <StyledNavigationBg aria-hidden='true' variants={menubar} />
         <NavMenu toggle={() => toggleOpen()} />
       </StyledNavigationContainer>
     </Fragment>
