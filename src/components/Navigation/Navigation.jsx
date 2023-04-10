@@ -54,8 +54,8 @@ const Navigation = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (
-    <Fragment>
-      <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
+    <header>
+      {/* <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} /> */}
       <StyledNavigationContainer
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
@@ -64,10 +64,11 @@ const Navigation = () => {
         id='mainnav'
         aria-labelledby='mainnav'
       >
+        <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
         <StyledNavigationBg aria-hidden='true' variants={menubar} />
         <NavMenu toggle={() => toggleOpen()} />
       </StyledNavigationContainer>
-    </Fragment>
+    </header>
   );
 };
 

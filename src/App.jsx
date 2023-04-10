@@ -19,11 +19,13 @@ function App() {
         <GlobalStyles />
         <Navigation />
         <Sidebar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <ProjectGallery />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <ProjectGallery />
+        </main>
         <Footer />
       </AppProvider>
     </ThemeProvider>
