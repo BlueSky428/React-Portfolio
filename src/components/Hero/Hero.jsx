@@ -9,10 +9,27 @@ import {
   childHeroTextVariants,
   parentHeroTextVariants,
 } from '../../utils/animations';
+import GlobeSVG from '/src/assets/icons/globe.svg';
 import { motion, useReducedMotion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+import { useState } from 'react';
+import { StyledLanguageButton } from '../../styles/Hero/HeroText/StyledLanguageButton';
 
 const Hero = () => {
+  const { t } = useTranslation();
+  const [language, setLanguage] = useState('en');
   const shouldReduceMotion = useReducedMotion();
+
+  const toggleLanguageHandler = () => {
+    if (language === 'en') {
+      i18next.changeLanguage('ja');
+      setLanguage('jp');
+    } else {
+      i18next.changeLanguage('en');
+      setLanguage('en');
+    }
+  };
   return (
     <>
       <StyledHeroSectionBackdrop>
@@ -26,7 +43,7 @@ const Hero = () => {
             >
               <motion.div variants={childHeroTextVariants}>
                 <h1>
-                  Hi there, I'm <span>Nick</span>.
+                  {t('greetings')} <span>Nick</span>.
                 </h1>
               </motion.div>
 
@@ -43,12 +60,21 @@ const Hero = () => {
               <motion.div variants={childHeroTextVariants}>
                 <motion.a
                   whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
-                  href='\Nick-Mullenmeister-Resume.pdf'
+                  href='/Nick-Mullenmeister-Resume.pdf'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   resume
                 </motion.a>
+
+                <StyledLanguageButton
+                  whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
+                  aria-label='Change language'
+                  onClick={toggleLanguageHandler}
+                >
+                  <GlobeSVG />
+                  <span>{language === 'en' ? '日本語' : 'English'}</span>
+                </StyledLanguageButton>
               </motion.div>
             </StyledTextBox>
           </StyledHeroContainer>

@@ -98,6 +98,24 @@ const StyledTextBox = styled(motion.div)`
     }
   }
 
+  & div:last-child {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: fit-content;
+    margin-top: 3.6rem;
+    @media ${props => props.theme.bp.desktopL} {
+      margin-top: 3rem;
+    }
+
+    @media ${props => props.theme.bp.tabletS} {
+      margin-top: 1.5rem;
+    }
+    @media ${props => props.theme.bp.mobileL} {
+      margin-top: 2rem;
+    }
+  }
+
   & a {
     font-family: ${props => props.theme.fonts.primary};
     font-weight: 600;
@@ -107,14 +125,12 @@ const StyledTextBox = styled(motion.div)`
     padding: 1.45rem 2.45rem;
     letter-spacing: 0.1rem;
     border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
-    margin-top: 3.6rem;
     line-height: 1;
     font-size: 1.6rem;
     text-transform: capitalize;
 
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.5rem;
-      margin-top: 3rem;
     }
 
     @media ${props => props.theme.bp.desktopXS} {
@@ -122,11 +138,7 @@ const StyledTextBox = styled(motion.div)`
       padding: 1rem 2rem;
     }
     @media ${props => props.theme.bp.tabletS} {
-      margin-top: 1.5rem;
       padding: 0.8rem 1.8rem;
-    }
-    @media ${props => props.theme.bp.mobileL} {
-      margin-top: 2rem;
     }
   }
 `;
