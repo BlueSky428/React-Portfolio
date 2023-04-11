@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 import { CONSTANTS } from '../constants';
+import { useTranslation } from 'react-i18next';
 
 const AppContext = createContext();
 
@@ -12,7 +13,9 @@ export const AppProvider = ({ children }) => {
   const toggleMoreProjects = () => {
     setShowMoreProjects(!showMoreProjects);
   };
+  const { t } = useTranslation();
 
+  // For handling whether the user has scrolled to bottom of page - changes sidebar color
   const handleScroll = () => {
     const pageBottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
@@ -33,6 +36,11 @@ export const AppProvider = ({ children }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Changes the document title based on the language selected
+  useEffect(() => {
+    document.title = t('app-title');
+  }, [t]);
 
   return (
     <AppContext.Provider
