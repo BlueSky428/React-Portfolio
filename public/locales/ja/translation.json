@@ -1,16 +1,16 @@
 {
   "app-title": "ホーム | マレンマイスター　ニック • ポートフォリオ",
-  "greetings": "こんにちは、私は ",
-  "name": "Nick",
-  "sub-heading": "Welcome to my corner of the web.",
-  "more-info": "I'm a web developer based in Minnesota who builds interesting and beautiful websites that help people. My current focus is on accessible React applications. I also love Japan.",
-  "resume-btn": "resume",
-  "about-heading": "about me",
-  "about-text-top": "Hi! My name is Nick and I like building things for the web. I was introduced to web development during high school, but I became much more engaged in the field after graduating from a coding boot camp in 2022. Since then I have continued to hone my programming skills through consistent practice and dedication.",
-  "about-text-bottom": "Outside of the coding world, I enjoy traveling and studying Japanese. I spent a few years living in Japan, where I taught English and studied Japanese culture. I also play video games, DJ, enjoy pencil drawing, and practice the piano during my free time.",
-  "technology-heading": "technology",
-  "projects-heading": "projects",
-  "featured-tag": "featured project",
+  "greetings": "こんにちは、",
+  "name": "ニックです。",
+  "sub-heading": "私のウエブのコーナーへようこそ。",
+  "more-info": "私はミネソタ州を拠点とするウェブ開発者で、人々を助ける面白くて美しいウェブサイトを構築しています。現在は、アクセシブルなReactアプリケーションに注力しています。",
+  "resume-btn": "レジュメ",
+  "about-heading": "私について",
+  "about-text-top": "私の名前はニックで、ウェブのために何かを作るのが好きです。高校時代にウェブ開発に出会ったのですが、2022年にコーディング・ブートキャンプを卒業してから、この分野にもっとのめり込むようになりました。それ以来、一貫した練習と献身的な努力によって、プログラミングのスキルを磨き続けています。",
+  "about-text-bottom": "コーディングの世界以外では、旅行と日本語の勉強を楽しんでいます。数年間日本に住んでいたことがあり、そこで英語を教えたり、日本文化を学んだりしました。また、ビデオゲームをしたり、DJをしたり、鉛筆画を楽しんだり、自由時間にはピアノの練習をしたりしています。",
+  "technology-heading": "テクノロジー",
+  "projects-heading": "プロジェクト",
+  "featured-tag": "目玉プロジェクト",
   "projects": {
     "project-descriptions": [
       {
@@ -55,12 +55,13 @@
       }
     ]
   },
-  "show-more-btn": "show more",
-  "show-less-btn": "show less",
-  "menu-home": "home",
-  "menu-about": "about",
-  "menu-technology": "technology",
-  "menu-projects": "projects",
-  "footer-contact": "e-mail",
-  "footer-message": "Website by Nick Mullenmeister"
+  "show-more-btn": "もっと見る",
+  "show-less-btn": "非表示",
+  "learn-more": "詳しく見る",
+  "menu-home": "ホーム",
+  "menu-about": "私について",
+  "menu-technology": "テクノロジー",
+  "menu-projects": "プロジェクト",
+  "footer-contact": "メール",
+  "footer-message": "マレンマイスター　ニックによるウエブサイト"
 }

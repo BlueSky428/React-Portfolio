@@ -12,8 +12,10 @@ import { childProjectVariants } from '../../utils/animations';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const GalleryItem = ({ project }) => {
+  const { t } = useTranslation();
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
   const card = useRef(null);
@@ -50,7 +52,7 @@ const GalleryItem = ({ project }) => {
               }
             }}
           >
-            more info
+            {t('learn-more')}
             <ExpandSVG />
           </button>
         </StyledCardHeader>

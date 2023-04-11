@@ -7,6 +7,7 @@ import BoulderSVG from '/src/assets/images/illustrations/boulderV2.svg';
 import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
 import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
 import PlantSVG from '/src/assets/images/illustrations/underwater-plantV2.svg';
+import { useTranslation } from 'react-i18next';
 
 const StyledFooter = styled.footer`
   display: grid;
@@ -256,6 +257,7 @@ const StyledBoulderContainer = styled.div`
 `;
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <StyledFooter>
       <StyledFooterBackground>
@@ -278,8 +280,8 @@ const Footer = () => {
             <BoulderSVG />
           </StyledBoulderContainer>
           <StyledContactInfo>
-            <li>e-mail: mully7773@gmail.com</li>
-            <li>website by Nick Mullenmeister</li>
+            <li> {t('footer-contact')}: mully7773@gmail.com</li>
+            <li>{t('footer-message')}</li>
           </StyledContactInfo>
         </StyledContactInfoContainer>
         <StyledPlantContainer>

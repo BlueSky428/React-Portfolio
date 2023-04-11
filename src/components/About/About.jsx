@@ -14,14 +14,16 @@ import {
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
       <StyledAboutSection>
         <StyledSectionHeading>
-          <h2 id='about'>about me</h2>
+          <h2 id='about'> {t('about-heading')}</h2>
         </StyledSectionHeading>
 
         <StyledPictureContainer
@@ -58,19 +60,8 @@ const About = () => {
           viewport={{ once: true }}
           variants={picturesTextVariants}
         >
-          <p>
-            Hi! My name is Nick and I like building things for the web. I was
-            introduced to web development during high school, but I became much
-            more engaged in the field after graduating from a coding boot camp
-            in 2022. Since then I have continued to hone my programming skills
-            through consistent practice and dedication.{' '}
-          </p>
-          <p>
-            Outside of the coding world, I enjoy traveling and studying
-            Japanese. I spent a few years living in Japan, where I taught
-            English and studied Japanese culture. I also play video games, DJ,
-            enjoy pencil drawing, and practice the piano during my free time.
-          </p>
+          <p>{t('about-text-top')}</p>
+          <p>{t('about-text-bottom')}</p>
         </StyledAboutTextContainer>
         <StyledRedTempleContainer
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}

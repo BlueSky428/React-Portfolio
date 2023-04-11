@@ -43,19 +43,15 @@ const Hero = () => {
             >
               <motion.div variants={childHeroTextVariants}>
                 <h1>
-                  {t('greetings')} <span>Nick</span>.
+                  {t('greetings')} <span> {t('name')}</span>
                 </h1>
               </motion.div>
 
               <motion.div variants={childHeroTextVariants}>
-                <h2>Welcome to my corner of the web.</h2>
+                <h2> {t('sub-heading')}</h2>
               </motion.div>
               <motion.div variants={childHeroTextVariants}>
-                <p>
-                  I'm a web developer based in Minnesota who builds interesting
-                  and beautiful websites that help people. My current focus is
-                  on accessible React applications. I also love Japan.{' '}
-                </p>
+                <p>{t('more-info')}</p>
               </motion.div>
               <motion.div variants={childHeroTextVariants}>
                 <motion.a
@@ -64,7 +60,7 @@ const Hero = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  resume
+                  {t('resume-btn')}
                 </motion.a>
 
                 <StyledLanguageButton

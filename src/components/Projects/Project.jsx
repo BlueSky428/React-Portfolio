@@ -15,8 +15,10 @@ import {
   projectSlideRightVariants,
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Project = ({ project, alternate }) => {
+  const { t } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
   return (
     <StyledProjectItem
@@ -48,7 +50,7 @@ const Project = ({ project, alternate }) => {
       </StyledProjectImage>
       <StyledProjectContent alternate={alternate}>
         <StyledProjectContentBorder alternate={alternate}>
-          <span>featured project</span>
+          <span>{t('featured-tag')}</span>
           <h3>{project.title}</h3>
           <StyledProjectDescriptionContainer>
             <p>{project.description}</p>

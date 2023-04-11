@@ -10,14 +10,16 @@ import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
 import { buttonVariant } from '../../utils/animations';
 import { AnimatePresence, useReducedMotion } from 'framer-motion';
 import { CONSTANTS } from '../../constants';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
     <StyledProjectsSection>
       <StyledSectionHeading>
-        <h2 id='projects'>projects</h2>
+        <h2 id='projects'> {t('projects-heading')}</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
         {projectData
@@ -44,7 +46,7 @@ const Projects = () => {
             exit={shouldReduceMotion ? 'noMotion' : 'exit'}
             onClick={() => toggleMoreProjects()}
           >
-            show more
+            {t('show-more-btn')}
           </StyledProjectButton>
         )}
       </AnimatePresence>

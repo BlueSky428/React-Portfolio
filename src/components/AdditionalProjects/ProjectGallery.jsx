@@ -7,8 +7,10 @@ import { StyledProjectGallery } from '../../styles/AdditionalProjects/Additional
 import GalleryItem from './GalleryItem';
 import { buttonVariant, parentProjectVariants } from '../../utils/animations';
 import { CONSTANTS } from '../../constants';
+import { useTranslation } from 'react-i18next';
 
 const ProjectGallery = () => {
+  const { t } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
@@ -35,7 +37,7 @@ const ProjectGallery = () => {
                 exit={shouldReduceMotion ? 'noMotion' : 'exit'}
                 onClick={() => toggleMoreProjects()}
               >
-                show less
+                {t('show-less-btn')}
               </StyledProjectButton>
             </StyledProjectGallery>
           </>
