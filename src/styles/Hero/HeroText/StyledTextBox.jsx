@@ -29,10 +29,15 @@ const StyledTextBox = styled(motion.div)`
     color: ${props => props.theme.primary.h1};
     font-family: ${props => props.theme.fonts.primary};
 
-    & span {
-      font-family: ${props => props.theme.fonts.secondary};
+    /* Change the font to a different Japanese font when the language is not English - lang prop is passed from parent StyledTextBox (mandatory) and its value comes from i18next in Hero.jsx */
+    & span:not(:last-child) {
+      font-family: ${props =>
+        props.lang === 'en'
+          ? props.theme.fonts.secondary
+          : props.theme.fonts.tertiary};
+      letter-spacing: ${props => (props.lang === 'ja' ? '-0.6rem' : '0')};
+
       font-size: 4rem;
-      /* font-weight: 100; */
       font-weight: 600;
       @media ${props => props.theme.bp.desktopL} {
         font-size: 4.4rem;
@@ -50,6 +55,7 @@ const StyledTextBox = styled(motion.div)`
 
     @media ${props => props.theme.bp.desktopL} {
       font-size: 3.4rem;
+
       line-height: 1.2;
     }
     @media ${props => props.theme.bp.desktopM} {

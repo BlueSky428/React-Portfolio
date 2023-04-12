@@ -2,6 +2,7 @@
   "app-title": "Home | Nick Mullenmeister • Portfolio",
   "greetings": "Hi there, I'm ",
   "name": "Nick",
+  "name-end": ".",
   "sub-heading": "Welcome to my corner of the web.",
   "more-info": "I'm a web developer based in Minnesota who builds interesting and beautiful websites that help people. My current focus is on accessible React applications. I also love Japan.",
   "resume-btn": "resume",

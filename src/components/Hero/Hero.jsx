@@ -15,16 +15,18 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import { useState } from 'react';
 import { StyledLanguageButton } from '../../styles/Hero/HeroText/StyledLanguageButton';
+import i18n from '../../i18n';
 
 const Hero = () => {
-  const { t } = useTranslation();
   const [language, setLanguage] = useState('en');
+  const { t } = useTranslation();
+  const lang = i18n.resolvedLanguage;
   const shouldReduceMotion = useReducedMotion();
 
   const toggleLanguageHandler = () => {
     if (language === 'en') {
       i18next.changeLanguage('ja');
-      setLanguage('jp');
+      setLanguage('ja');
     } else {
       i18next.changeLanguage('en');
       setLanguage('en');
@@ -37,13 +39,15 @@ const Hero = () => {
           <HeroBackground />
           <StyledHeroContainer>
             <StyledTextBox
+              lang={lang}
               initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
               animate='visible'
               variants={parentHeroTextVariants}
             >
               <motion.div variants={childHeroTextVariants}>
                 <h1>
-                  {t('greetings')} <span> {t('name')}</span>
+                  {t('greetings')} <span lang={lang}>{t('name')}</span>
+                  <span>{t('name-end')}</span>
                 </h1>
               </motion.div>
 

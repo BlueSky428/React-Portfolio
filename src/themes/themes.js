@@ -14,6 +14,8 @@ export const base = {
   fonts: {
     primary: 'Montserrat, system-ui, sans-serif',
     secondary: 'GazeNozarashi, system-ui, cursive',
+    // 'Secondary' font for Japanese text
+    tertiary: 'Zen Kurenaido, sans-serif',
   },
   bp: {
     mobileS: `only screen and (max-width: ${bpSize.mobileS})`,
