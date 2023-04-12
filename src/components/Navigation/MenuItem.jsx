@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import i18n from '../../i18n';
 
 const variants = {
   open: {
@@ -21,9 +22,13 @@ const variants = {
 };
 
 const StyledMenuItem = styled(motion.li)`
-  font-family: ${props => props.theme.fonts.secondary};
+  font-family: ${props =>
+    props.lang === 'en'
+      ? props.theme.fonts.secondary
+      : props.theme.fonts.tertiary};
+  letter-spacing: ${props => (props.lang === 'ja' ? '-0.3rem' : '0')};
   text-transform: capitalize;
-  font-size: 3rem;
+  font-size: ${props => (props.lang === 'ja' ? '2.7rem' : '3rem')};
   font-weight: 600;
   width: fit-content;
 
@@ -32,18 +37,20 @@ const StyledMenuItem = styled(motion.li)`
   }
 `;
 
-export const MenuItem = ({ section, toggle }) => {
+export const MenuItem = ({ sectionTitle, sectionHref, toggle }) => {
+  const lang = i18n.resolvedLanguage;
   return (
     <>
       <StyledMenuItem
+        lang={lang}
         variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         tabIndex={-1}
         // role='menu item'
       >
-        <a href={section.sectionHref} onClick={toggle}>
-          {section.sectionTitle}
+        <a href={sectionHref} onClick={toggle} lang={lang}>
+          {sectionTitle}
         </a>
       </StyledMenuItem>
     </>

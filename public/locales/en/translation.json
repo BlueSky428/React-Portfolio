@@ -59,10 +59,24 @@
   "show-more-btn": "show more",
   "show-less-btn": "show less",
   "learn-more": "more info",
-  "menu-home": "home",
-  "menu-about": "about",
-  "menu-technology": "technology",
-  "menu-projects": "projects",
+  "navigation": [
+    {
+      "menuTitle": "home",
+      "href": "/#home"
+    },
+    {
+      "menuTitle": "about",
+      "href": "/#about"
+    },
+    {
+      "menuTitle": "technology",
+      "href": "/#technology"
+    },
+    {
+      "menuTitle": "project",
+      "href": "/#projects"
+    }
+  ],
   "footer-contact": "e-mail",
   "footer-message": "Website by Nick Mullenmeister"
 }

@@ -9,13 +9,15 @@ import { parentTechnologyVariants } from '../../utils/animations';
 import Skill from './Skill';
 import { useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 const Skills = () => {
   const { t } = useTranslation();
+  const lang = i18n.resolvedLanguage;
   const shouldReduceMotion = useReducedMotion();
   return (
     <StyledSkillsSection>
-      <StyledSectionHeading>
+      <StyledSectionHeading lang={lang}>
         <h2 id='technology'> {t('technology-heading')}</h2>
       </StyledSectionHeading>
       <StyledSkillsContainer>

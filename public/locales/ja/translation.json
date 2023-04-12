@@ -59,10 +59,24 @@
   "show-more-btn": "もっと見る",
   "show-less-btn": "非表示",
   "learn-more": "詳しく見る",
-  "menu-home": "ホーム",
-  "menu-about": "私について",
-  "menu-technology": "テクノロジー",
-  "menu-projects": "プロジェクト",
+  "navigation": [
+    {
+      "menuTitle": "ホーム",
+      "href": "/#home"
+    },
+    {
+      "menuTitle": "私について",
+      "href": "/#about"
+    },
+    {
+      "menuTitle": "テクノロジー",
+      "href": "/#technology"
+    },
+    {
+      "menuTitle": "プロジェクト",
+      "href": "/#projects"
+    }
+  ],
   "footer-contact": "メール",
   "footer-message": "マレンマイスター　ニックによるウエブサイト"
 }

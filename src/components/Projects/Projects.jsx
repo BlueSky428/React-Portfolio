@@ -11,14 +11,16 @@ import { buttonVariant } from '../../utils/animations';
 import { AnimatePresence, useReducedMotion } from 'framer-motion';
 import { CONSTANTS } from '../../constants';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 const Projects = () => {
   const { t } = useTranslation();
+  const lang = i18n.resolvedLanguage;
   const shouldReduceMotion = useReducedMotion();
   const { showMoreProjects, toggleMoreProjects } = useGlobalContext();
   return (
     <StyledProjectsSection>
-      <StyledSectionHeading>
+      <StyledSectionHeading lang={lang}>
         <h2 id='projects'> {t('projects-heading')}</h2>
       </StyledSectionHeading>
       <StyledProjectsList>
