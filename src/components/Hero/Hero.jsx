@@ -24,7 +24,7 @@ const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
 
   const toggleLanguageHandler = () => {
-    if (language === 'en') {
+    if (lang === 'en') {
       i18next.changeLanguage('ja');
       setLanguage('ja');
     } else {
@@ -73,7 +73,7 @@ const Hero = () => {
                   onClick={toggleLanguageHandler}
                 >
                   <GlobeSVG />
-                  <span>{language === 'en' ? '日本語' : 'English'}</span>
+                  <span>{lang === 'en' ? '日本語' : 'English'}</span>
                 </StyledLanguageButton>
               </motion.div>
             </StyledTextBox>
