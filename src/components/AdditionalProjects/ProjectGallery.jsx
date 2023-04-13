@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, useReducedMotion, motion } from 'framer-motion';
 import { useGlobalContext } from '../../Context/Context';
 import { projectData } from '../../data/projectData';
 import { StyledProjectButton } from '../../styles/UI/StyledProjectsButton';
@@ -27,8 +26,19 @@ const ProjectGallery = () => {
             >
               {projectData
                 .slice(CONSTANTS.FEATURED_PROJECT_CUTOFF)
-                .map(project => {
-                  return <GalleryItem key={project.id} project={project} />;
+                .map((project, index) => {
+                  return (
+                    <GalleryItem
+                      key={project.id}
+                      project={project}
+                      // Mapping over these translated descriptions the same as in the Projects section, but this time add the cutoff (4) to the index, so that the mapping for the additional projects begins at the 5th project in the list.
+                      description={t(
+                        `projects.${
+                          index + CONSTANTS.FEATURED_PROJECT_CUTOFF
+                        }.description`
+                      )}
+                    />
+                  );
                 })}
               <StyledProjectButton
                 variants={buttonVariant}

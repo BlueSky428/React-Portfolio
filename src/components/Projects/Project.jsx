@@ -17,7 +17,7 @@ import {
 import { useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-const Project = ({ project, alternate }) => {
+const Project = ({ project, description, alternate }) => {
   const { t } = useTranslation();
   const shouldReduceMotion = useReducedMotion();
   return (
@@ -53,7 +53,8 @@ const Project = ({ project, alternate }) => {
           <span>{t('featured-tag')}</span>
           <h3>{project.title}</h3>
           <StyledProjectDescriptionContainer>
-            <p>{project.description}</p>
+            {/* <p>{project.description}</p> */}
+            <p>{description}</p>
           </StyledProjectDescriptionContainer>
           <ul>
             {project.technologies.map(tech => {

@@ -14,7 +14,7 @@ import { useRef } from 'react';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const GalleryItem = ({ project }) => {
+const GalleryItem = ({ project, description }) => {
   const { t } = useTranslation();
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
@@ -93,7 +93,8 @@ const GalleryItem = ({ project }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <p>{project.description}</p>
+              {/* <p>{project.description}</p> */}
+              <p>{description}</p>
               <ul>
                 {project.technologies.map(tech => {
                   return <li key={tech}>{tech}</li>;
