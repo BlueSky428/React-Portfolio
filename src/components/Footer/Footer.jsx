@@ -8,6 +8,7 @@ import SeaweedSVG from '/src/assets/images/illustrations/seaweed.svg';
 import Seaweed2SVG from '/src/assets/images/illustrations/seaweed2.svg';
 import PlantSVG from '/src/assets/images/illustrations/underwater-plantV2.svg';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 const StyledFooter = styled.footer`
   display: grid;
@@ -147,8 +148,12 @@ const StyledContactInfo = styled.ul`
   & li {
     color: ${props => props.theme.neutrals.footerText};
     font-family: ${props => props.theme.fonts.secondary};
-    font-size: 2.2rem;
-    /* text-transform: capitalize; */
+    font-family: ${props =>
+      props.lang === 'en'
+        ? props.theme.fonts.secondary
+        : props.theme.fonts.tertiary};
+    font-size: ${props => (props.lang === 'en' ? '2.2rem' : '1.8rem')};
+
     @media ${props => props.theme.bp.tabletS} {
       font-size: 1.4rem;
     }
@@ -238,7 +243,8 @@ const StyledBoulderContainer = styled.div`
   }
 
   position: absolute;
-  bottom: -7.8rem;
+  bottom: ${props => (props.lang === 'en' ? '-7.8rem' : '-8.4rem')};
+  /* bottom: -7.8rem; */
   transform: translateX(15rem);
   @media ${props => props.theme.bp.tabletS} {
     transform: translateX(23rem);
@@ -258,6 +264,7 @@ const StyledBoulderContainer = styled.div`
 
 const Footer = () => {
   const { t } = useTranslation();
+  const lang = i18n.resolvedLanguage;
   return (
     <StyledFooter>
       <StyledFooterBackground>
@@ -276,10 +283,10 @@ const Footer = () => {
           <StyledKoi2Container>
             <Koi2SVG />
           </StyledKoi2Container>
-          <StyledBoulderContainer>
+          <StyledBoulderContainer lang={lang}>
             <BoulderSVG />
           </StyledBoulderContainer>
-          <StyledContactInfo>
+          <StyledContactInfo lang={lang}>
             <li> {t('footer-contact')}: mully7773@gmail.com</li>
             <li>{t('footer-message')}</li>
           </StyledContactInfo>
