@@ -55,6 +55,25 @@ const lightPalette = {
   },
 };
 
+// Dark Theme
+const darkPalette = {
+  primary: {
+    100: '#1e3e67',
+    200: '#244977',
+    300: '#2b548a',
+    400: '#407ac3',
+    500: '#ecf6fa',
+    600: '#ecf6faed',
+  },
+  secondary: {},
+  tertiary: { 600: '#ce373c' },
+  neutrals: { 100: '#121212', 200: '#1a1a1a', 300: '#222222ff' },
+  gradients: {
+    hero: ['#2b548acc', '#ce373ccc'],
+    footer: ['#2b548acc', '#ce373ccc'],
+  },
+};
+
 export const lightTheme = {
   primary: {
     h1: lightPalette.primary[600],

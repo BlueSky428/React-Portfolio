@@ -32,51 +32,61 @@ const Hero = () => {
       setLanguage('en');
     }
   };
+
   return (
     <>
       <StyledHeroSectionBackdrop>
         <StyledHeroSection>
           <HeroBackground />
           <StyledHeroContainer>
-            <StyledTextBox
-              lang={lang}
-              initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
-              animate='visible'
-              variants={parentHeroTextVariants}
+            {/* This motion.div is necessary for a smooth transition between language button clicks */}
+            <motion.div
+              key={lang} // add a key prop with the language value
             >
-              <motion.div variants={childHeroTextVariants}>
-                <h1>
-                  {t('greetings')} <span lang={lang}>{t('name')}</span>
-                  <span>{t('name-end')}</span>
-                </h1>
-              </motion.div>
+              <StyledTextBox
+                lang={lang}
+                initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
+                animate='visible'
+                variants={parentHeroTextVariants}
+              >
+                <motion.div variants={childHeroTextVariants}>
+                  <h1>
+                    {t('greetings')} <span lang={lang}>{t('name')}</span>
+                    <span>{t('name-end')}</span>
+                  </h1>
+                </motion.div>
 
-              <motion.div variants={childHeroTextVariants}>
-                <h2> {t('sub-heading')}</h2>
-              </motion.div>
-              <motion.div variants={childHeroTextVariants}>
-                <p>{t('more-info')}</p>
-              </motion.div>
-              <motion.div variants={childHeroTextVariants}>
-                <motion.a
-                  whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
-                  href='/Nick-Mullenmeister-Resume.pdf'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  {t('resume-btn')}
-                </motion.a>
+                <motion.div variants={childHeroTextVariants}>
+                  <h2> {t('sub-heading')}</h2>
+                </motion.div>
+                <motion.div variants={childHeroTextVariants}>
+                  <p>{t('more-info')}</p>
+                </motion.div>
+                <motion.div variants={childHeroTextVariants}>
+                  <motion.a
+                    whileTap={
+                      shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }
+                    }
+                    href='/Nick-Mullenmeister-Resume.pdf'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {t('resume-btn')}
+                  </motion.a>
 
-                <StyledLanguageButton
-                  whileTap={shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }}
-                  aria-label='Change language'
-                  onClick={toggleLanguageHandler}
-                >
-                  <GlobeSVG />
-                  <span>{lang === 'en' ? '日本語' : 'English'}</span>
-                </StyledLanguageButton>
-              </motion.div>
-            </StyledTextBox>
+                  <StyledLanguageButton
+                    whileTap={
+                      shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }
+                    }
+                    aria-label='Change language'
+                    onClick={toggleLanguageHandler}
+                  >
+                    <GlobeSVG />
+                    <span>{lang === 'en' ? '日本語' : 'English'}</span>
+                  </StyledLanguageButton>
+                </motion.div>
+              </StyledTextBox>
+            </motion.div>
           </StyledHeroContainer>
         </StyledHeroSection>
       </StyledHeroSectionBackdrop>
