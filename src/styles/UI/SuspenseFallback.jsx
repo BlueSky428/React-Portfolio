@@ -25,6 +25,7 @@ const SuspenseFallback = () => {
         transition={{ repeat: Infinity, duration: 0.6 }}
       />
       <h2>Loading...</h2>
+      <h2>読み込み中...</h2>
     </LoadingContainer>
   );
 };
