@@ -1,11 +1,70 @@
-// Hero animations //
+import { easeInOut } from 'framer-motion';
 
+// Ease and reducedMotion variables used in animations
 const cubicBezierEase = [0.645, 0.045, 0.355, 1];
 const noMotion = {
   opacity: 0.01,
   y: 0,
   x: 0,
 };
+
+// Navigation animations //
+
+// StyledNavigationBg open and close
+export const menubarVariants = {
+  open: {
+    clipPath: 'circle(30rem at 33.4rem 4.50rem)',
+    transition: {
+      stiffness: 20,
+      ease: easeInOut,
+      restDelta: 2,
+    },
+  },
+  closed: {
+    clipPath: 'circle(3rem at 33.4rem 4.50rem)',
+    transition: {
+      delay: 0.5,
+      duration: 1,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
+      ease: easeInOut,
+    },
+  },
+};
+
+// Menu parent / slide-up stagger
+export const menuVariants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
+
+// Menu child / slide-up opacity
+export const menuItemVariants = {
+  open: {
+    y: 0,
+    visibility: 'visible',
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    visibility: 'hidden',
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
+
+// Hero animations //
+
 // Hero StyledTextBox
 export const parentHeroTextVariants = {
   noMotion: noMotion,
