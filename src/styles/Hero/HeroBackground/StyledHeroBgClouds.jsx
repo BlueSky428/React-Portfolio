@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const horizontalDrift = keyframes`
     from {
@@ -26,18 +26,12 @@ export const StyledHeroBgClouds = styled.div`
   animation-direction: normal;
   animation-fill-mode: none;
   /* Set to running for animation */
-  animation-play-state: paused;
+  animation-play-state: running;
   animation-name: ${horizontalDrift};
   z-index: 10;
   opacity: 0.4;
 
-  /* ${props =>
-    props.small &&
-    css`
-      background: url(../../bg_kumo_sm.png);
-      animation-duration: 35s;
-    `} */
-
-  /* #530101 */
-  /* #4d0059 */
+  @media ${props => props.theme.bp.tabletS} {
+    display: none;
+  }
 `;

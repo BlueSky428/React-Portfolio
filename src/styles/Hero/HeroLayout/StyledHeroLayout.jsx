@@ -17,14 +17,6 @@ export const StyledHeroSection = styled.section`
     ${props => props.theme.gradients.heroBgTop}
   );
 
-  /* background: linear-gradient(
-      to top,
-      #fedccdcc,
-      #f5cce9cc
-    ),
-  
-    url(../../public/water-color.jpg) no-repeat; */
-  /* background-image: url(../../public/water-color.jpg); */
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
   overflow: hidden;
   position: relative;

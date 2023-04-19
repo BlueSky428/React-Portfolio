@@ -18,7 +18,10 @@ const StyledTextBox = styled(motion.div)`
     margin-top: 12rem;
   }
   @media ${props => props.theme.bp.mobileL} {
-    margin-top: 4rem;
+    margin-top: 12rem;
+  }
+  @media ${props => props.theme.bp.mobileM} {
+    text-align: center;
   }
 
   & h1 {
@@ -117,8 +120,13 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.tabletS} {
       margin-top: 1.5rem;
     }
+
     @media ${props => props.theme.bp.mobileL} {
       margin-top: 2rem;
+    }
+
+    @media ${props => props.theme.bp.mobileM} {
+      justify-content: space-between;
     }
   }
 
