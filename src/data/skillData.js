@@ -53,6 +53,6 @@ export const skillData = [
   },
   {
     id: crypto.randomUUID(),
-    technology: 'MySql',
+    technology: 'Figma',
   },
 ];
