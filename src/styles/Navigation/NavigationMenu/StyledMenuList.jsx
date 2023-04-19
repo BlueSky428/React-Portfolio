@@ -7,4 +7,8 @@ export const StyledMenuList = styled(motion.ul)`
   right: 8rem;
   width: fit-content;
   z-index: 2000000;
+  @media ${props => props.theme.bp.mobileM} {
+    top: 4.5rem;
+    right: 10rem;
+  }
 `;

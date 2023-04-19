@@ -54,6 +54,10 @@ const StyledTextBox = styled(motion.div)`
       @media ${props => props.theme.bp.mobileL} {
         font-size: 4.2rem;
       }
+      @media ${props => props.theme.bp.mobileM} {
+        font-size: ${props => (props.lang === 'en' ? '4.2rem' : '3.4rem')};
+        line-height: ${props => (props.lang === 'en' ? '3.2rem' : '2.4rem')};
+      }
     }
 
     @media ${props => props.theme.bp.desktopL} {
@@ -69,6 +73,10 @@ const StyledTextBox = styled(motion.div)`
     }
     @media ${props => props.theme.bp.mobileL} {
       font-size: 3.2rem;
+    }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: ${props => (props.lang === 'en' ? '3.2rem' : '2.4rem')};
+      line-height: ${props => (props.lang === 'en' ? '1.2' : '1.6')};
     }
   }
 
@@ -91,6 +99,11 @@ const StyledTextBox = styled(motion.div)`
     @media ${props => props.theme.bp.mobileL} {
       font-size: 2.2rem;
       line-height: 1.2;
+    }
+    @media ${props => props.theme.bp.mobileM} {
+      font-size: ${props => (props.lang === 'en' ? '2.2rem' : '2.2rem')};
+      letter-spacing: ${props => (props.lang === 'en' ? 'null' : '0.26rem')};
+      line-height: ${props => (props.lang === 'en' ? '1.2' : '1.5')};
     }
   }
 
