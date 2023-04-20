@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import { base, lightTheme } from './themes/themes';
+import { base, lightTheme, darkTheme } from './themes/themes';
 import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import GlobalStyles from './styles/Global/GlobalStyles';
