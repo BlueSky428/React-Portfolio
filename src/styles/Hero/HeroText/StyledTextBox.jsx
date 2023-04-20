@@ -1,24 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const StyledTextBox = styled(motion.div)`
-  /* TEMP */
-  margin-top: 26.5rem;
-  @media ${props => props.theme.bp.desktopL} {
-    margin-top: 28rem;
-  }
+  display: block;
+  position: relative;
+  z-index: 1500;
+
   @media ${props => props.theme.bp.desktopXS} {
     grid-row: 1 / 2;
     max-width: 40rem;
-    margin-top: 22rem;
-    /* justify-self: center; */
-    align-self: center;
-  }
-  @media ${props => props.theme.bp.tabletS} {
-    margin-top: 12rem;
-  }
-  @media ${props => props.theme.bp.mobileL} {
-    margin-top: 12rem;
+    align-self: center !important;
   }
   @media ${props => props.theme.bp.mobileM} {
     text-align: center;

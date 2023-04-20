@@ -4,6 +4,7 @@ import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ej
 // import FujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-theme.svg';
 import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
 import LanternSVG from '/src/assets/images/illustrations/chouchinV3.svg';
+import DarkModeSVG from '/src/assets/icons/moon.svg';
 import { StyledHeroBgClouds } from '../../styles/Hero/HeroBackground/StyledHeroBgClouds';
 import { StyledFujiContainer } from '../../styles/Hero/HeroBackground/StyledFujiContainer';
 import { StyledSunContainer } from '../../styles/Hero/HeroBackground/StyledSunContainer';
@@ -22,6 +23,10 @@ import { useReducedMotion } from 'framer-motion';
 
 const HeroBackground = () => {
   const shouldReduceMotion = useReducedMotion();
+
+  const test = () => {
+    console.log('clicked');
+  };
   return (
     <>
       <StyledHeroBgClouds />
@@ -32,8 +37,15 @@ const HeroBackground = () => {
         variants={branchVariants}
       >
         <TreeBranchSVG />
-        <StyledLanternContainer animate='visible' variants={lanternVariants}>
+        <StyledLanternContainer
+          onClick={test}
+          animate='visible'
+          variants={lanternVariants}
+        >
           <LanternSVG />
+          <div>
+            <DarkModeSVG />
+          </div>
         </StyledLanternContainer>
       </StyledTreeBranchContainer>
       <StyledFujiContainer

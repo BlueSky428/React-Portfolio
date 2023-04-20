@@ -1,14 +1,24 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledLanternContainer = styled(motion.div)`
+export const StyledLanternContainer = styled(motion.button)`
   width: 7rem;
   position: absolute;
   left: 23rem;
   bottom: 0.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1499;
 
   & svg {
     z-index: 50;
+  }
+  & div {
+    position: absolute;
+    bottom: 2.8rem;
+
+    & svg {
+    }
   }
 
   @media ${props => props.theme.bp.desktopL} {
