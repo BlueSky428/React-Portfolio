@@ -4,6 +4,7 @@ import App from './App';
 import './i18n';
 import { StyledLoadingContainer } from './styles/UI/StyledLoadingContainer';
 import SuspenseFallback from './styles/UI/SuspenseFallback';
+import { AppProvider } from './Context/Context';
 
 const loadingMarkup = (
   <StyledLoadingContainer>
@@ -13,8 +14,10 @@ const loadingMarkup = (
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Suspense fallback={loadingMarkup}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <AppProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </AppProvider>
   </Suspense>
 );

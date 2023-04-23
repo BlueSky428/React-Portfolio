@@ -5,6 +5,7 @@ import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ej
 import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
 import LanternSVG from '/src/assets/images/illustrations/chouchinV3.svg';
 import DarkModeSVG from '/src/assets/icons/moon.svg';
+import LightModeSVG from '/src/assets/icons/sun.svg';
 import { StyledHeroBgClouds } from '../../styles/Hero/HeroBackground/StyledHeroBgClouds';
 import { StyledFujiContainer } from '../../styles/Hero/HeroBackground/StyledFujiContainer';
 import { StyledSunContainer } from '../../styles/Hero/HeroBackground/StyledSunContainer';
@@ -20,13 +21,30 @@ import {
   lanternVariants,
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
+import { useGlobalContext } from '../../Context/Context';
+import { useContext } from 'react';
+import { useTheme } from 'styled-components';
 
 const HeroBackground = () => {
+  // const useDarkMode = useGlobalContext().useDarkMode;
+  // const { useDarkMode } = useGlobalContext();
+  // const [mode, setMode] = useDarkMode();
   const shouldReduceMotion = useReducedMotion();
+  const { toggleTheme, theme } = useGlobalContext();
 
-  const test = () => {
-    console.log('clicked');
+  // const theme = useTheme();
+  // const handleThemeChange = () => {
+  //   setMode(prevMode => (prevMode === 'dark' ? 'light' : 'dark'));
+  //   console.log(mode);
+  // };
+
+  const handleThemeChange = () => {
+    // const newMode = mode === 'dark' ? 'light' : 'dark';
+    // setMode(newMode);
+    // setMode(prevMode => (prevMode === 'dark' ? 'light' : 'dark'));
+    window.localStorage.setItem('mode', mode);
   };
+  // console.log(theme);
   return (
     <>
       <StyledHeroBgClouds />
@@ -38,14 +56,20 @@ const HeroBackground = () => {
       >
         <TreeBranchSVG />
         <StyledLanternContainer
-          onClick={test}
+          onClick={toggleTheme}
           animate='visible'
           variants={lanternVariants}
         >
           <LanternSVG />
-          <div>
-            <DarkModeSVG />
-          </div>
+          {theme === 'light' ? (
+            <div>
+              <DarkModeSVG />
+            </div>
+          ) : (
+            <div>
+              <LightModeSVG />
+            </div>
+          )}
         </StyledLanternContainer>
       </StyledTreeBranchContainer>
       <StyledFujiContainer

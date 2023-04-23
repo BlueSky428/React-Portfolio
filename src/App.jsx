@@ -8,26 +8,32 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './components/Projects/Projects';
 import Navigation from './components/Navigation/Navigation';
 import ProjectGallery from './components/AdditionalProjects/ProjectGallery';
-import { AppProvider } from './Context/Context';
+import { useGlobalContext } from './Context/Context';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const theme = { ...base, ...lightTheme };
+  const { theme } = useGlobalContext();
+  const lightMode = { ...lightTheme };
+  const darkMode = { ...darkTheme };
+
+  const currentTheme = {
+    ...base,
+    ...(theme === 'light' ? lightMode : darkMode),
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <AppProvider>
-        <GlobalStyles />
-        <Navigation />
-        <Sidebar />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <ProjectGallery />
-        </main>
-        <Footer />
-      </AppProvider>
+    <ThemeProvider theme={currentTheme}>
+      <GlobalStyles />
+      <Navigation />
+      <Sidebar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <ProjectGallery />
+      </main>
+      <Footer />
     </ThemeProvider>
   );
 }

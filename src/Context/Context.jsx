@@ -10,6 +10,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
   const [atBottom, setAtBottom] = useState(false);
+  const [theme, setTheme] = useState('light');
   const toggleMoreProjects = () => {
     setShowMoreProjects(!showMoreProjects);
   };
@@ -42,9 +43,24 @@ export const AppProvider = ({ children }) => {
     document.title = t('app-title');
   }, [t]);
 
+  // Light/Dark theme toggler
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+    window.localStorage.setItem('theme', theme);
+  };
+  // useEffect(() => {
+  //   const userTheme = localStorage.getItem('theme');
+  //   setTheme(userTheme);
+  // }, [setTheme]);
   return (
     <AppContext.Provider
-      value={{ showMoreProjects, toggleMoreProjects, atBottom }}
+      value={{
+        showMoreProjects,
+        toggleMoreProjects,
+        atBottom,
+        toggleTheme,
+        theme,
+      }}
     >
       {children}
     </AppContext.Provider>
