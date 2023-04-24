@@ -1,7 +1,8 @@
 import TreeBranchSVG from '/src/assets/images/illustrations/blossom-branch-v2OG.svg';
 import SunSVG from '/src/assets/images/illustrations/rising-sun.svg';
+import MoonSVG from '/src/assets/images/illustrations/rising-moonV2.svg';
 import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
-// import FujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-theme.svg';
+import DarkFujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-theme.svg';
 import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
 import LanternSVG from '/src/assets/images/illustrations/chouchinV3.svg';
 import DarkModeSVG from '/src/assets/icons/moon.svg';
@@ -22,29 +23,10 @@ import {
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 import { useGlobalContext } from '../../Context/Context';
-import { useContext } from 'react';
-import { useTheme } from 'styled-components';
 
 const HeroBackground = () => {
-  // const useDarkMode = useGlobalContext().useDarkMode;
-  // const { useDarkMode } = useGlobalContext();
-  // const [mode, setMode] = useDarkMode();
   const shouldReduceMotion = useReducedMotion();
   const { toggleTheme, theme } = useGlobalContext();
-
-  // const theme = useTheme();
-  // const handleThemeChange = () => {
-  //   setMode(prevMode => (prevMode === 'dark' ? 'light' : 'dark'));
-  //   console.log(mode);
-  // };
-
-  const handleThemeChange = () => {
-    // const newMode = mode === 'dark' ? 'light' : 'dark';
-    // setMode(newMode);
-    // setMode(prevMode => (prevMode === 'dark' ? 'light' : 'dark'));
-    window.localStorage.setItem('mode', mode);
-  };
-  // console.log(theme);
   return (
     <>
       <StyledHeroBgClouds />
@@ -77,19 +59,21 @@ const HeroBackground = () => {
         animate='visible'
         variants={fujiVariants}
       >
-        <FujiSVG />
+        {theme === 'light' ? <FujiSVG /> : <DarkFujiSVG />}
       </StyledFujiContainer>
       <StyledSunContainer
         initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
         animate='visible'
         variants={sunVariants}
+        pageTheme={theme}
       >
-        <SunSVG />
+        {theme === 'light' ? <SunSVG /> : <MoonSVG />}
         <StyledCloudContainer
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
           animate='visible'
           // animate='animate'
           variants={rightCloudVariants}
+          pageTheme={theme}
         >
           <CloudSVG />
         </StyledCloudContainer>

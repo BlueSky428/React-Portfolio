@@ -108,9 +108,12 @@ export const StyledSunContainer = styled(motion.div)`
     /* width: auto; */
     height: 100%;
     max-width: 100%;
-
     filter: drop-shadow(
-      0px 1px 1.7px ${props => props.theme.tertiary.sunShadow}
+      0px 1px 1.7px
+        ${props =>
+          props.pageTheme === 'light'
+            ? props.theme.tertiary.sunShadow
+            : 'white'}
     );
 
     @media ${props => props.theme.bp.desktopXS} {

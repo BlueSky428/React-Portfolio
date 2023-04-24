@@ -41,6 +41,13 @@ export const StyledCloudContainer = styled(motion.div)`
 
   & svg {
     filter: none;
+    /* filter: drop-shadow(
+      ${props =>
+      props.pageTheme === 'light' ? '0 0 0 white' : '0 0 0.25 #343434'}
+    ); */
+    /* filter: drop-shadow(0 0 0.25rem #343434) brightness(100%); */
+
+    /* color: #343434; */
   }
 
   ${props =>
