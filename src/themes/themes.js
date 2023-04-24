@@ -50,7 +50,8 @@ const lightPalette = {
     300: '#f1f2daff',
   },
   gradients: {
-    hero: ['#fedccdcc', '#f5cce9cc'],
+    hero: ['#fedccdcc', '#f5cce9cc', '#fedccdcc'],
+    heroSectionBackdrop: ['#fbf3e2', '#fbf3e2'],
     footer: ['#fedccdcc', '#f5cce9cc'],
   },
 };
@@ -67,9 +68,10 @@ const darkPalette = {
   },
   secondary: {},
   tertiary: { 600: '#ce373c' },
-  neutrals: { 100: '#121212', 200: '#1a1a1a', 300: '#222222ff' },
+  neutrals: { 100: '#121212', 200: '#cfd7e1', 300: '#222222ff' },
   gradients: {
-    hero: ['#283e51', '#0a2342'],
+    hero: ['#283e51', '#0a2342', '#cfd7e1'],
+    heroSectionBackdrop: ['#dee4eb', '#cfd7e1'],
     footer: ['#2b548acc', '#ce373ccc'],
   },
 };
@@ -106,7 +108,6 @@ export const darkTheme = {
   },
   neutrals: {
     footerText: darkPalette.neutrals[300],
-    heroBackdrop: darkPalette.neutrals[200],
     aboutBackdrop: darkPalette.neutrals[200],
     imageBorder: darkPalette.neutrals[200],
     textSelectionColor: darkPalette.neutrals[100],
@@ -114,6 +115,9 @@ export const darkTheme = {
   gradients: {
     heroBgBottom: darkPalette.gradients.hero[0],
     heroBgTop: darkPalette.gradients.hero[1],
+    heroBgBtmRtCorner: darkPalette.gradients.hero[2],
+    heroSectionBackdropLeft: darkPalette.gradients.heroSectionBackdrop[0],
+    heroSectionBackdropRight: darkPalette.gradients.heroSectionBackdrop[1],
     footerBgBottom: darkPalette.gradients.footer[0],
     footerBgTop: darkPalette.gradients.footer[0],
   },
@@ -160,7 +164,7 @@ export const lightTheme = {
   },
   neutrals: {
     footerText: lightPalette.neutrals[300],
-    heroBackdrop: lightPalette.neutrals[200],
+
     aboutBackdrop: lightPalette.neutrals[200],
     imageBorder: lightPalette.neutrals[200],
     textSelectionColor: lightPalette.neutrals[100],
@@ -168,6 +172,9 @@ export const lightTheme = {
   gradients: {
     heroBgBottom: lightPalette.gradients.hero[0],
     heroBgTop: lightPalette.gradients.hero[1],
+    heroBgBtmRtCorner: lightPalette.gradients.hero[2],
+    heroSectionBackdropLeft: lightPalette.gradients.heroSectionBackdrop[0],
+    heroSectionBackdropRight: lightPalette.gradients.heroSectionBackdrop[1],
     footerBgBottom: lightPalette.gradients.footer[0],
     footerBgTop: lightPalette.gradients.footer[0],
   },

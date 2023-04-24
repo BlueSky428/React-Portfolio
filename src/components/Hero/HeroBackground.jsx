@@ -2,7 +2,7 @@ import TreeBranchSVG from '/src/assets/images/illustrations/blossom-branch-v2OG.
 import SunSVG from '/src/assets/images/illustrations/rising-sun.svg';
 import MoonSVG from '/src/assets/images/illustrations/rising-moonV2.svg';
 import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
-import DarkFujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-theme.svg';
+import DarkFujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-themeV2.svg';
 import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
 import LanternSVG from '/src/assets/images/illustrations/chouchinV3.svg';
 import DarkModeSVG from '/src/assets/icons/moon.svg';
@@ -82,6 +82,7 @@ const HeroBackground = () => {
           initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
           animate='visible'
           variants={leftCloudVariants}
+          pageTheme={theme}
         >
           <CloudSVG />
         </StyledCloudContainer>

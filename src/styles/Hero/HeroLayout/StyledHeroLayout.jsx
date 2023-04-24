@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const StyledHeroSectionBackdrop = styled.div`
   background-color: ${props => props.theme.neutrals.heroBackdrop};
+  background: linear-gradient(
+    to right,
+    ${props => props.theme.gradients.heroSectionBackdropLeft} 50%,
+    ${props => props.theme.gradients.heroSectionBackdropRight} 80%
+  );
 `;
 
 export const StyledHeroSection = styled.section`
@@ -12,12 +17,14 @@ export const StyledHeroSection = styled.section`
   height: 100svh;
   /* background: linear-gradient(to top, #0181f1, skyblue); */
   background: linear-gradient(
-    to top,
-    ${props => props.theme.gradients.heroBgBottom},
-    ${props => props.theme.gradients.heroBgTop}
+    176.3deg,
+    ${props => props.theme.gradients.heroBgTop},
+    ${props => props.theme.gradients.heroBgBottom} 88%,
+    ${props => props.theme.gradients.heroBgBtmRtCorner} 90.7%
   );
 
   clip-path: polygon(0px 0px, 100% 0px, 100% 90%, 0px 100%);
+
   overflow: hidden;
   position: relative;
 
