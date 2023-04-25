@@ -1,10 +1,13 @@
 import TreeBranchSVG from '/src/assets/images/illustrations/blossom-branch-v2OG.svg';
+import DarkTreeBranchSVG from '/src/assets/images/illustrations/blossom-branch-v2-dark.svg';
 import SunSVG from '/src/assets/images/illustrations/rising-sun.svg';
 import MoonSVG from '/src/assets/images/illustrations/rising-moonV2.svg';
 import FujiSVG from '/src/assets/images/illustrations/mount-fuji-hokusai-near-ejiri-noBg-sakura02Mini.svg';
 import DarkFujiSVG from '/src/assets/images/illustrations/fuji-hokusai-dark-themeV2.svg';
 import CloudSVG from '/src/assets/images/illustrations/kumo-grayV2.svg';
-import LanternSVG from '/src/assets/images/illustrations/chouchinV3.svg';
+
+import LightLanternSVG from '/src/assets/images/illustrations/chouchinV3-light.svg';
+import DarkLanternSVG from '/src/assets/images/illustrations/chouchinV3-dark.svg';
 import DarkModeSVG from '/src/assets/icons/moon.svg';
 import LightModeSVG from '/src/assets/icons/sun.svg';
 import { StyledHeroBgClouds } from '../../styles/Hero/HeroBackground/StyledHeroBgClouds';
@@ -36,13 +39,14 @@ const HeroBackground = () => {
         animate='visible'
         variants={branchVariants}
       >
-        <TreeBranchSVG />
+        {theme === 'light' ? <TreeBranchSVG /> : <DarkTreeBranchSVG />}
         <StyledLanternContainer
           onClick={toggleTheme}
           animate='visible'
           variants={lanternVariants}
         >
-          <LanternSVG />
+          {theme === 'light' ? <LightLanternSVG /> : <DarkLanternSVG />}
+
           {theme === 'light' ? (
             <div>
               <DarkModeSVG />
