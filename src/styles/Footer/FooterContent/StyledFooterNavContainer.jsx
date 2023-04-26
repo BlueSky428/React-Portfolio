@@ -15,7 +15,7 @@ export const StyledFooterNavContainer = styled.div`
       }
 
       & :hover {
-        color: inherit;
+        /* color: inherit; */
       }
 
       & a {

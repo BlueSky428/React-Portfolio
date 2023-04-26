@@ -76,7 +76,7 @@ const darkPalette = {
   gradients: {
     hero: ['#283e51', '#0a2342', '#cfd7e1'],
     heroSectionBackdrop: ['#dee4eb', '#cfd7e1'],
-    footer: ['#2b548acc', '#ce373ccc'],
+    footer: ['#2b548acc', '#deb9d4'],
   },
 };
 
@@ -89,7 +89,7 @@ export const darkTheme = {
     link: darkPalette.primary[600],
     navigationBars: darkPalette.primary[600],
     scrollbarThumb: darkPalette.primary[600],
-    footerContentBg: darkPalette.primary[400],
+    footerContentBg: darkPalette.primary[200],
     h2: darkPalette.primary[350],
     navLinkHover: darkPalette.primary[400],
     h3: darkPalette.primary[300],
@@ -97,7 +97,7 @@ export const darkTheme = {
     skillLiText: darkPalette.primary[300],
     scrollbarThumbHover: darkPalette.primary[300],
     scrollbarTrack: darkPalette.primary[300],
-    linkHover: darkPalette.primary[300],
+    linkHover: darkPalette.primary[350],
     skillLiBg: darkPalette.primary[200],
     projectDescBg: darkPalette.primary[200],
     body: darkPalette.primary[50],
@@ -113,7 +113,7 @@ export const darkTheme = {
     navigationBorder: darkPalette.tertiary[600],
   },
   neutrals: {
-    footerText: darkPalette.neutrals[300],
+    footerText: darkPalette.neutrals[200],
     aboutBackdrop: darkPalette.neutrals[200],
     imageBorder: darkPalette.neutrals[200],
     textSelectionColor: darkPalette.neutrals[100],
@@ -124,19 +124,10 @@ export const darkTheme = {
     heroBgBtmRtCorner: darkPalette.gradients.hero[2],
     heroSectionBackdropLeft: darkPalette.gradients.heroSectionBackdrop[0],
     heroSectionBackdropRight: darkPalette.gradients.heroSectionBackdrop[1],
-    footerBgBottom: darkPalette.gradients.footer[0],
+    footerBgBottom: darkPalette.gradients.footer[1],
     footerBgTop: darkPalette.gradients.footer[0],
   },
 };
-
-// background: linear-gradient(to bottom, #0a2342, #283e51);
-
-/* background-image: linear-gradient(
-      to bottom,
-      rgb(2, 64, 115),
-      rgba(2, 9, 53, 0.379)
-    ),
-    url('/water-color-sm.webp'); */
 
 export const lightTheme = {
   primary: {
@@ -149,7 +140,7 @@ export const lightTheme = {
     scrollbarThumb: lightPalette.primary[600],
     footerContentBg: lightPalette.primary[400],
     h2: lightPalette.primary[400],
-    navLinkHover: lightPalette.primary[400],
+    navLinkHover: lightPalette.primary[350],
     h3: lightPalette.primary[300],
     h4: lightPalette.primary[300],
     skillLiText: lightPalette.primary[300],
