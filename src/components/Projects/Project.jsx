@@ -16,9 +16,11 @@ import {
 } from '../../utils/animations';
 import { useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useGlobalContext } from '../../Context/Context';
 
 const Project = ({ project, description, alternate }) => {
   const { t } = useTranslation();
+  const { theme } = useGlobalContext();
   const shouldReduceMotion = useReducedMotion();
   return (
     <StyledProjectItem
@@ -31,7 +33,7 @@ const Project = ({ project, description, alternate }) => {
       }
       alternate={alternate}
     >
-      <StyledProjectImage alternate={alternate}>
+      <StyledProjectImage pageTheme={theme} alternate={alternate}>
         <StyledProjectImageContainer>
           <picture>
             <source

@@ -33,6 +33,7 @@ export const base = {
 // Light Theme
 const lightPalette = {
   primary: {
+    50: '#ffffff',
     100: '#ecf6faed',
     200: '#ecf6fa',
     300: '#407ac3',
@@ -60,6 +61,7 @@ const lightPalette = {
 // Dark Theme
 const darkPalette = {
   primary: {
+    50: '#283e51',
     100: '#1e3e67',
     200: '#244977',
     300: '#bfccdc',
@@ -98,6 +100,8 @@ export const darkTheme = {
     linkHover: darkPalette.primary[300],
     skillLiBg: darkPalette.primary[200],
     projectDescBg: darkPalette.primary[200],
+    body: darkPalette.primary[50],
+    main: darkPalette.primary[50],
   },
   tertiary: {
     textSelection: darkPalette.tertiary[600],
@@ -154,6 +158,8 @@ export const lightTheme = {
     linkHover: lightPalette.primary[300],
     skillLiBg: lightPalette.primary[200],
     projectDescBg: lightPalette.primary[200],
+    body: lightPalette.primary[50],
+    main: lightPalette.primary[50],
   },
   tertiary: {
     textSelection: lightPalette.tertiary[600],

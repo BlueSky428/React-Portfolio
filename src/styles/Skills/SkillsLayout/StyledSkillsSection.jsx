@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledSkillsSection = styled.section`
   display: grid;
@@ -16,8 +16,17 @@ export const StyledSkillsSection = styled.section`
     ),
     url('/wisp.webp');
 
-  /* background-image: linear-gradient(to bottom, rgb(40, 62, 81), rgb(40, 62, 81)),
-    url('/wisp.webp'); */
+  ${props =>
+    props.pageTheme === 'dark' &&
+    css`
+      background-image: linear-gradient(
+          to bottom,
+          rgba(40, 62, 81, 0.8) 20%,
+          rgba(40, 62, 81, 0.5),
+          rgba(40, 62, 81, 0.9)
+        ),
+        url('/wisp.webp');
+    `}
 
   background-repeat: no-repeat;
   background-position: center;

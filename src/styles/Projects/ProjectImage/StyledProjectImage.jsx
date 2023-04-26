@@ -38,8 +38,13 @@ export const StyledProjectImage = styled.div`
   grid-column: 1 / 8;
   grid-area: 1 / 1 / -1 / 8;
   box-shadow: 0 0.3rem 0.3rem 0 rgb(0 0 0 / 15%);
-  box-shadow: 0 1rem 2.5rem -1.8rem ${props => props.theme.primary.li};
   border-radius: 0.2rem;
+  box-shadow: 0 1rem 2.5rem -1.8rem ${props => props.theme.primary.li};
+  ${props =>
+    props.pageTheme === 'dark' &&
+    css`
+      box-shadow: none;
+    `}
   @media ${props => props.theme.bp.desktopS} {
     height: 32rem;
     width: 52rem;

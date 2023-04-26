@@ -97,6 +97,11 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         line-height: 1.6;
         font-weight: 300; 
+        background-color: ${props => props.theme.primary.body};
+        }
+
+    main {
+        background-color: ${props => props.theme.primary.main};
         }
 
     img, picture, svg, video {
