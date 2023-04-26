@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledAboutSection = styled.section`
   position: relative;
-  padding: 12rem 0;
+  padding: 15rem 0;
   /* Previous style no white fade */
   /* background-image: linear-gradient(
       to bottom,
@@ -23,6 +23,19 @@ export const StyledAboutSection = styled.section`
       rgba(255, 255, 255, 0.9) 99.3%
     ),
     url('/water-color-sm.webp');
+
+  ${props =>
+    props.pageTheme === 'dark' &&
+    css`
+      background-image: linear-gradient(
+          to bottom,
+          rgba(207, 215, 225, 1),
+          rgba(40, 62, 81, 0.7),
+          rgba(40, 62, 81, 0.9),
+          rgba(40, 62, 81, 1)
+        ),
+        url('/water-color-sm.webp');
+    `}
 
   background-repeat: no-repeat;
   background-size: cover;

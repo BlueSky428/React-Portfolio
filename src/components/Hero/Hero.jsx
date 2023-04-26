@@ -16,11 +16,13 @@ import i18next from 'i18next';
 import { useState } from 'react';
 import { StyledLanguageButton } from '../../styles/Hero/HeroText/StyledLanguageButton';
 import i18n from '../../i18n';
+import { useGlobalContext } from '../../Context/Context';
 
 const Hero = () => {
   const [language, setLanguage] = useState('en');
   const { t } = useTranslation();
   const lang = i18n.resolvedLanguage;
+  const { theme } = useGlobalContext();
   const shouldReduceMotion = useReducedMotion();
 
   const toggleLanguageHandler = () => {
@@ -44,6 +46,7 @@ const Hero = () => {
               key={lang} // add a key prop with the language value
             >
               <StyledTextBox
+                pageTheme={theme}
                 lang={lang}
                 initial={shouldReduceMotion ? 'noMotion' : 'hidden'}
                 animate='visible'
@@ -64,6 +67,7 @@ const Hero = () => {
                 </motion.div>
                 <motion.div variants={childHeroTextVariants}>
                   <motion.a
+                    pageTheme={theme}
                     whileTap={
                       shouldReduceMotion ? { scale: 1 } : { scale: 0.97 }
                     }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const StyledTextBox = styled(motion.div)`
@@ -142,10 +142,16 @@ const StyledTextBox = styled(motion.div)`
     border-radius: 0.4rem;
     padding: 1.45rem 2.45rem;
     letter-spacing: 0.1rem;
-    border: 0.12rem solid ${props => props.theme.tertiary.linkBorder};
+    border: 0.16rem solid ${props => props.theme.tertiary.linkBorder};
     line-height: 1;
     font-size: 1.6rem;
     text-transform: capitalize;
+
+    ${props =>
+      props.pageTheme === 'dark' &&
+      css`
+        border: 0.16rem solid #fff;
+      `};
 
     @media ${props => props.theme.bp.desktopL} {
       font-size: 1.5rem;

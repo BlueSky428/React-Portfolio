@@ -15,6 +15,10 @@ export const StyledSkillsSection = styled.section`
       rgba(255, 255, 255, 0.75) 90%
     ),
     url('/wisp.webp');
+
+  /* background-image: linear-gradient(to bottom, rgb(40, 62, 81), rgb(40, 62, 81)),
+    url('/wisp.webp'); */
+
   background-repeat: no-repeat;
   background-position: center;
   @media ${props => props.theme.bp.desktopXS} {

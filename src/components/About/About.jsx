@@ -16,14 +16,16 @@ import { useReducedMotion } from 'framer-motion';
 import { StyledSectionHeading } from '../../styles/UI/StyledSectionHeading';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { useGlobalContext } from '../../Context/Context';
 
 const About = () => {
   const { t } = useTranslation();
   const lang = i18n.resolvedLanguage;
+  const { theme } = useGlobalContext();
   const shouldReduceMotion = useReducedMotion();
   return (
     <>
-      <StyledAboutSection>
+      <StyledAboutSection pageTheme={theme}>
         <StyledSectionHeading lang={lang}>
           <h2 id='about'> {t('about-heading')}</h2>
         </StyledSectionHeading>
