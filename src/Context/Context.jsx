@@ -10,7 +10,19 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
   const [atBottom, setAtBottom] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const [theme, setUserTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('userTheme');
+    if (savedTheme) {
+      try {
+        const initialValue = JSON.parse(savedTheme);
+        return initialValue;
+      } catch (error) {
+        return '';
+      }
+    } else {
+      return '';
+    }
+  });
   const toggleMoreProjects = () => {
     setShowMoreProjects(!showMoreProjects);
   };
@@ -45,13 +57,16 @@ export const AppProvider = ({ children }) => {
 
   // Light/Dark theme toggler
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-    window.localStorage.setItem('theme', theme);
+    theme === 'dark'
+      ? setUserTheme(prevTheme => (prevTheme = 'light'))
+      : setUserTheme(prevTheme => (prevTheme = 'dark'));
   };
-  // useEffect(() => {
-  //   const userTheme = localStorage.getItem('theme');
-  //   setTheme(userTheme);
-  // }, [setTheme]);
+
+  // Sets theme upon loading the page
+  useEffect(() => {
+    localStorage.setItem('userTheme', JSON.stringify(theme));
+  }, [theme]);
+
   return (
     <AppContext.Provider
       value={{

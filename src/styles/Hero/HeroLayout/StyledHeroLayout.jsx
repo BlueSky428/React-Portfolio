@@ -7,7 +7,6 @@ export const StyledHeroSectionBackdrop = styled.div`
     ${props => props.theme.gradients.heroSectionBackdropLeft} 50%,
     ${props => props.theme.gradients.heroSectionBackdropRight} 80%
   );
-  transition: background 2s !important;
 `;
 
 export const StyledHeroSection = styled.section`
