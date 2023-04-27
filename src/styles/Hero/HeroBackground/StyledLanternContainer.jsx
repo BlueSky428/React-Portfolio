@@ -17,7 +17,11 @@ export const StyledLanternContainer = styled(motion.button)`
     position: absolute;
     bottom: 2.8rem;
 
-    & svg {
+    @media ${props => props.theme.bp.desktopXS} {
+      bottom: 3.8rem;
+    }
+    @media ${props => props.theme.bp.tabletS} {
+      bottom: 2rem;
     }
   }
 

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const StyledAboutSection = styled.section`
   position: relative;
-  padding: 15rem 0;
+  padding: 16rem 0;
   /* Previous style no white fade */
   /* background-image: linear-gradient(
       to bottom,
@@ -37,6 +37,21 @@ export const StyledAboutSection = styled.section`
         url('/water-color-sm.webp');
     `}
 
+  @media ${props => props.theme.bp.mobileL} {
+    ${props =>
+      props.pageTheme === 'dark' &&
+      css`
+        background-image: linear-gradient(
+            to bottom,
+            rgba(207, 215, 225, 1) 15%,
+            rgba(40, 62, 81, 0.7),
+            rgba(40, 62, 81, 0.9),
+            rgba(40, 62, 81, 1)
+          ),
+          url('/water-color-sm.webp');
+      `}
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position-x: 70rem; */
@@ -56,5 +71,6 @@ export const StyledAboutSection = styled.section`
     row-gap: 0;
     overflow: hidden;
     padding: 6rem 0;
+    padding-top: 10rem;
   }
 `;
