@@ -32,6 +32,8 @@
       Localization (Japanese) 
     </a>
 - ThemeProvider
+- Light/Dark Theme
+- Local Storage
 - Responsive Design
 - SVG (created with <a href="https://inkscape.org/" color="white">
   Inkscape
