@@ -67,6 +67,24 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem('userTheme', JSON.stringify(theme));
   }, [theme]);
 
+  // Check user preference for dark mode
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    if (prefersDarkMode) {
+      setUserTheme('dark');
+    }
+  }, []);
+  useEffect(() => {
+    const prefersLightMode = window.matchMedia(
+      '(prefers-color-scheme: light)'
+    ).matches;
+    if (prefersLightMode) {
+      setUserTheme('light');
+    }
+  }, []);
+
   return (
     <AppContext.Provider
       value={{

@@ -11,6 +11,7 @@ const StyledTextBox = styled(motion.div)`
     max-width: 40rem;
     align-self: center !important;
   }
+
   @media ${props => props.theme.bp.mobileM} {
     text-align: center;
   }

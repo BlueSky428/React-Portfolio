@@ -26,7 +26,7 @@ export const StyledHeroBgClouds = styled.div`
   animation-direction: normal;
   animation-fill-mode: none;
   /* Set to running for animation */
-  animation-play-state: paused;
+  animation-play-state: running;
   animation-name: ${horizontalDrift};
   z-index: 10;
   opacity: 0.4;
