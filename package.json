@@ -17,7 +17,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
     "styled-components": "^5.3.6",
-    "vite-plugin-svgr": "^2.4.0"
+    "vite-plugin-svgr": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
